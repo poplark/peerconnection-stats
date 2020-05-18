@@ -3037,11 +3037,6 @@ karma-jasmine@^3.1.1:
   dependencies:
     jasmine-core "^3.5.0"
 
-karma-opera-launcher@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/karma-opera-launcher/-/karma-opera-launcher-1.0.0.tgz#fa51628531a1d0be84b2d8dc0d7ee209fc8ff91a"
-  integrity sha1-+lFihTGh0L6EstjcDX7iCfyP+Ro=
-
 karma-safari-launcher@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/karma-safari-launcher/-/karma-safari-launcher-1.0.0.tgz#96982a2cc47d066aae71c553babb28319115a2ce"

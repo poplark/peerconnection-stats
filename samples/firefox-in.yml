@@ -1,0 +1,183 @@
+pair:
+  type: "candidate-pair"
+  bytesReceived: 0
+  bytesSent: 0
+  # others
+  id: "452671b7"
+  lastPacketReceivedTimestamp: 0
+  lastPacketSentTimestamp: 0
+  localCandidateId: "b5b78fdc"
+  nominated: false
+  priority: 4633677350444073000
+  readable: true
+  remoteCandidateId: "c8e60664"
+  selected: false
+  state: "failed"
+  timestamp: 1589794085899
+  transportId: "transport_0"
+  writable: true
+  # currentRoundTripTime: 0.032
+  # availableOutgoingBitrate: 300000
+  # consentRequestsSent: 12
+  # requestsReceived: 0
+  # requestsSent: 1
+  # responsesReceived: 13
+  # responsesSent: 0
+  # state: "succeeded"
+  # totalRoundTripTime: 0.42
+  # writable: true
+
+pair2:
+  type: "candidate-pair"
+  bytesReceived: 2935055
+  bytesSent: 12800
+  # others
+  id: "95a7c5e8"
+  lastPacketReceivedTimestamp: 1589794085907
+  lastPacketSentTimestamp: 1589794085776
+  localCandidateId: "957b42cc"
+  nominated: true
+  priority: 4633677349907202000
+  readable: true
+  remoteCandidateId: "c8e60664"
+  selected: true
+  state: "succeeded"
+  timestamp: 1589794085899
+  transportId: "transport_0"
+  writable: true
+
+local-candidate:
+  type: "local-candidate"
+  candidateType: "host"
+  address: "5b7c1c09-6358-47cf-a5df-fb29343248d1.local"
+  port: 60240
+  protocol: "udp"
+  # others
+  id: "b5b78fdc"
+  priority: 2122252543
+  timestamp: 1589794085899
+
+local-candidate1:
+  type: "local-candidate"
+  candidateType: "host"
+  address: "5b7c1c09-6358-47cf-a5df-fb29343248d1.local"
+  port: 51228
+  protocol: "tcp"
+  # others
+  id: "97f64667"
+  priority: 2105524479
+  timestamp: 1589794085899
+
+local-candidate2:
+  type: "local-candidate"
+  candidateType: "prflx"
+  address: "(redacted)"
+  port: 60240
+  protocol: "udp"
+  id: "957b42cc"
+  priority: 1853817087
+  timestamp: 1589794085899
+
+remote-candidate:
+  type: "remote-candidate"
+  candidateType: "host"
+  address: "106.75.167.159"
+  port: 26905
+  protocol: "udp"
+  # others
+  id: "c8e60664"
+  priority: 1078862079
+  timestamp: 1589794085899
+
+audio1:
+  type: inbound-rtp
+  kind: audio
+  mediaType: audio
+  bytesReceived: 333198
+  packetsReceived: 1926
+  jitter: 0.014
+  packetsLost: 0
+  # others
+  id: "5ecaf80c"
+  nackCount: 0
+  remoteId: "6e4203e0"
+  ssrc: 476923040
+  timestamp: 1589794085900
+  # codecId: "RTCCodec_audio_Inbound_111"
+  # estimatedPlayoutTimestamp: 4035040579
+  # fecPacketsDiscarded: 0
+  # fecPacketsReceived: 0
+  # headerBytesReceived: 46780
+  # lastPacketReceivedTimestamp: 323007.124
+  # trackId: "RTCMediaStreamTrack_receiver_1"
+  # transportId: "RTCTransport_audio_1"
+
+
+# audio2:
+#   type: track
+#   kind: audio
+#   remoteSource: true
+#   audioLevel: 0.0008545182653279214
+#   totalAudioEnergy: 0.08223486599693215
+#   # others
+#   concealedSamples: 26699
+#   concealmentEvents: 7
+#   detached: false
+#   ended: false
+#   id: "RTCMediaStreamTrack_receiver_1"
+#   insertedSamplesForDeceleration: 29557
+#   jitterBufferDelay: 480508.8
+#   jitterBufferEmittedCount: 2239680
+#   removedSamplesForAcceleration: 4637
+#   silentConcealedSamples: 8239
+#   timestamp: 1589787245130.197
+#   totalSamplesDuration: 47.72999999999907
+#   totalSamplesReceived: 2291040
+#   trackIdentifier: "07868786-6740-443f-892c-f367ed51a93b"
+
+audio2:
+  type: "remote-outbound-rtp"
+  kind: "audio"
+  mediaType: "audio"
+  bytesSent: 597212
+  packetsSent: 3452
+  # others
+  id: "6e4203e0"
+  localId: "5ecaf80c"
+  ssrc: 476923040
+  timestamp: 1589794085433
+
+video1:
+  type: "inbound-rtp"
+  kind: "video"
+  mediaType: "video"
+  jitter: 0.037
+  bytesReceived: 1503348
+  packetsLost: 0
+  packetsReceived: 1729
+  framesDecoded: 1135
+  firCount: 0
+  nackCount: 0
+  pliCount: 1
+  # others
+  bitrateMean: 311995.3684210527
+  bitrateStdDev: 41619.782765268785
+  discardedPackets: 0
+  framerateMean: 29.736842105263158
+  framerateStdDev: 0.9207579288741627
+  id: "9347dbac"
+  remoteId: "6b93d544"
+  ssrc: 473703678
+  timestamp: 1589794085900
+
+video2:
+  type: "remote-outbound-rtp"
+  kind: "video"
+  mediaType: "video"
+  bytesSent: 1484036
+  packetsSent: 1712
+  # others
+  id: "6b93d544"
+  localId: "9347dbac"
+  ssrc: 473703678
+  timestamp: 1589794085433

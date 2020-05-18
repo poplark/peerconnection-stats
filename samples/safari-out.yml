@@ -1,0 +1,93 @@
+pair:
+  type: "candidate-pair"
+  bytesReceived: 15121
+  bytesSent: 2673375
+  currentRoundTripTime: 0.03
+  availableOutgoingBitrate: 300000
+  # others
+  id: "RTCIceCandidatePair_zv6tJAj8_qYGk6jVr"
+  localCandidateId: "RTCIceCandidate_zv6tJAj8"
+  nominated: true
+  priority: 4633677349890571000
+  remoteCandidateId: "RTCIceCandidate_qYGk6jVr"
+  requestsReceived: 0
+  requestsSent: 1
+  responsesReceived: 30
+  responsesSent: 0
+  state: "succeeded"
+  timestamp: 1589798689277
+  totalRoundTripTime: 1.208
+  transportId: "RTCTransport_0_1"
+  writable: true
+
+local-candidate:
+  type: "local-candidate"
+  candidateType: "prflx"
+  port: 63334
+  protocol: "udp"
+  # others
+  deleted: false
+  id: "RTCIceCandidate_zv6tJAj8"
+  priority: 1845501695
+  timestamp: 1589798689277
+  transportId: "RTCTransport_0_1"
+
+remote-candidate:
+  type: "remote-candidate"
+  candidateType: "host"
+  port: 22989
+  protocol: "udp"
+  # others
+  deleted: false
+  id: "RTCIceCandidate_qYGk6jVr"
+  priority: 1078862079
+  timestamp: 1589798689277
+  transportId: "RTCTransport_0_1"
+
+audio-outbound:
+  type: "outbound-rtp"
+  mediaType: "audio"
+  bytesSent: 319021
+  packetsSent: 3293
+  isRemote: false
+  # others
+  codecId: "RTCCodec_0_Outbound_111"
+  id: "RTCOutboundRTPAudioStream_151997794"
+  qpSum: 0
+  ssrc: 151997794
+  timestamp: 1589798689277
+  trackId: "RTCMediaStreamTrack_sender_1"
+  transportId: "RTCTransport_0_1"
+
+video-track:
+  type: "track"
+  remoteSource: false
+  frameHeight: 180
+  frameWidth: 320
+  framesSent: 1932
+  # others
+  detached: false
+  ended: false
+  id: "RTCMediaStreamTrack_sender_2"
+  timestamp: 1589798689277
+  trackIdentifier: "d4f2e902-996b-4f06-b45c-5bdbd60ccc84"
+
+video-outbound:
+  type: "outbound-rtp"
+  mediaType: "video"
+  isRemote: false
+  bytesSent: 2283882
+  packetsSent: 3026
+  framesEncoded: 1932
+  nackCount: 0
+  pliCount: 5
+  firCount: 0
+  # others
+  codecId: "RTCCodec_1_Outbound_100"
+  id: "RTCOutboundRTPVideoStream_2751456311"
+  qpSum: 0
+  ssrc: 2751456311
+  timestamp: 1589798689277
+  trackId: "RTCMediaStreamTrack_sender_2"
+  transportId: "RTCTransport_0_1"
+

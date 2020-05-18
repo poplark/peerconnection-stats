@@ -64,8 +64,8 @@ module.exports = function(config) {
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     // use karam-edge-launcher, not karma-edgium-launcher
-    // browsers: ['Chrome', 'Firefox', 'Safari', 'Opera', 'Edge'],
-    browsers: ['Chrome', 'Firefox', 'Safari', 'Opera'],
+    // browsers: ['Chrome', 'Firefox', 'Safari', 'Edge'],
+    browsers: ['Chrome', 'Firefox', 'Safari'],
 
 
     // Continuous Integration mode
@@ -82,7 +82,6 @@ module.exports = function(config) {
       'karma-chrome-launcher',
       'karma-firefox-launcher',
       'karma-safari-launcher',
-      'karma-opera-launcher',
       // 'karma-edge-launcher'
     ]
   })

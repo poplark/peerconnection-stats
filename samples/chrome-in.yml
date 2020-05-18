@@ -1,0 +1,143 @@
+pair:
+  type: "candidate-pair"
+  bytesReceived: 2080882
+  bytesSent: 13839
+  currentRoundTripTime: 0.033
+  # others
+  availableIncomingBitrate: 216576
+  availableOutgoingBitrate: 300000
+  consentRequestsSent: 22
+  id: "RTCIceCandidatePair_qsTHWN9W_fd41L5iZ"
+  localCandidateId: "RTCIceCandidate_qsTHWN9W"
+  nominated: true
+  priority: 4633677349907217000
+  remoteCandidateId: "RTCIceCandidate_fd41L5iZ"
+  requestsReceived: 0
+  requestsSent: 1
+  responsesReceived: 23
+  responsesSent: 0
+  state: "succeeded"
+  timestamp: 1589787245130.197
+  totalRoundTripTime: 0.852
+  transportId: "RTCTransport_audio_1"
+  writable: true
+
+local-candidate:
+  type: "local-candidate"
+  candidateType: "prflx"
+  isRemote: false
+  ip: "106.75.220.2"
+  networkType: "wifi"
+  port: 53871
+  # others
+  deleted: false
+  id: "RTCIceCandidate_qsTHWN9W"
+  priority: 1853824767
+  protocol: "udp"
+  timestamp: 1589787245130.197
+  transportId: "RTCTransport_audio_1"
+
+remote-candidate:
+  type: "remote-candidate"
+  candidateType: "host"
+  isRemote: true
+  ip: "106.75.166.157"
+  port: 24787
+  # others
+  deleted: false
+  id: "RTCIceCandidate_fd41L5iZ"
+  priority: 1078862079
+  protocol: "udp"
+  timestamp: 1589787245130.197
+  transportId: "RTCTransport_audio_1"
+
+audio1:
+  type: inbound-rtp
+  kind: audio
+  mediaType: audio
+  isRemote: false
+  bytesReceived: 156806
+  packetsReceived: 2339
+  jitter: 0.022
+  packetsLost: 0
+  # others
+  codecId: "RTCCodec_audio_Inbound_111"
+  estimatedPlayoutTimestamp: 4035040579
+  fecPacketsDiscarded: 0
+  fecPacketsReceived: 0
+  headerBytesReceived: 46780
+  id: "RTCInboundRTPAudioStream_660636110"
+  lastPacketReceivedTimestamp: 323007.124
+  ssrc: 660636110
+  timestamp: 1589787245130.197
+  trackId: "RTCMediaStreamTrack_receiver_1"
+  transportId: "RTCTransport_audio_1"
+
+audio2:
+  type: track
+  kind: audio
+  remoteSource: true
+  audioLevel: 0.0008545182653279214
+  totalAudioEnergy: 0.08223486599693215
+  # others
+  concealedSamples: 26699
+  concealmentEvents: 7
+  detached: false
+  ended: false
+  id: "RTCMediaStreamTrack_receiver_1"
+  insertedSamplesForDeceleration: 29557
+  jitterBufferDelay: 480508.8
+  jitterBufferEmittedCount: 2239680
+  removedSamplesForAcceleration: 4637
+  silentConcealedSamples: 8239
+  timestamp: 1589787245130.197
+  totalSamplesDuration: 47.72999999999907
+  totalSamplesReceived: 2291040
+  trackIdentifier: "07868786-6740-443f-892c-f367ed51a93b"
+
+video1:
+  type: "inbound-rtp"
+  kind: "video"
+  mediaType: "video"
+  isRemote: false
+  headerBytesReceived: 40496
+  bytesReceived: 1563597
+  packetsLost: 0
+  packetsReceived: 1840
+  framesDecoded: 941
+  keyFramesDecoded: 4
+  # others
+  codecId: "RTCCodec_video_Inbound_96"
+  decoderImplementation: "libvpx"
+  estimatedPlayoutTimestamp: 4035040553
+  firCount: 0
+  id: "RTCInboundRTPVideoStream_316881499"
+  lastPacketReceivedTimestamp: 323006.945
+  nackCount: 0
+  pliCount: 1
+  qpSum: 1884
+  ssrc: 316881499
+  timestamp: 1589787245130.197
+  totalDecodeTime: 1.055
+  totalInterFrameDelay: 47.56999999999998
+  totalSquaredInterFrameDelay: 2.8564619999999863
+  trackId: "RTCMediaStreamTrack_receiver_2"
+  transportId: "RTCTransport_audio_1"
+
+video2:
+  type: "track"
+  kind: "video"
+  remoteSource: true
+  frameHeight: 180
+  frameWidth: 320
+  framesDecoded: 941
+  framesDropped: 0
+  framesReceived: 944
+  # others
+  detached: false
+  ended: false
+  id: "RTCMediaStreamTrack_receiver_2"
+  jitterBufferDelay: 203.965
+  jitterBufferEmittedCount: 940
+  timestamp: 1589787245130.197
+  trackIdentifier: "1a57be0a-2eaa-4a10-8bef-da4bd659b71e"

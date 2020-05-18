@@ -1,0 +1,169 @@
+pair:
+  type: "candidate-pair"
+  bytesReceived: 5689
+  bytesSent: 909561
+  currentRoundTripTime: 0.032
+  # others
+  availableOutgoingBitrate: 300000
+  consentRequestsSent: 12
+  id: "RTCIceCandidatePair_CH/8yadW_HY5icWFp"
+  localCandidateId: "RTCIceCandidate_CH/8yadW"
+  nominated: true
+  priority: 4633677349907217000
+  remoteCandidateId: "RTCIceCandidate_HY5icWFp"
+  requestsReceived: 0
+  requestsSent: 1
+  responsesReceived: 13
+  responsesSent: 0
+  state: "succeeded"
+  timestamp: 1589783725463.84
+  totalRoundTripTime: 0.42
+  transportId: "RTCTransport_audio_1"
+  writable: true
+
+local-candidate:
+  type: "local-candidate"
+  candidateType: "prflx"
+  isRemote: false
+  ip: "106.75.220.2"
+  networkType: "wifi"
+  port: 51061
+  protocol: "udp"
+  # others
+  deleted: false
+  id: "RTCIceCandidate_CH/8yadW"
+  priority: 1853824767
+  timestamp: 1589783725463.84
+  transportId: "RTCTransport_audio_1"
+
+remote-candidate:
+  type: "remote-candidate"
+  candidateType: "host"
+  isRemote: true
+  ip: "106.75.166.157"
+  port: 22543
+  protocol: "udp"
+  # others
+  deleted: false
+  id: "RTCIceCandidate_HY5icWFp"
+  priority: 1078862079
+  timestamp: 1589783725463.84
+  transportId: "RTCTransport_audio_1"
+
+audio-media-source:
+  type: "media-source"
+  kind: "audio"
+  audioLevel: 0.06784264656514176
+  totalAudioEnergy: 0.269070831105968
+  # others
+  totalSamplesDuration: 24.520000000001033
+  id: "RTCAudioSource_37"
+  timestamp: 1589783725463.84
+  trackIdentifier: "f1f8c9bc-022a-468d-b9aa-22d9aa313194"
+
+audio-outbound:
+  type: "outbound-rtp"
+  kind: "audio"
+  mediaType: "audio"
+  isRemote: false
+  bytesSent: 95208
+  packetsSent: 1218
+  # others
+  codecId: "RTCCodec_audio_Outbound_111"
+  headerBytesSent: 24360
+  id: "RTCOutboundRTPAudioStream_2299633337"
+  mediaSourceId: "RTCAudioSource_37"
+  remoteId: "RTCRemoteInboundRtpAudioStream_2299633337"
+  retransmittedBytesSent: 0
+  retransmittedPacketsSent: 0
+  ssrc: 2299633337
+  timestamp: 1589783725463.84
+  trackId: "RTCMediaStreamTrack_sender_37"
+  transportId: "RTCTransport_audio_1"
+
+audio-inbound:
+  type: "remote-inbound-rtp"
+  kind: "audio"
+  jitter: 0
+  packetsLost: 0
+  roundTripTime: 0.035
+  # others
+  codecId: "RTCCodec_audio_Outbound_111"
+  id: "RTCRemoteInboundRtpAudioStream_2299633337"
+  localId: "RTCOutboundRTPAudioStream_2299633337"
+  ssrc: 2299633337
+  timestamp: 1589783722579.66
+  transportId: "RTCTransport_audio_1"
+
+video-track:
+  type: "track"
+  kind: "video"
+  remoteSource: false
+  frameHeight: 180
+  frameWidth: 320
+  framesSent: 273
+  # others
+  detached: false
+  ended: false
+  hugeFramesSent: 0
+  id: "RTCMediaStreamTrack_sender_2"
+  mediaSourceId: "RTCVideoSource_2"
+  timestamp: 1589798068190.619
+  trackIdentifier: "9219168c-c55e-4eef-8cc5-0fb61ec0c471"
+
+video-outbound:
+  type: "outbound-rtp"
+  kind: "video"
+  mediaType: "video"
+  isRemote: false
+  bytesSent: 478179
+  packetsSent: 526
+  framesEncoded: 273
+  firCount: 0
+  nackCount: 0
+  pliCount: 1
+  # others
+  codecId: "RTCCodec_video_Outbound_96"
+  encoderImplementation: "libvpx"
+  headerBytesSent: 12072
+  id: "RTCOutboundRTPVideoStream_1629960587"
+  keyFramesEncoded: 2
+  mediaSourceId: "RTCVideoSource_2"
+  qpSum: 1225
+  qualityLimitationReason: "none"
+  qualityLimitationResolutionChanges: 0
+  remoteId: "RTCRemoteInboundRtpVideoStream_1629960587"
+  retransmittedBytesSent: 0
+  retransmittedPacketsSent: 0
+  ssrc: 1629960587
+  timestamp: 1589798068190.619
+  totalEncodeTime: 0.517
+  totalEncodedBytesTarget: 573407
+  totalPacketSendDelay: 17.279
+  trackId: "RTCMediaStreamTrack_sender_2"
+  transportId: "RTCTransport_audio_1"
+
+video-inbound:
+  type: "remote-inbound-rtp"
+  kind: "video"
+  jitter: 0
+  packetsLost: 0
+  roundTripTime: 0.031
+  # others
+  codecId: "RTCCodec_video_Outbound_96"
+  id: "RTCRemoteInboundRtpVideoStream_1629960587"
+  localId: "RTCOutboundRTPVideoStream_1629960587"
+  ssrc: 1629960587
+  timestamp: 1589798067247.678
+  transportId: "RTCTransport_audio_1"
+
+video-media-source:
+  type: "media-source"
+  kind: "video"
+  height: 180
+  width: 320
+  framesPerSecond: 20
+  # others
+  id: "RTCVideoSource_2"
+  timestamp: 1589798068190.619
+  trackIdentifier: "9219168c-c55e-4eef-8cc5-0fb61ec0c471"

@@ -1,0 +1,190 @@
+pair:
+  type: "candidate-pair"
+  bytesReceived: 0
+  bytesSent: 0
+  selected: false
+  state: "failed"
+  # others
+  id: "d8ba1dba"
+  lastPacketReceivedTimestamp: 0
+  lastPacketSentTimestamp: 0
+  localCandidateId: "ad6fe27c"
+  nominated: false
+  priority: 4633677350444073000
+  readable: true
+  remoteCandidateId: "2f4b971b"
+  timestamp: 1589794133143
+  transportId: "transport_0"
+  writable: true
+
+pair2:
+  type: "candidate-pair"
+  bytesReceived: 19791
+  bytesSent: 4176202
+  selected: true
+  state: "succeeded"
+  # others
+  id: "a71b3b03"
+  lastPacketReceivedTimestamp: 1589794133026
+  lastPacketSentTimestamp: 1589794133142
+  localCandidateId: "14f9b73b"
+  nominated: true
+  priority: 4633677349907202000
+  readable: true
+  remoteCandidateId: "2f4b971b"
+  timestamp: 1589794133143
+  transportId: "transport_0"
+  writable: true
+
+local-candidate:
+  type: "local-candidate"
+  candidateType: "host"
+  address: "192.168.188.176"
+  port: 54283
+  protocol: "udp"
+  id: "ad6fe27c"
+  priority: 2122252543
+  timestamp: 1589794133143
+
+local-candidate1:
+  type: "local-candidate"
+  candidateType: "host"
+  address: "192.168.188.176"
+  port: 63636
+  protocol: "tcp"
+  id: "f4c70d9e"
+  priority: 2105524479
+  timestamp: 1589794133143
+
+local-candidate2:
+  type: "local-candidate"
+  candidateType: "prflx"
+  address: "106.75.220.2"
+  port: 54283
+  protocol: "udp"
+  id: "14f9b73b"
+  priority: 1853817087
+  timestamp: 1589794133143
+
+remote-candidate:
+  type: "remote-candidate"
+  candidateType: "host"
+  address: "106.75.166.157"
+  protocol: "udp"
+  port: 20139
+  id: "2f4b971b"
+  priority: 1078862079
+  timestamp: 1589794133143
+
+audio1:
+  type: "inbound-rtp"
+  kind: "audio"
+  mediaType: "audio"
+  jitter: 0
+  bytesReceived: 0
+  packetsReceived: 0
+  packetsLost: 0
+  nackCount: 0
+  # others
+  id: "efbc620"
+  ssrc: 0
+  timestamp: 1589794133146
+
+audio2:
+  type: "outbound-rtp"
+  kind: "audio"
+  mediaType: "audio"
+  bytesSent: 751360
+  packetsSent: 4343
+  # others
+  id: "c207239b"
+  nackCount: 0
+  remoteId: "cbcb9a88"
+  ssrc: 151424865
+  timestamp: 1589794133146
+
+audio3:
+  type: "remote-inbound-rtp"
+  kind: "audio"
+  mediaType: "audio"
+  jitter: 0
+  packetsLost: 0
+  roundTripTime: 0.035
+  bytesReceived: 679118
+  packetsReceived: 4218
+  # others
+  id: "cbcb9a88"
+  localId: "c207239b"
+  ssrc: 151424865
+  timestamp: 1589794133014
+
+video1:
+  type: "inbound-rtp"
+  kind: "video"
+  mediaType: "video"
+  packetsLost: 0
+  packetsReceived: 0
+  jitter: 0
+  nackCount: 0
+  pliCount: 0
+  firCount: 0
+  # others
+  bitrateMean: 0
+  bitrateStdDev: 0
+  bytesReceived: 0
+  discardedPackets: 0
+  framerateMean: 0
+  framerateStdDev: 0
+  framesDecoded: 0
+  id: "f1610008"
+  remoteId: "46e89316"
+  ssrc: 3203617866
+  timestamp: 1589794133147
+
+video2:
+  type: "outbound-rtp"
+  kind: "video"
+  mediaType: "video"
+  bytesSent: 3324797
+  packetsSent: 3841
+  nackCount: 0
+  pliCount: 36
+  firCount: 0
+  # others
+  bitrateMean: 292868.70114942535
+  bitrateStdDev: 36057.34421694722
+  droppedFrames: 13
+  framerateMean: 29.66666666666668
+  framerateStdDev: 1.7631015659294698
+  framesEncoded: 2574
+  id: "592ecc04"
+  qpSum: 10826
+  remoteId: "270bc534"
+  ssrc: 2595209450
+  timestamp: 1589794133146
+
+video3:
+  type: "remote-inbound-rtp"
+  kind: "video"
+  mediaType: "video"
+  bytesReceived: 3207738
+  packetsReceived: 3839
+  jitter: 0
+  packetsLost: 0
+  roundTripTime: 0.036
+  # others
+  id: "270bc534"
+  localId: "592ecc04"
+  ssrc: 2595209450
+  timestamp: 1589794133014
+
+video4:
+  type: "remote-outbound-rtp"
+  kind: "video"
+  mediaType: "video"
+  bytesSent: 0
+  packetsSent: 0
+  id: "46e89316"
+  localId: "f1610008"
+  ssrc: 3203617866
+  timestamp: 1589794133014

@@ -3,6 +3,7 @@ node_modules
 lib/index.js.map
 
 .DS_Store
+tmp
 
 yarn-error.log
 package-lock.json
