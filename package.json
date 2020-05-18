@@ -1,0 +1,27 @@
+{
+  "name": "peerconnection-stats",
+  "version": "0.0.1",
+  "description": "getStats API of peerconnection with `Standardized` and `Legacy Non-Standard` data",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/poplark/peerconnection-stats.git"
+  },
+  "keywords": [
+    "webrtc",
+    "peerconnection",
+    "getStats",
+    "standardized",
+    "legacy",
+    "no-standard"
+  ],
+  "author": "poplark",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/poplark/peerconnection-stats/issues"
+  },
+  "homepage": "https://github.com/poplark/peerconnection-stats#readme"
+}
