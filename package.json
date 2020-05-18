@@ -4,7 +4,9 @@
   "description": "getStats API of peerconnection with `Standardized` and `Legacy Non-Standard` reports",
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "karma start test/karma.config.js",
+    "dev": "webpack --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +20,14 @@
     "legacy",
     "no-standard"
   ],
-  "author": "poplark",
+  "author": {
+    "name": "poplark",
+    "email": "songkang666@126.com",
+    "url": "https://github.com/poplark"
+  },
+  "files": [
+    "lib/index.js"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/poplark/peerconnection-stats/issues"
@@ -29,8 +38,13 @@
     "jasmine-core": "^3.5.0",
     "karma": "^5.0.7",
     "karma-chrome-launcher": "^3.1.0",
+    "karma-edge-launcher": "^0.4.2",
+    "karma-firefox-launcher": "^1.3.0",
     "karma-jasmine": "^3.1.1",
+    "karma-opera-launcher": "^1.0.0",
+    "karma-safari-launcher": "^1.0.0",
     "karma-typescript": "^5.0.2",
+    "karma-typescript-es6-transform": "^5.0.2",
     "ts-loader": "^7.0.4",
     "typescript": "^3.9.2",
     "webpack": "^4.43.0",
