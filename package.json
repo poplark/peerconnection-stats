@@ -1,7 +1,7 @@
 {
   "name": "peerconnection-stats",
   "version": "0.0.1",
-  "description": "getStats API of peerconnection with `Standardized` and `Legacy Non-Standard` data",
+  "description": "getStats API of peerconnection with `Standardized` and `Legacy Non-Standard` reports",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -23,5 +23,17 @@
   "bugs": {
     "url": "https://github.com/poplark/peerconnection-stats/issues"
   },
-  "homepage": "https://github.com/poplark/peerconnection-stats#readme"
+  "homepage": "https://github.com/poplark/peerconnection-stats#readme",
+  "devDependencies": {
+    "@types/jasmine": "^3.5.10",
+    "jasmine-core": "^3.5.0",
+    "karma": "^5.0.7",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-jasmine": "^3.1.1",
+    "karma-typescript": "^5.0.2",
+    "ts-loader": "^7.0.4",
+    "typescript": "^3.9.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  }
 }

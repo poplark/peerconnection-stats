@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "rootDir": "src",
+    "outDir": "types",
+    "newLine": "LF",
+    "lib": [
+      "es2015",
+      "es2016",
+      "es2017",
+      "dom",
+      "scripthost"
+    ],
+    "moduleResolution": "classic",
+    "importHelpers": true,
+    "baseUrl": "./",
+    "paths": {
+      "tslib": ["node_modules/tslib/tslib.d.ts"]
+    },
+    "declaration": true,
+    "pretty": true,
+    "sourceMap": true,
+    "inlineSources": true,
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "noUnusedParameters": true,
+    "removeComments": true,
+    "experimentalDecorators": true
+  },
+  "include": [
+    "src/**/*",
+    "./*.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts",
+    "dist",
+    "es",
+    "lib"
+  ]
+}
