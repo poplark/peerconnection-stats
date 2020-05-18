@@ -51,7 +51,7 @@ remote-candidate:
   timestamp: 1589787245130.197
   transportId: "RTCTransport_audio_1"
 
-audio1:
+audio-inbound:
   type: inbound-rtp
   kind: audio
   mediaType: audio
@@ -73,7 +73,7 @@ audio1:
   trackId: "RTCMediaStreamTrack_receiver_1"
   transportId: "RTCTransport_audio_1"
 
-audio2:
+audio-track:
   type: track
   kind: audio
   remoteSource: true
@@ -95,7 +95,7 @@ audio2:
   totalSamplesReceived: 2291040
   trackIdentifier: "07868786-6740-443f-892c-f367ed51a93b"
 
-video1:
+video-inbound:
   type: "inbound-rtp"
   kind: "video"
   mediaType: "video"
@@ -124,7 +124,7 @@ video1:
   trackId: "RTCMediaStreamTrack_receiver_2"
   transportId: "RTCTransport_audio_1"
 
-video2:
+video-track:
   type: "track"
   kind: "video"
   remoteSource: true

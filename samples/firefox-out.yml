@@ -76,7 +76,7 @@ remote-candidate:
   priority: 1078862079
   timestamp: 1589794133143
 
-audio1:
+audio-inbound:
   type: "inbound-rtp"
   kind: "audio"
   mediaType: "audio"
@@ -90,7 +90,7 @@ audio1:
   ssrc: 0
   timestamp: 1589794133146
 
-audio2:
+audio-outbound:
   type: "outbound-rtp"
   kind: "audio"
   mediaType: "audio"
@@ -103,7 +103,7 @@ audio2:
   ssrc: 151424865
   timestamp: 1589794133146
 
-audio3:
+audio-inbound:
   type: "remote-inbound-rtp"
   kind: "audio"
   mediaType: "audio"
@@ -118,7 +118,7 @@ audio3:
   ssrc: 151424865
   timestamp: 1589794133014
 
-video1:
+video-inboud:
   type: "inbound-rtp"
   kind: "video"
   mediaType: "video"
@@ -141,7 +141,23 @@ video1:
   ssrc: 3203617866
   timestamp: 1589794133147
 
-video2:
+video-inbound2:
+  type: "remote-inbound-rtp"
+  kind: "video"
+  mediaType: "video"
+  bytesReceived: 3207738
+  packetsReceived: 3839
+  jitter: 0
+  packetsLost: 0
+  roundTripTime: 0.036
+  # others
+  id: "270bc534"
+  localId: "592ecc04"
+  ssrc: 2595209450
+  timestamp: 1589794133014
+
+
+video-outboud:
   type: "outbound-rtp"
   kind: "video"
   mediaType: "video"
@@ -163,22 +179,7 @@ video2:
   ssrc: 2595209450
   timestamp: 1589794133146
 
-video3:
-  type: "remote-inbound-rtp"
-  kind: "video"
-  mediaType: "video"
-  bytesReceived: 3207738
-  packetsReceived: 3839
-  jitter: 0
-  packetsLost: 0
-  roundTripTime: 0.036
-  # others
-  id: "270bc534"
-  localId: "592ecc04"
-  ssrc: 2595209450
-  timestamp: 1589794133014
-
-video4:
+video-outbound2:
   type: "remote-outbound-rtp"
   kind: "video"
   mediaType: "video"
