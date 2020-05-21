@@ -1,452 +1,323 @@
 Reports:
-  - RTCLegacyStatsReport:
-    id: googTrack_35778b66-7b8b-42a8-b4d6-a9d13552a9ee
+  # RTCLegacyStatsReport:
+  - id: googTrack_4f7781e8-60da-4f03-8a48-2d8a8e3db1ad
     type: googTrack
     stats:
-      - stat:
-        name: googTrackId
-        value: 35778b66-7b8b-42a8-b4d6-a9d13552a9ee
-  - RTCLegacyStatsReport:
-    id: googTrack_9d904cef-beeb-40e3-9def-0f05a06fed53
+      - name: googTrackId
+        value: 4f7781e8-60da-4f03-8a48-2d8a8e3db1ad
+  # RTCLegacyStatsReport:
+  - id: googTrack_a1a55fdd-ac92-4d63-b1ee-c15a4febdb4d
     type: googTrack
     stats:
-      - stat:
-        name: googTrackId
-        value: 9d904cef-beeb-40e3-9def-0f05a06fed53
-  - RTCLegacyStatsReport:
-    id: googLibjingleSession_8606926110561703304
+      - name: googTrackId
+        value: a1a55fdd-ac92-4d63-b1ee-c15a4febdb4d
+  # RTCLegacyStatsReport:
+  - id: googLibjingleSession_3538753784804259988
     type: googLibjingleSession
     stats:
-      - stat:
-        name: googInitiator
+      - name: googInitiator
         value: true
-  - RTCLegacyStatsReport:
-    id: bweforvideo
+  # RTCLegacyStatsReport:
+  - id: bweforvideo
     type: VideoBwe
     stats:
-      - stat:
-        name: googActualEncBitrate
-        value: 280512
-      - stat:
-        name: googAvailableSendBandwidth
+      - name: googActualEncBitrate
+        value: 299512
+      - name: googAvailableSendBandwidth
         value: 300000
-      - stat:
-        name: googRetransmitBitrate
+      - name: googRetransmitBitrate
         value: 0
-      - stat:
-        name: googAvailableReceiveBandwidth
+      - name: googAvailableReceiveBandwidth
         value: 0
-      - stat:
-        name: googTargetEncBitrate
-        value: 298784
-      - stat:
-        name: googBucketDelay
-        value: 0
-      - stat:
-        name: googTransmitBitrate
-        value: 280240
-  - RTCLegacyStatsReport:
-    id: googCertificate_AC:0F:24:DA:9D:22:42:BF:84:C0:19:A1:AD:05:D4:71:D3:2B:E8:02:09:07:93:FA:F3:A1:98:DD:2E:B5:D8:44
+      - name: googTargetEncBitrate
+        value: 298720
+      - name: googBucketDelay
+        value: 11
+      - name: googTransmitBitrate
+        value: 320536
+  # RTCLegacyStatsReport:
+  - id: googCertificate_D8:89:88:A2:7C:06:84:89:0C:B2:47:09:5D:61:50:5D:CD:72:41:5B:88:D5:C7:64:0F:E5:22:48:88:59:5D:E4
     type: googCertificate
     stats:
-      - stat:
-        name: googFingerprint
-        value: AC:0F:24:DA:9D:22:42:BF:84:C0:19:A1:AD:05:D4:71:D3:2B:E8:02:09:07:93:FA:F3:A1:98:DD:2E:B5:D8:44
-      - stat:
-        name: googFingerprintAlgorithm
+      - name: googFingerprint
+        value: D8:89:88:A2:7C:06:84:89:0C:B2:47:09:5D:61:50:5D:CD:72:41:5B:88:D5:C7:64:0F:E5:22:48:88:59:5D:E4
+      - name: googFingerprintAlgorithm
         value: sha-256
-      - stat:
-        name: googDerBase64
-        value: MIIBFjCBvaADAgECAgkAj13xu1exmyEwCgYIKoZIzj0EAwIwETEPMA0GA1UEAwwGV2ViUlRDMB4XDTIwMDUxOTA2NTcyNVoXDTIwMDYxOTA2NTcyNVowETEPMA0GA1UEAwwGV2ViUlRDMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAErnUfmNet7/yXMgJtJG72Qr99KuVOa8wKwHuiLJ65I7QUHBRjJGa9pzk8UODwCPI+Zt2R5+UUQeSZFwTeTRy/szAKBggqhkjOPQQDAgNIADBFAiEAmHHOAluBeZAyMQxRUO61CqMI34W3L1CZCQOpL7jtkQECIEMmAA1IJb7HYFfIYoEXd5STgURsDzBGNgbUERavLzMG
-  - RTCLegacyStatsReport:
-    id: Channel-audio-1
+      - name: googDerBase64
+        value: MIIBFjCBvaADAgECAgkAjIcyx6AypIIwCgYIKoZIzj0EAwIwETEPMA0GA1UEAwwGV2ViUlRDMB4XDTIwMDUyMDA5MDc1MFoXDTIwMDYyMDA5MDc1MFowETEPMA0GA1UEAwwGV2ViUlRDMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEHFQOoDetYBmSQpmbUSmuG8b/4R1tEYlLHJCKKf9ZEXVxOoxVUz8LZoNm9wIWG6n2PerzG3d3crbG6AMLaxgbgTAKBggqhkjOPQQDAgNIADBFAiBtNjFovN7iVxVJD4q+X548XKxSFQu6EN2ZsOVPqMdd7QIhAIr4r3WgML+Nkk1+AtwAktmL5AQWq3KNmRwhd6kx4qKH
+  # RTCLegacyStatsReport:
+  - id: Channel-audio-1
     type: googComponent
     stats:
-      - stat:
-        name: googComponent
+      - name: googComponent
         value: 1
-      - stat:
-        name: remoteCertificateId
-        value: googCertificate_77:71:33:76:C5:CD:5C:04:34:51:21:99:4E:F4:49:19:5A:EA:B6:14
-      - stat:
-        name: selectedCandidatePairId
+      - name: remoteCertificateId
+        value: googCertificate_AC:D7:98:CA:44:5D:64:D4:F3:B9:BA:11:E7:F4:FF:46:30:09:FF:BA
+      - name: selectedCandidatePairId
         value: Conn-audio-1-0
-      - stat:
-        name: dtlsCipher
+      - name: dtlsCipher
         value: TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256
-      - stat:
-        name: localCertificateId
-        value: googCertificate_AC:0F:24:DA:9D:22:42:BF:84:C0:19:A1:AD:05:D4:71:D3:2B:E8:02:09:07:93:FA:F3:A1:98:DD:2E:B5:D8:44
-      - stat:
-        name: srtpCipher
+      - name: localCertificateId
+        value: googCertificate_D8:89:88:A2:7C:06:84:89:0C:B2:47:09:5D:61:50:5D:CD:72:41:5B:88:D5:C7:64:0F:E5:22:48:88:59:5D:E4
+      - name: srtpCipher
         value: AES_CM_128_HMAC_SHA1_80
-  - RTCLegacyStatsReport:
-    id: Cand-FPmLsOj5
+  # RTCLegacyStatsReport:
+  - id: Cand-XvO9+yrJ
     type: localcandidate
     stats:
-      - stat:
-        name: stunKeepaliveRequestsSent
+      - name: stunKeepaliveRequestsSent
         value: 0
-      - stat:
-        name: portNumber
-        value: 62924
-      - stat:
-        name: networkType
+      - name: portNumber
+        value: 49447
+      - name: networkType
         value: wlan
-      - stat:
-        name: ipAddress
+      - name: ipAddress
         value: 192.168.188.176
-      - stat:
-        name: stunKeepaliveResponsesReceived
+      - name: stunKeepaliveResponsesReceived
         value: 0
-      - stat:
-        name: stunKeepaliveRttTotal
+      - name: stunKeepaliveRttTotal
         value: 0
-      - stat:
-        name: transport
+      - name: transport
         value: udp
-      - stat:
-        name: candidateType
+      - name: candidateType
         value: host
-      - stat:
-        name: stunKeepaliveRttSquaredTotal
+      - name: stunKeepaliveRttSquaredTotal
         value: 0
-      - stat:
-        name: priority
+      - name: priority
         value: 2122260223
-  - RTCLegacyStatsReport:
-    id: Channel-video-1
+  # RTCLegacyStatsReport:
+  - id: Channel-video-1
     type: googComponent
     stats:
-      - stat:
-        name: googComponent
+      - name: googComponent
         value: 1
-      - stat:
-        name: localCertificateId
-        value: googCertificate_AC:0F:24:DA:9D:22:42:BF:84:C0:19:A1:AD:05:D4:71:D3:2B:E8:02:09:07:93:FA:F3:A1:98:DD:2E:B5:D8:44
-  - RTCLegacyStatsReport:
-    id: Cand-Hf795rm0
+      - name: localCertificateId
+        value: googCertificate_D8:89:88:A2:7C:06:84:89:0C:B2:47:09:5D:61:50:5D:CD:72:41:5B:88:D5:C7:64:0F:E5:22:48:88:59:5D:E4
+  # RTCLegacyStatsReport:
+  - id: Cand-gEt3Z4ug
     type: localcandidate
     stats:
-      - stat:
-        name: stunKeepaliveRequestsSent
+      - name: stunKeepaliveRequestsSent
         value: 0
-      - stat:
-        name: portNumber
-        value: 54919
-      - stat:
-        name: networkType
+      - name: portNumber
+        value: 50832
+      - name: networkType
         value: wlan
-      - stat:
-        name: ipAddress
+      - name: ipAddress
         value: 192.168.188.176
-      - stat:
-        name: stunKeepaliveResponsesReceived
+      - name: stunKeepaliveResponsesReceived
         value: 0
-      - stat:
-        name: stunKeepaliveRttTotal
+      - name: stunKeepaliveRttTotal
         value: 0
-      - stat:
-        name: transport
+      - name: transport
         value: udp
-      - stat:
-        name: candidateType
+      - name: candidateType
         value: host
-      - stat:
-        name: stunKeepaliveRttSquaredTotal
+      - name: stunKeepaliveRttSquaredTotal
         value: 0
-      - stat:
-        name: priority
+      - name: priority
         value: 2122260223
-  - RTCLegacyStatsReport:
-    id: ssrc_3412935543_send
+  # RTCLegacyStatsReport:
+  - id: ssrc_2068043731_send
     type: ssrc
     stats:
-      - stat:
-        name: audioInputLevel
-        value: 1505
-      - stat:
-        name: transportId
+      - name: audioInputLevel
+        value: 302
+      - name: transportId
         value: Channel-audio-1
-      - stat:
-        name: mediaType
+      - name: mediaType
         value: audio
-      - stat:
-        name: packetsLost
-        value: 21
-      - stat:
-        name: googTrackId
-        value: 35778b66-7b8b-42a8-b4d6-a9d13552a9ee
-      - stat:
-        name: googRtt
-        value: 54
-      - stat:
-        name: googCodecName
-        value: opus
-      - stat:
-        name: totalAudioEnergy
-        value: 104.444
-      - stat:
-        name: ssrc
-        value: 3412935543
-      - stat:
-        name: googJitterReceived
+      - name: packetsLost
         value: 0
-      - stat:
-        name: googTypingNoiseState
+      - name: googTrackId
+        value: 4f7781e8-60da-4f03-8a48-2d8a8e3db1ad
+      - name: googRtt
+        value: 30
+      - name: googCodecName
+        value: opus
+      - name: totalAudioEnergy
+        value: 0.0483321
+      - name: ssrc
+        value: 2068043731
+      - name: googJitterReceived
+        value: 0
+      - name: googTypingNoiseState
         value: false
-      - stat:
-        name: packetsSent
-        value: 494017
-      - stat:
-        name: bytesSent
-        value: 45654947
-      - stat:
-        name: totalSamplesDuration
-        value: 9858.38
-  - RTCLegacyStatsReport:
-    id: ssrc_1268561741_send
+      - name: packetsSent
+        value: 1306
+      - name: bytesSent
+        value: 123430
+      - name: totalSamplesDuration
+        value: 26.39
+  # RTCLegacyStatsReport:
+  - id: ssrc_489380160_send
     type: ssrc
     stats:
-      - stat:
-        name: googContentType
+      - name: googContentType
         value: realtime
-      - stat:
-        name: googFrameWidthInput
+      - name: googFrameWidthInput
         value: 320
-      - stat:
-        name: googFrameWidthSent
+      - name: googFrameWidthSent
         value: 320
-      - stat:
-        name: packetsLost
-        value: 79
-      - stat:
-        name: googRtt
-        value: 33
-      - stat:
-        name: googHasEnteredLowResolution
+      - name: packetsLost
+        value: 0
+      - name: googRtt
+        value: 30
+      - name: googHasEnteredLowResolution
         value: false
-      - stat:
-        name: googEncodeUsagePercent
-        value: 8
-      - stat:
-        name: googCpuLimitedResolution
+      - name: googEncodeUsagePercent
+        value: 9
+      - name: googCpuLimitedResolution
         value: false
-      - stat:
-        name: googNacksReceived
-        value: 348
-      - stat:
-        name: googBandwidthLimitedResolution
+      - name: googNacksReceived
+        value: 0
+      - name: googBandwidthLimitedResolution
         value: false
-      - stat:
-        name: googFrameHeightInput
+      - name: googFrameHeightInput
         value: 180
-      - stat:
-        name: googAvgEncodeMs
-        value: 2
-      - stat:
-        name: googTrackId
-        value: 9d904cef-beeb-40e3-9def-0f05a06fed53
-      - stat:
-        name: googFrameRateInput
+      - name: googAvgEncodeMs
+        value: 14
+      - name: googTrackId
+        value: a1a55fdd-ac92-4d63-b1ee-c15a4febdb4d
+      - name: googFrameRateInput
         value: 19
-      - stat:
-        name: framesEncoded
-        value: 200646
-      - stat:
-        name: codecImplementationName
+      - name: framesEncoded
+        value: 516
+      - name: codecImplementationName
         value: libvpx
-      - stat:
-        name: transportId
+      - name: transportId
         value: Channel-audio-1
-      - stat:
-        name: mediaType
+      - name: mediaType
         value: video
-      - stat:
-        name: googFrameHeightSent
+      - name: googFrameHeightSent
         value: 180
-      - stat:
-        name: googFrameRateSent
+      - name: googFrameRateSent
         value: 19
-      - stat:
-        name: googCodecName
+      - name: googCodecName
         value: VP8
-      - stat:
-        name: hugeFramesSent
+      - name: hugeFramesSent
         value: 0
-      - stat:
-        name: qpSum
-        value: 420030
-      - stat:
-        name: googPlisReceived
-        value: 683
-      - stat:
-        name: googAdaptationChanges
+      - name: qpSum
+        value: 3759
+      - name: googPlisReceived
+        value: 2
+      - name: googAdaptationChanges
         value: 0
-      - stat:
-        name: ssrc
-        value: 1268561741
-      - stat:
-        name: googFirsReceived
+      - name: ssrc
+        value: 489380160
+      - name: googFirsReceived
         value: 0
-      - stat:
-        name: packetsSent
-        value: 389382
-      - stat:
-        name: bytesSent
-        value: 341260584
-  - RTCLegacyStatsReport:
-    id: googCertificate_77:71:33:76:C5:CD:5C:04:34:51:21:99:4E:F4:49:19:5A:EA:B6:14
+      - name: packetsSent
+        value: 1042
+      - name: bytesSent
+        value: 963477
+  # RTCLegacyStatsReport:
+  - id: googCertificate_AC:D7:98:CA:44:5D:64:D4:F3:B9:BA:11:E7:F4:FF:46:30:09:FF:BA
     type: googCertificate
     stats:
-      - stat:
-        name: googFingerprint
-        value: 77:71:33:76:C5:CD:5C:04:34:51:21:99:4E:F4:49:19:5A:EA:B6:14
-      - stat:
-        name: googFingerprintAlgorithm
+      - name: googFingerprint
+        value: AC:D7:98:CA:44:5D:64:D4:F3:B9:BA:11:E7:F4:FF:46:30:09:FF:BA
+      - name: googFingerprintAlgorithm
         value: sha-1
-      - stat:
-        name: googDerBase64
-        value: MIIB3jCCAUegAwIBAgIDOwuoMA0GCSqGSIb3DQEBBQUAMDQxGDAWBgNVBAoMD21lZGlhc291cDIxMTU4NTEYMBYGA1UEAwwPbWVkaWFzb3VwMjExNTg1MB4XDTEwMDUxODA4MDU0NFoXDTMwMDUxMzA4MDU0NFowNDEYMBYGA1UECgwPbWVkaWFzb3VwMjExNTg1MRgwFgYDVQQDDA9tZWRpYXNvdXAyMTE1ODUwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKaYncNYy7h50URIPl9katuAPXzcRUQcJ+i90HjHFc+Hgk1o2rsZiD9w1XM6ktsToJCXxulTuHRnPPs5FShyJh+S0G8EKGTv4VeD8MO/w8lqjlwxJnQiglHeojABroPT1PdeWh15Javx+tzdzvkQ/CAcOrjYnB1qTtuJpcdi9ywDAgMBAAEwDQYJKoZIhvcNAQEFBQADgYEAVTvtxBIb4uydFe5jeAVX8m+fOFDOFryGBx+J5FFyBaRRywu36wrg0tSrbyouSCiTDjPZnEpk9+zASnVZovE9YTp/BaeyraZHntWlDzTmoyj736yTJA3hwysiaPJ4GfBXP+bGwyWENyeP++bTxnXMtaEdAFUrzmEND1u4uSTcge0=
-  - RTCLegacyStatsReport:
-    id: Cand-cA2UYEr+
+      - name: googDerBase64
+        value: MIIB3jCCAUegAwIBAgIDOwuoMA0GCSqGSIb3DQEBBQUAMDQxGDAWBgNVBAoMD21lZGlhc291cDIxMTU4NTEYMBYGA1UEAwwPbWVkaWFzb3VwMjExNTg1MB4XDTEwMDUyNDAzNDgyNVoXDTMwMDUxOTAzNDgyNVowNDEYMBYGA1UECgwPbWVkaWFzb3VwMjExNTg1MRgwFgYDVQQDDA9tZWRpYXNvdXAyMTE1ODUwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALajqohIyE0BR/Dx8L9yGii3vnpufrX9xtMZE3VQP/KFsl66lJGgSDrOFtSJHiThNIzMKDt++Yi1l5uXV+9gA3Zzr3UfYQ675pXw0VS0X6kBtY5P2kmMBoxvBCG3DXvTm5eYRK3cfiRNfGtzpkyC5r1NebDSA87BlebMzbn0vt7zAgMBAAEwDQYJKoZIhvcNAQEFBQADgYEAambEzf5RKeA+6eaCcg2mP9IurLiCkAsgAPhcjgi/dtxrplD0hZLqP1VqNy3ljWm3RmqsAn122BeR3kog3YP9v5wlnbaqL7+l5qwoxo6k9mK77xLoZ8C7uzU5lLrjeVu33x1WmOaduBBFOwKCb6UjSsvOIx9VwwUHD9C+Pzj65HY=
+  # RTCLegacyStatsReport:
+  - id: Cand-1+BZwzyE
     type: localcandidate
     stats:
-      - stat:
-        name: stunKeepaliveRequestsSent
+      - name: stunKeepaliveRequestsSent
         value: 0
-      - stat:
-        name: portNumber
-        value: 62924
-      - stat:
-        name: networkType
+      - name: portNumber
+        value: 49447
+      - name: networkType
         value: wlan
-      - stat:
-        name: ipAddress
+      - name: ipAddress
         value: 106.75.220.2
-      - stat:
-        name: stunKeepaliveResponsesReceived
+      - name: stunKeepaliveResponsesReceived
         value: 0
-      - stat:
-        name: stunKeepaliveRttTotal
+      - name: stunKeepaliveRttTotal
         value: 0
-      - stat:
-        name: transport
+      - name: transport
         value: udp
-      - stat:
-        name: candidateType
+      - name: candidateType
         value: peerreflexive
-      - stat:
-        name: stunKeepaliveRttSquaredTotal
+      - name: stunKeepaliveRttSquaredTotal
         value: 0
-      - stat:
-        name: priority
+      - name: priority
         value: 1853824767
-  - RTCLegacyStatsReport:
-    id: Cand-aMqNmbRS
+  # RTCLegacyStatsReport:
+  - id: Cand-gXybYaoE
     type: localcandidate
     stats:
-      - stat:
-        name: portNumber
+      - name: portNumber
         value: 9
-      - stat:
-        name: networkType
+      - name: networkType
         value: wlan
-      - stat:
-        name: ipAddress
+      - name: ipAddress
         value: 192.168.188.176
-      - stat:
-        name: transport
+      - name: transport
         value: tcp
-      - stat:
-        name: candidateType
+      - name: candidateType
         value: host
-      - stat:
-        name: priority
+      - name: priority
         value: 1518280447
-  - RTCLegacyStatsReport:
-    id: Conn-audio-1-0
+  # RTCLegacyStatsReport:
+  - id: Conn-audio-1-0
     type: googCandidatePair
     stats:
-      - stat:
-        name: responsesSent
+      - name: responsesSent
         value: 0
-      - stat:
-        name: requestsReceived
+      - name: requestsReceived
         value: 0
-      - stat:
-        name: googRemoteCandidateType
+      - name: googRemoteCandidateType
         value: local
-      - stat:
-        name: googReadable
+      - name: googReadable
         value: true
-      - stat:
-        name: googLocalAddress
-        value: 106.75.220.2:62924
-      - stat:
-        name: consentRequestsSent
-        value: 1
-      - stat:
-        name: googTransportType
+      - name: googLocalAddress
+        value: 106.75.220.2:49447
+      - name: consentRequestsSent
+        value: 2
+      - name: googTransportType
         value: udp
-      - stat:
-        name: googChannelId
+      - name: googChannelId
         value: Channel-audio-1
-      - stat:
-        name: googLocalCandidateType
+      - name: googLocalCandidateType
         value: prflx
-      - stat:
-        name: googWritable
+      - name: googWritable
         value: true
-      - stat:
-        name: requestsSent
-        value: 4037
-      - stat:
-        name: googRemoteAddress
-        value: 106.75.167.159:24674
-      - stat:
-        name: googRtt
-        value: 30
-      - stat:
-        name: googActiveConnection
+      - name: requestsSent
+        value: 14
+      - name: googRemoteAddress
+        value: 106.75.167.159:25205
+      - name: googRtt
+        value: 37
+      - name: googActiveConnection
         value: true
-      - stat:
-        name: packetsDiscardedOnSend
+      - name: packetsDiscardedOnSend
         value: 0
-      - stat:
-        name: bytesReceived
-        value: 2264607
-      - stat:
-        name: responsesReceived
-        value: 4017
-      - stat:
-        name: remoteCandidateId
-        value: Cand-o39lexQE
-      - stat:
-        name: localCandidateId
-        value: Cand-cA2UYEr+
-      - stat:
-        name: bytesSent
-        value: 396799217
-      - stat:
-        name: packetsSent
-        value: 895501
-  - RTCLegacyStatsReport:
-    id: Cand-o39lexQE
+      - name: bytesReceived
+        value: 5941
+      - name: responsesReceived
+        value: 14
+      - name: remoteCandidateId
+        value: Cand-OwNVw9OL
+      - name: localCandidateId
+        value: Cand-1+BZwzyE
+      - name: bytesSent
+        value: 1113540
+      - name: packetsSent
+        value: 2378
+  # RTCLegacyStatsReport:
+  - id: Cand-OwNVw9OL
     type: remotecandidate
     stats:
-      - stat:
-        name: portNumber
-        value: 24674
-      - stat:
-        name: ipAddress
+      - name: portNumber
+        value: 25205
+      - name: ipAddress
         value: 106.75.167.159
-      - stat:
-        name: transport
+      - name: transport
         value: udp
-      - stat:
-        name: candidateType
+      - name: candidateType
         value: host
-      - stat:
-        name: priority
+      - name: priority
         value: 1078862079

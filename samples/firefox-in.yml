@@ -1,383 +1,269 @@
 Reports:
-  - RTCStatsReport:
-    id: 54656fd8
+  # RTCStatsReport:
+  - id: 54656fd8
     type: candidate-pair
     stats:
-      - stat:
-        name: id
+      - name: id
         value: 54656fd8
-      - stat:
-        name: timestamp
+      - name: timestamp
         value: 1589968099020
-      - stat:
-        name: type
+      - name: type
         value: candidate-pair
-      - stat:
-        name: bytesReceived
+      - name: bytesReceived
         value: 0
-      - stat:
-        name: bytesSent
+      - name: bytesSent
         value: 0
-      - stat:
-        name: lastPacketReceivedTimestamp
+      - name: lastPacketReceivedTimestamp
         value: 0
-      - stat:
-        name: lastPacketSentTimestamp
+      - name: lastPacketSentTimestamp
         value: 0
-      - stat:
-        name: localCandidateId
+      - name: localCandidateId
         value: e6b16511
-      - stat:
-        name: nominated
+      - name: nominated
         value: false
-      - stat:
-        name: priority
+      - name: priority
         value: 4633677350444073000
-      - stat:
-        name: readable
+      - name: readable
         value: true
-      - stat:
-        name: remoteCandidateId
+      - name: remoteCandidateId
         value: 2998f384
-      - stat:
-        name: selected
+      - name: selected
         value: false
-      - stat:
-        name: state
+      - name: state
         value: failed
-      - stat:
-        name: transportId
+      - name: transportId
         value: transport_0
-      - stat:
-        name: writable
+      - name: writable
         value: true
-  - RTCStatsReport:
-    id: a9ed5b26
+  # RTCStatsReport:
+  - id: a9ed5b26
     type: candidate-pair
     stats:
-      - stat:
-        name: id
+      - name: id
         value: a9ed5b26
-      - stat:
-        name: timestamp
+      - name: timestamp
         value: 1589968099020
-      - stat:
-        name: type
+      - name: type
         value: candidate-pair
-      - stat:
-        name: bytesReceived
+      - name: bytesReceived
         value: 1776259
-      - stat:
-        name: bytesSent
+      - name: bytesSent
         value: 10139
-      - stat:
-        name: lastPacketReceivedTimestamp
+      - name: lastPacketReceivedTimestamp
         value: 1589968099003
-      - stat:
-        name: lastPacketSentTimestamp
+      - name: lastPacketSentTimestamp
         value: 1589968098854
-      - stat:
-        name: localCandidateId
+      - name: localCandidateId
         value: c271cbe9
-      - stat:
-        name: nominated
+      - name: nominated
         value: true
-      - stat:
-        name: priority
+      - name: priority
         value: 4633677349907202000
-      - stat:
-        name: readable
+      - name: readable
         value: true
-      - stat:
-        name: remoteCandidateId
+      - name: remoteCandidateId
         value: 2998f384
-      - stat:
-        name: selected
+      - name: selected
         value: true
-      - stat:
-        name: state
+      - name: state
         value: succeeded
-      - stat:
-        name: transportId
+      - name: transportId
         value: transport_0
-      - stat:
-        name: writable
+      - name: writable
         value: true
-  - RTCStatsReport:
-    id: e6b16511
+  # RTCStatsReport:
+  - id: e6b16511
     type: local-candidate
     stats:
-      - stat:
-        name: id
+      - name: id
         value: e6b16511
-      - stat:
-        name: timestamp
+      - name: timestamp
         value: 1589968099020
-      - stat:
-        name: type
+      - name: type
         value: local-candidate
-      - stat:
-        name: address
+      - name: address
         value: 192.168.188.176
-      - stat:
-        name: candidateType
+      - name: candidateType
         value: host
-      - stat:
-        name: port
+      - name: port
         value: 52421
-      - stat:
-        name: priority
+      - name: priority
         value: 2122252543
-      - stat:
-        name: protocol
+      - name: protocol
         value: udp
-  - RTCStatsReport:
-    id: 6b0d166f
+  # RTCStatsReport:
+  - id: 6b0d166f
     type: local-candidate
     stats:
-      - stat:
-        name: id
+      - name: id
         value: 6b0d166f
-      - stat:
-        name: timestamp
+      - name: timestamp
         value: 1589968099020
-      - stat:
-        name: type
+      - name: type
         value: local-candidate
-      - stat:
-        name: address
+      - name: address
         value: 192.168.188.176
-      - stat:
-        name: candidateType
+      - name: candidateType
         value: host
-      - stat:
-        name: port
+      - name: port
         value: 53885
-      - stat:
-        name: priority
+      - name: priority
         value: 2105524479
-      - stat:
-        name: protocol
+      - name: protocol
         value: tcp
-  - RTCStatsReport:
-    id: c271cbe9
+  # RTCStatsReport:
+  - id: c271cbe9
     type: local-candidate
     stats:
-      - stat:
-        name: id
+      - name: id
         value: c271cbe9
-      - stat:
-        name: timestamp
+      - name: timestamp
         value: 1589968099020
-      - stat:
-        name: type
+      - name: type
         value: local-candidate
-      - stat:
-        name: address
+      - name: address
         value: 106.75.220.2
-      - stat:
-        name: candidateType
+      - name: candidateType
         value: prflx
-      - stat:
-        name: port
+      - name: port
         value: 52421
-      - stat:
-        name: priority
+      - name: priority
         value: 1853817087
-      - stat:
-        name: protocol
+      - name: protocol
         value: udp
-  - RTCStatsReport:
-    id: 2998f384
+  # RTCStatsReport:
+  - id: 2998f384
     type: remote-candidate
     stats:
-      - stat:
-        name: id
+      - name: id
         value: 2998f384
-      - stat:
-        name: timestamp
+      - name: timestamp
         value: 1589968099020
-      - stat:
-        name: type
+      - name: type
         value: remote-candidate
-      - stat:
-        name: address
+      - name: address
         value: 106.75.166.201
-      - stat:
-        name: candidateType
+      - name: candidateType
         value: host
-      - stat:
-        name: port
+      - name: port
         value: 28966
-      - stat:
-        name: priority
+      - name: priority
         value: 1078862079
-      - stat:
-        name: protocol
+      - name: protocol
         value: udp
-  - RTCStatsReport:
-    id: ac70976
+  # RTCStatsReport:
+  - id: ac70976
     type: inbound-rtp
     stats:
-      - stat:
-        name: id
+      - name: id
         value: ac70976
-      - stat:
-        name: timestamp
+      - name: timestamp
         value: 1589968099020
-      - stat:
-        name: type
+      - name: type
         value: inbound-rtp
-      - stat:
-        name: kind
+      - name: kind
         value: audio
-      - stat:
-        name: mediaType
+      - name: mediaType
         value: audio
-      - stat:
-        name: ssrc
+      - name: ssrc
         value: 842940053
-      - stat:
-        name: jitter
+      - name: jitter
         value: 0.014
-      - stat:
-        name: packetsLost
+      - name: packetsLost
         value: 15
-      - stat:
-        name: packetsReceived
+      - name: packetsReceived
         value: 1547
-      - stat:
-        name: bytesReceived
+      - name: bytesReceived
         value: 141983
-      - stat:
-        name: nackCount
+      - name: nackCount
         value: 0
-      - stat:
-        name: remoteId
+      - name: remoteId
         value: 4dbeae9
-  - RTCStatsReport:
-    id: 6f2d0a31
+  # RTCStatsReport:
+  - id: 6f2d0a31
     type: inbound-rtp
     stats:
-      - stat:
-        name: id
+      - name: id
         value: 6f2d0a31
-      - stat:
-        name: timestamp
+      - name: timestamp
         value: 1589968099021
-      - stat:
-        name: type
+      - name: type
         value: inbound-rtp
-      - stat:
-        name: kind
+      - name: kind
         value: video
-      - stat:
-        name: mediaType
+      - name: mediaType
         value: video
-      - stat:
-        name: ssrc
+      - name: ssrc
         value: 741299064
-      - stat:
-        name: discardedPackets
+      - name: discardedPackets
         value: 0
-      - stat:
-        name: jitter
+      - name: jitter
         value: 0.059
-      - stat:
-        name: packetsLost
+      - name: packetsLost
         value: 14
-      - stat:
-        name: packetsReceived
+      - name: packetsReceived
         value: 1227
-      - stat:
-        name: bitrateMean
+      - name: bitrateMean
         value: 257511.51515151514
-      - stat:
-        name: bitrateStdDev
+      - name: bitrateStdDev
         value: 104314.28722738594
-      - stat:
-        name: bytesReceived
+      - name: bytesReceived
         value: 1099756
-      - stat:
-        name: firCount
+      - name: firCount
         value: 0
-      - stat:
-        name: framerateMean
+      - name: framerateMean
         value: 14.848484848484846
-      - stat:
-        name: framerateStdDev
+      - name: framerateStdDev
         value: 8.628155988250082
-      - stat:
-        name: framesDecoded
+      - name: framesDecoded
         value: 644
-      - stat:
-        name: nackCount
+      - name: nackCount
         value: 36
-      - stat:
-        name: pliCount
+      - name: pliCount
         value: 2
-      - stat:
-        name: remoteId
+      - name: remoteId
         value: 8f0a8473
-  - RTCStatsReport:
-    id: 4dbeae9
+  # RTCStatsReport:
+  - id: 4dbeae9
     type: remote-outbound-rtp
     stats:
-      - stat:
-        name: id
+      - name: id
         value: 4dbeae9
-      - stat:
-        name: timestamp
+      - name: timestamp
         value: 1589968098907
-      - stat:
-        name: type
+      - name: type
         value: remote-outbound-rtp
-      - stat:
-        name: kind
+      - name: kind
         value: audio
-      - stat:
-        name: mediaType
+      - name: mediaType
         value: audio
-      - stat:
-        name: ssrc
+      - name: ssrc
         value: 842940053
-      - stat:
-        name: bytesSent
+      - name: bytesSent
         value: 279612
-      - stat:
-        name: packetsSent
+      - name: packetsSent
         value: 3042
-      - stat:
-        name: localId
+      - name: localId
         value: ac70976
-  - RTCStatsReport:
-    id: 8f0a8473
+  # RTCStatsReport:
+  - id: 8f0a8473
     type: remote-outbound-rtp
     stats:
-      - stat:
-        name: id
+      - name: id
         value: 8f0a8473
-      - stat:
-        name: timestamp
+      - name: timestamp
         value: 1589968098907
-      - stat:
-        name: type
+      - name: type
         value: remote-outbound-rtp
-      - stat:
-        name: kind
+      - name: kind
         value: video
-      - stat:
-        name: mediaType
+      - name: mediaType
         value: video
-      - stat:
-        name: ssrc
+      - name: ssrc
         value: 741299064
-      - stat:
-        name: bytesSent
+      - name: bytesSent
         value: 1068314
-      - stat:
-        name: packetsSent
+      - name: packetsSent
         value: 1191
-      - stat:
-        name: localId
+      - name: localId
         value: 6f2d0a31

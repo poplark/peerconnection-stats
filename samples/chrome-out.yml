@@ -1,617 +1,433 @@
 Reports:
-  - RTCStatsReport:
-    id: RTCAudioSource_1
+  # RTCStatsReport:
+  - id: RTCAudioSource_1
     type: media-source
     stats:
-      - stat:
-        name: id
+      - name: id
         value: RTCAudioSource_1
-      - stat:
-        name: timestamp
-        value: 1589967936625.601
-      - stat:
-        name: type
+      - name: timestamp
+        value: 1590052098549.883
+      - name: type
         value: media-source
-      - stat:
-        name: trackIdentifier
-        value: 35778b66-7b8b-42a8-b4d6-a9d13552a9ee
-      - stat:
-        name: kind
+      - name: trackIdentifier
+        value: 4f7781e8-60da-4f03-8a48-2d8a8e3db1ad
+      - name: kind
         value: audio
-      - stat:
-        name: audioLevel
-        value: 0.04327524643696402
-      - stat:
-        name: totalAudioEnergy
-        value: 104.17687118270595
-      - stat:
-        name: totalSamplesDuration
-        value: 9836.570000168289
-  - RTCStatsReport:
-    id: RTCCertificate_77:71:33:76:C5:CD:5C:04:34:51:21:99:4E:F4:49:19:5A:EA:B6:14
+      - name: audioLevel
+        value: 0.009216589861751152
+      - name: totalAudioEnergy
+        value: 0.04832871118754848
+      - name: totalSamplesDuration
+        value: 26.35000000000132
+  # RTCStatsReport:
+  - id: RTCCertificate_AC:D7:98:CA:44:5D:64:D4:F3:B9:BA:11:E7:F4:FF:46:30:09:FF:BA
     type: certificate
     stats:
-      - stat:
-        name: id
-        value: RTCCertificate_77:71:33:76:C5:CD:5C:04:34:51:21:99:4E:F4:49:19:5A:EA:B6:14
-      - stat:
-        name: timestamp
-        value: 1589967936625.601
-      - stat:
-        name: type
+      - name: id
+        value: RTCCertificate_AC:D7:98:CA:44:5D:64:D4:F3:B9:BA:11:E7:F4:FF:46:30:09:FF:BA
+      - name: timestamp
+        value: 1590052098549.883
+      - name: type
         value: certificate
-      - stat:
-        name: fingerprint
-        value: 77:71:33:76:C5:CD:5C:04:34:51:21:99:4E:F4:49:19:5A:EA:B6:14
-      - stat:
-        name: fingerprintAlgorithm
+      - name: fingerprint
+        value: AC:D7:98:CA:44:5D:64:D4:F3:B9:BA:11:E7:F4:FF:46:30:09:FF:BA
+      - name: fingerprintAlgorithm
         value: sha-1
-      - stat:
-        name: base64Certificate
-        value: MIIB3jCCAUegAwIBAgIDOwuoMA0GCSqGSIb3DQEBBQUAMDQxGDAWBgNVBAoMD21lZGlhc291cDIxMTU4NTEYMBYGA1UEAwwPbWVkaWFzb3VwMjExNTg1MB4XDTEwMDUxODA4MDU0NFoXDTMwMDUxMzA4MDU0NFowNDEYMBYGA1UECgwPbWVkaWFzb3VwMjExNTg1MRgwFgYDVQQDDA9tZWRpYXNvdXAyMTE1ODUwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKaYncNYy7h50URIPl9katuAPXzcRUQcJ+i90HjHFc+Hgk1o2rsZiD9w1XM6ktsToJCXxulTuHRnPPs5FShyJh+S0G8EKGTv4VeD8MO/w8lqjlwxJnQiglHeojABroPT1PdeWh15Javx+tzdzvkQ/CAcOrjYnB1qTtuJpcdi9ywDAgMBAAEwDQYJKoZIhvcNAQEFBQADgYEAVTvtxBIb4uydFe5jeAVX8m+fOFDOFryGBx+J5FFyBaRRywu36wrg0tSrbyouSCiTDjPZnEpk9+zASnVZovE9YTp/BaeyraZHntWlDzTmoyj736yTJA3hwysiaPJ4GfBXP+bGwyWENyeP++bTxnXMtaEdAFUrzmEND1u4uSTcge0=
-  - RTCStatsReport:
-    id: RTCCertificate_AC:0F:24:DA:9D:22:42:BF:84:C0:19:A1:AD:05:D4:71:D3:2B:E8:02:09:07:93:FA:F3:A1:98:DD:2E:B5:D8:44
+      - name: base64Certificate
+        value: MIIB3jCCAUegAwIBAgIDOwuoMA0GCSqGSIb3DQEBBQUAMDQxGDAWBgNVBAoMD21lZGlhc291cDIxMTU4NTEYMBYGA1UEAwwPbWVkaWFzb3VwMjExNTg1MB4XDTEwMDUyNDAzNDgyNVoXDTMwMDUxOTAzNDgyNVowNDEYMBYGA1UECgwPbWVkaWFzb3VwMjExNTg1MRgwFgYDVQQDDA9tZWRpYXNvdXAyMTE1ODUwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALajqohIyE0BR/Dx8L9yGii3vnpufrX9xtMZE3VQP/KFsl66lJGgSDrOFtSJHiThNIzMKDt++Yi1l5uXV+9gA3Zzr3UfYQ675pXw0VS0X6kBtY5P2kmMBoxvBCG3DXvTm5eYRK3cfiRNfGtzpkyC5r1NebDSA87BlebMzbn0vt7zAgMBAAEwDQYJKoZIhvcNAQEFBQADgYEAambEzf5RKeA+6eaCcg2mP9IurLiCkAsgAPhcjgi/dtxrplD0hZLqP1VqNy3ljWm3RmqsAn122BeR3kog3YP9v5wlnbaqL7+l5qwoxo6k9mK77xLoZ8C7uzU5lLrjeVu33x1WmOaduBBFOwKCb6UjSsvOIx9VwwUHD9C+Pzj65HY=
+  # RTCStatsReport:
+  - id: RTCCertificate_D8:89:88:A2:7C:06:84:89:0C:B2:47:09:5D:61:50:5D:CD:72:41:5B:88:D5:C7:64:0F:E5:22:48:88:59:5D:E4
     type: certificate
     stats:
-      - stat:
-        name: id
-        value: RTCCertificate_AC:0F:24:DA:9D:22:42:BF:84:C0:19:A1:AD:05:D4:71:D3:2B:E8:02:09:07:93:FA:F3:A1:98:DD:2E:B5:D8:44
-      - stat:
-        name: timestamp
-        value: 1589967936625.601
-      - stat:
-        name: type
+      - name: id
+        value: RTCCertificate_D8:89:88:A2:7C:06:84:89:0C:B2:47:09:5D:61:50:5D:CD:72:41:5B:88:D5:C7:64:0F:E5:22:48:88:59:5D:E4
+      - name: timestamp
+        value: 1590052098549.883
+      - name: type
         value: certificate
-      - stat:
-        name: fingerprint
-        value: AC:0F:24:DA:9D:22:42:BF:84:C0:19:A1:AD:05:D4:71:D3:2B:E8:02:09:07:93:FA:F3:A1:98:DD:2E:B5:D8:44
-      - stat:
-        name: fingerprintAlgorithm
+      - name: fingerprint
+        value: D8:89:88:A2:7C:06:84:89:0C:B2:47:09:5D:61:50:5D:CD:72:41:5B:88:D5:C7:64:0F:E5:22:48:88:59:5D:E4
+      - name: fingerprintAlgorithm
         value: sha-256
-      - stat:
-        name: base64Certificate
-        value: MIIBFjCBvaADAgECAgkAj13xu1exmyEwCgYIKoZIzj0EAwIwETEPMA0GA1UEAwwGV2ViUlRDMB4XDTIwMDUxOTA2NTcyNVoXDTIwMDYxOTA2NTcyNVowETEPMA0GA1UEAwwGV2ViUlRDMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAErnUfmNet7/yXMgJtJG72Qr99KuVOa8wKwHuiLJ65I7QUHBRjJGa9pzk8UODwCPI+Zt2R5+UUQeSZFwTeTRy/szAKBggqhkjOPQQDAgNIADBFAiEAmHHOAluBeZAyMQxRUO61CqMI34W3L1CZCQOpL7jtkQECIEMmAA1IJb7HYFfIYoEXd5STgURsDzBGNgbUERavLzMG
-  - RTCStatsReport:
-    id: RTCIceCandidatePair_cA2UYEr+_o39lexQE
+      - name: base64Certificate
+        value: MIIBFjCBvaADAgECAgkAjIcyx6AypIIwCgYIKoZIzj0EAwIwETEPMA0GA1UEAwwGV2ViUlRDMB4XDTIwMDUyMDA5MDc1MFoXDTIwMDYyMDA5MDc1MFowETEPMA0GA1UEAwwGV2ViUlRDMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEHFQOoDetYBmSQpmbUSmuG8b/4R1tEYlLHJCKKf9ZEXVxOoxVUz8LZoNm9wIWG6n2PerzG3d3crbG6AMLaxgbgTAKBggqhkjOPQQDAgNIADBFAiBtNjFovN7iVxVJD4q+X548XKxSFQu6EN2ZsOVPqMdd7QIhAIr4r3WgML+Nkk1+AtwAktmL5AQWq3KNmRwhd6kx4qKH
+  # RTCStatsReport:
+  - id: RTCIceCandidatePair_1+BZwzyE_OwNVw9OL
     type: candidate-pair
     stats:
-      - stat:
-        name: id
-        value: RTCIceCandidatePair_cA2UYEr+_o39lexQE
-      - stat:
-        name: timestamp
-        value: 1589967936625.601
-      - stat:
-        name: type
+      - name: id
+        value: RTCIceCandidatePair_1+BZwzyE_OwNVw9OL
+      - name: timestamp
+        value: 1590052098549.883
+      - name: type
         value: candidate-pair
-      - stat:
-        name: transportId
+      - name: transportId
         value: RTCTransport_audio_1
-      - stat:
-        name: localCandidateId
-        value: RTCIceCandidate_cA2UYEr+
-      - stat:
-        name: remoteCandidateId
-        value: RTCIceCandidate_o39lexQE
-      - stat:
-        name: state
+      - name: localCandidateId
+        value: RTCIceCandidate_1+BZwzyE
+      - name: remoteCandidateId
+        value: RTCIceCandidate_OwNVw9OL
+      - name: state
         value: succeeded
-      - stat:
-        name: priority
+      - name: priority
         value: 4633677349907217000
-      - stat:
-        name: nominated
+      - name: nominated
         value: true
-      - stat:
-        name: writable
+      - name: writable
         value: true
-      - stat:
-        name: bytesSent
-        value: 395828205
-      - stat:
-        name: bytesReceived
-        value: 2259641
-      - stat:
-        name: totalRoundTripTime
-        value: 160.863
-      - stat:
-        name: currentRoundTripTime
-        value: 0.041
-      - stat:
-        name: availableOutgoingBitrate
+      - name: bytesSent
+        value: 1113540
+      - name: bytesReceived
+        value: 5941
+      - name: totalRoundTripTime
+        value: 0.494
+      - name: currentRoundTripTime
+        value: 0.053
+      - name: availableOutgoingBitrate
         value: 300000
-      - stat:
-        name: requestsReceived
+      - name: requestsReceived
         value: 0
-      - stat:
-        name: requestsSent
-        value: 1
-      - stat:
-        name: responsesReceived
-        value: 4008
-      - stat:
-        name: responsesSent
+      - name: requestsSent
+        value: 2
+      - name: responsesReceived
+        value: 14
+      - name: responsesSent
         value: 0
-      - stat:
-        name: consentRequestsSent
-        value: 4027
-  - RTCStatsReport:
-    id: RTCIceCandidate_cA2UYEr+
+      - name: consentRequestsSent
+        value: 12
+  # RTCStatsReport:
+  - id: RTCIceCandidate_1+BZwzyE
     type: local-candidate
     stats:
-      - stat:
-        name: id
-        value: RTCIceCandidate_cA2UYEr+
-      - stat:
-        name: timestamp
-        value: 1589967936625.601
-      - stat:
-        name: type
+      - name: id
+        value: RTCIceCandidate_1+BZwzyE
+      - name: timestamp
+        value: 1590052098549.883
+      - name: type
         value: local-candidate
-      - stat:
-        name: transportId
+      - name: transportId
         value: RTCTransport_audio_1
-      - stat:
-        name: isRemote
+      - name: isRemote
         value: false
-      - stat:
-        name: networkType
+      - name: networkType
         value: wifi
-      - stat:
-        name: ip
+      - name: ip
         value: 106.75.220.2
-      - stat:
-        name: port
-        value: 62924
-      - stat:
-        name: protocol
+      - name: port
+        value: 49447
+      - name: protocol
         value: udp
-      - stat:
-        name: candidateType
+      - name: candidateType
         value: prflx
-      - stat:
-        name: priority
+      - name: priority
         value: 1853824767
-      - stat:
-        name: deleted
+      - name: deleted
         value: false
-  - RTCStatsReport:
-    id: RTCIceCandidate_o39lexQE
+  # RTCStatsReport:
+  - id: RTCIceCandidate_OwNVw9OL
     type: remote-candidate
     stats:
-      - stat:
-        name: id
-        value: RTCIceCandidate_o39lexQE
-      - stat:
-        name: timestamp
-        value: 1589967936625.601
-      - stat:
-        name: type
+      - name: id
+        value: RTCIceCandidate_OwNVw9OL
+      - name: timestamp
+        value: 1590052098549.883
+      - name: type
         value: remote-candidate
-      - stat:
-        name: transportId
+      - name: transportId
         value: RTCTransport_audio_1
-      - stat:
-        name: isRemote
+      - name: isRemote
         value: true
-      - stat:
-        name: ip
+      - name: ip
         value: 106.75.167.159
-      - stat:
-        name: port
-        value: 24674
-      - stat:
-        name: protocol
+      - name: port
+        value: 25205
+      - name: protocol
         value: udp
-      - stat:
-        name: candidateType
+      - name: candidateType
         value: host
-      - stat:
-        name: priority
+      - name: priority
         value: 1078862079
-      - stat:
-        name: deleted
+      - name: deleted
         value: false
-  - RTCStatsReport:
-    id: RTCMediaStreamTrack_sender_1
+  # RTCStatsReport:
+  - id: RTCMediaStreamTrack_sender_1
     type: track
     stats:
-      - stat:
-        name: id
+      - name: id
         value: RTCMediaStreamTrack_sender_1
-      - stat:
-        name: timestamp
-        value: 1589967936625.601
-      - stat:
-        name: type
+      - name: timestamp
+        value: 1590052098549.883
+      - name: type
         value: track
-      - stat:
-        name: trackIdentifier
-        value: 35778b66-7b8b-42a8-b4d6-a9d13552a9ee
-      - stat:
-        name: mediaSourceId
+      - name: trackIdentifier
+        value: 4f7781e8-60da-4f03-8a48-2d8a8e3db1ad
+      - name: mediaSourceId
         value: RTCAudioSource_1
-      - stat:
-        name: remoteSource
+      - name: remoteSource
         value: false
-      - stat:
-        name: ended
+      - name: ended
         value: false
-      - stat:
-        name: detached
+      - name: detached
         value: false
-      - stat:
-        name: kind
+      - name: kind
         value: audio
-  - RTCStatsReport:
-    id: RTCMediaStreamTrack_sender_2
+  # RTCStatsReport:
+  - id: RTCMediaStreamTrack_sender_2
     type: track
     stats:
-      - stat:
-        name: id
+      - name: id
         value: RTCMediaStreamTrack_sender_2
-      - stat:
-        name: timestamp
-        value: 1589967936625.601
-      - stat:
-        name: type
+      - name: timestamp
+        value: 1590052098549.883
+      - name: type
         value: track
-      - stat:
-        name: trackIdentifier
-        value: 9d904cef-beeb-40e3-9def-0f05a06fed53
-      - stat:
-        name: mediaSourceId
+      - name: trackIdentifier
+        value: a1a55fdd-ac92-4d63-b1ee-c15a4febdb4d
+      - name: mediaSourceId
         value: RTCVideoSource_2
-      - stat:
-        name: remoteSource
+      - name: remoteSource
         value: false
-      - stat:
-        name: ended
+      - name: ended
         value: false
-      - stat:
-        name: detached
+      - name: detached
         value: false
-      - stat:
-        name: kind
+      - name: kind
         value: video
-      - stat:
-        name: frameWidth
+      - name: frameWidth
         value: 320
-      - stat:
-        name: frameHeight
+      - name: frameHeight
         value: 180
-      - stat:
-        name: framesSent
-        value: 200192
-      - stat:
-        name: hugeFramesSent
+      - name: framesSent
+        value: 516
+      - name: hugeFramesSent
         value: 0
-  - RTCStatsReport:
-    id: RTCMediaStream_3306978a-fbef-44c2-b3d4-4a732bb2a3f9
+  # RTCStatsReport:
+  - id: RTCMediaStream_243de30b-656d-4775-991c-52e733266388
     type: stream
     stats:
-      - stat:
-        name: id
-        value: RTCMediaStream_3306978a-fbef-44c2-b3d4-4a732bb2a3f9
-      - stat:
-        name: timestamp
-        value: 1589967936625.601
-      - stat:
-        name: type
+      - name: id
+        value: RTCMediaStream_243de30b-656d-4775-991c-52e733266388
+      - name: timestamp
+        value: 1590052098549.883
+      - name: type
         value: stream
-      - stat:
-        name: streamIdentifier
-        value: 3306978a-fbef-44c2-b3d4-4a732bb2a3f9
-      - stat:
-        name: trackIds
+      - name: streamIdentifier
+        value: 243de30b-656d-4775-991c-52e733266388
+      - name: trackIds
         value: RTCMediaStreamTrack_sender_1,RTCMediaStreamTrack_sender_2
-  - RTCStatsReport:
-    id: RTCOutboundRTPAudioStream_3412935543
+  # RTCStatsReport:
+  - id: RTCOutboundRTPAudioStream_2068043731
     type: outbound-rtp
     stats:
-      - stat:
-        name: id
-        value: RTCOutboundRTPAudioStream_3412935543
-      - stat:
-        name: timestamp
-        value: 1589967936625.601
-      - stat:
-        name: type
+      - name: id
+        value: RTCOutboundRTPAudioStream_2068043731
+      - name: timestamp
+        value: 1590052098549.883
+      - name: type
         value: outbound-rtp
-      - stat:
-        name: ssrc
-        value: 3412935543
-      - stat:
-        name: isRemote
+      - name: ssrc
+        value: 2068043731
+      - name: isRemote
         value: false
-      - stat:
-        name: mediaType
+      - name: mediaType
         value: audio
-      - stat:
-        name: kind
+      - name: kind
         value: audio
-      - stat:
-        name: trackId
+      - name: trackId
         value: RTCMediaStreamTrack_sender_1
-      - stat:
-        name: transportId
+      - name: transportId
         value: RTCTransport_audio_1
-      - stat:
-        name: codecId
+      - name: codecId
         value: RTCCodec_audio_Outbound_111
-      - stat:
-        name: mediaSourceId
+      - name: mediaSourceId
         value: RTCAudioSource_1
-      - stat:
-        name: remoteId
-        value: RTCRemoteInboundRtpAudioStream_3412935543
-      - stat:
-        name: packetsSent
-        value: 492926
-      - stat:
-        name: retransmittedPacketsSent
-        value: 1106
-      - stat:
-        name: bytesSent
-        value: 35698471
-      - stat:
-        name: headerBytesSent
-        value: 9858520
-      - stat:
-        name: retransmittedBytesSent
-        value: 81650
-  - RTCStatsReport:
-    id: RTCOutboundRTPVideoStream_1268561741
+      - name: remoteId
+        value: RTCRemoteInboundRtpAudioStream_2068043731
+      - name: packetsSent
+        value: 1305
+      - name: retransmittedPacketsSent
+        value: 0
+      - name: bytesSent
+        value: 97243
+      - name: headerBytesSent
+        value: 26100
+      - name: retransmittedBytesSent
+        value: 0
+  # RTCStatsReport:
+  - id: RTCOutboundRTPVideoStream_489380160
     type: outbound-rtp
     stats:
-      - stat:
-        name: id
-        value: RTCOutboundRTPVideoStream_1268561741
-      - stat:
-        name: timestamp
-        value: 1589967936625.601
-      - stat:
-        name: type
+      - name: id
+        value: RTCOutboundRTPVideoStream_489380160
+      - name: timestamp
+        value: 1590052098549.883
+      - name: type
         value: outbound-rtp
-      - stat:
-        name: ssrc
-        value: 1268561741
-      - stat:
-        name: isRemote
+      - name: ssrc
+        value: 489380160
+      - name: isRemote
         value: false
-      - stat:
-        name: mediaType
+      - name: mediaType
         value: video
-      - stat:
-        name: kind
+      - name: kind
         value: video
-      - stat:
-        name: trackId
+      - name: trackId
         value: RTCMediaStreamTrack_sender_2
-      - stat:
-        name: transportId
+      - name: transportId
         value: RTCTransport_audio_1
-      - stat:
-        name: codecId
+      - name: codecId
         value: RTCCodec_video_Outbound_96
-      - stat:
-        name: firCount
+      - name: firCount
         value: 0
-      - stat:
-        name: pliCount
-        value: 681
-      - stat:
-        name: nackCount
-        value: 348
-      - stat:
-        name: qpSum
-        value: 419027
-      - stat:
-        name: mediaSourceId
+      - name: pliCount
+        value: 2
+      - name: nackCount
+        value: 0
+      - name: qpSum
+        value: 3759
+      - name: mediaSourceId
         value: RTCVideoSource_2
-      - stat:
-        name: remoteId
-        value: RTCRemoteInboundRtpVideoStream_1268561741
-      - stat:
-        name: packetsSent
-        value: 388452
-      - stat:
-        name: retransmittedPacketsSent
+      - name: remoteId
+        value: RTCRemoteInboundRtpVideoStream_489380160
+      - name: packetsSent
+        value: 1042
+      - name: retransmittedPacketsSent
         value: 0
-      - stat:
-        name: bytesSent
-        value: 331843242
-      - stat:
-        name: headerBytesSent
-        value: 8566880
-      - stat:
-        name: retransmittedBytesSent
+      - name: bytesSent
+        value: 939917
+      - name: headerBytesSent
+        value: 23560
+      - name: retransmittedBytesSent
         value: 0
-      - stat:
-        name: framesEncoded
-        value: 200192
-      - stat:
-        name: keyFramesEncoded
-        value: 674
-      - stat:
-        name: totalEncodeTime
-        value: 390.59
-      - stat:
-        name: totalEncodedBytesTarget
-        value: 378549912
-      - stat:
-        name: totalPacketSendDelay
-        value: 39586.534
-      - stat:
-        name: qualityLimitationReason
+      - name: framesEncoded
+        value: 516
+      - name: keyFramesEncoded
+        value: 3
+      - name: totalEncodeTime
+        value: 1.141
+      - name: totalEncodedBytesTarget
+        value: 1045039
+      - name: totalPacketSendDelay
+        value: 68.029
+      - name: qualityLimitationReason
         value: none
-      - stat:
-        name: qualityLimitationResolutionChanges
+      - name: qualityLimitationResolutionChanges
         value: 0
-      - stat:
-        name: encoderImplementation
+      - name: encoderImplementation
         value: libvpx
-  - RTCStatsReport:
-    id: RTCPeerConnection
+  # RTCStatsReport:
+  - id: RTCPeerConnection
     type: peer-connection
     stats:
-      - stat:
-        name: id
+      - name: id
         value: RTCPeerConnection
-      - stat:
-        name: timestamp
-        value: 1589967936625.601
-      - stat:
-        name: type
+      - name: timestamp
+        value: 1590052098549.883
+      - name: type
         value: peer-connection
-      - stat:
-        name: dataChannelsOpened
+      - name: dataChannelsOpened
         value: 0
-      - stat:
-        name: dataChannelsClosed
+      - name: dataChannelsClosed
         value: 0
-  - RTCStatsReport:
-    id: RTCRemoteInboundRtpAudioStream_3412935543
+  # RTCStatsReport:
+  - id: RTCRemoteInboundRtpAudioStream_2068043731
     type: remote-inbound-rtp
     stats:
-      - stat:
-        name: id
-        value: RTCRemoteInboundRtpAudioStream_3412935543
-      - stat:
-        name: timestamp
-        value: 1589967933813.658
-      - stat:
-        name: type
+      - name: id
+        value: RTCRemoteInboundRtpAudioStream_2068043731
+      - name: timestamp
+        value: 1590052094672.824
+      - name: type
         value: remote-inbound-rtp
-      - stat:
-        name: ssrc
-        value: 3412935543
-      - stat:
-        name: kind
+      - name: ssrc
+        value: 2068043731
+      - name: kind
         value: audio
-      - stat:
-        name: transportId
+      - name: transportId
         value: RTCTransport_audio_1
-      - stat:
-        name: codecId
+      - name: codecId
         value: RTCCodec_audio_Outbound_111
-      - stat:
-        name: packetsLost
-        value: 21
-      - stat:
-        name: jitter
-        value: 0.0003541666666666667
-      - stat:
-        name: localId
-        value: RTCOutboundRTPAudioStream_3412935543
-      - stat:
-        name: roundTripTime
-        value: 0.031
-  - RTCStatsReport:
-    id: RTCRemoteInboundRtpVideoStream_1268561741
+      - name: packetsLost
+        value: 0
+      - name: jitter
+        value: 0.000020833333333333333
+      - name: localId
+        value: RTCOutboundRTPAudioStream_2068043731
+      - name: roundTripTime
+        value: 0.03
+  # RTCStatsReport:
+  - id: RTCRemoteInboundRtpVideoStream_489380160
     type: remote-inbound-rtp
     stats:
-      - stat:
-        name: id
-        value: RTCRemoteInboundRtpVideoStream_1268561741
-      - stat:
-        name: timestamp
-        value: 1589967936413.602
-      - stat:
-        name: type
+      - name: id
+        value: RTCRemoteInboundRtpVideoStream_489380160
+      - name: timestamp
+        value: 1590052098071.293
+      - name: type
         value: remote-inbound-rtp
-      - stat:
-        name: ssrc
-        value: 1268561741
-      - stat:
-        name: kind
+      - name: ssrc
+        value: 489380160
+      - name: kind
         value: video
-      - stat:
-        name: transportId
+      - name: transportId
         value: RTCTransport_audio_1
-      - stat:
-        name: codecId
+      - name: codecId
         value: RTCCodec_video_Outbound_96
-      - stat:
-        name: packetsLost
-        value: 79
-      - stat:
-        name: jitter
-        value: 0.000044444444444444447
-      - stat:
-        name: localId
-        value: RTCOutboundRTPVideoStream_1268561741
-      - stat:
-        name: roundTripTime
+      - name: packetsLost
+        value: 0
+      - name: jitter
+        value: 0.00008888888888888889
+      - name: localId
+        value: RTCOutboundRTPVideoStream_489380160
+      - name: roundTripTime
         value: 0.03
-  - RTCStatsReport:
-    id: RTCTransport_audio_1
+  # RTCStatsReport:
+  - id: RTCTransport_audio_1
     type: transport
     stats:
-      - stat:
-        name: id
+      - name: id
         value: RTCTransport_audio_1
-      - stat:
-        name: timestamp
-        value: 1589967936625.601
-      - stat:
-        name: type
+      - name: timestamp
+        value: 1590052098549.883
+      - name: type
         value: transport
-      - stat:
-        name: bytesSent
-        value: 395828205
-      - stat:
-        name: bytesReceived
-        value: 2259641
-      - stat:
-        name: dtlsState
+      - name: bytesSent
+        value: 1113540
+      - name: bytesReceived
+        value: 5941
+      - name: dtlsState
         value: connected
-      - stat:
-        name: selectedCandidatePairId
-        value: RTCIceCandidatePair_cA2UYEr+_o39lexQE
-      - stat:
-        name: localCertificateId
-        value: RTCCertificate_AC:0F:24:DA:9D:22:42:BF:84:C0:19:A1:AD:05:D4:71:D3:2B:E8:02:09:07:93:FA:F3:A1:98:DD:2E:B5:D8:44
-      - stat:
-        name: remoteCertificateId
-        value: RTCCertificate_77:71:33:76:C5:CD:5C:04:34:51:21:99:4E:F4:49:19:5A:EA:B6:14
-      - stat:
-        name: tlsVersion
+      - name: selectedCandidatePairId
+        value: RTCIceCandidatePair_1+BZwzyE_OwNVw9OL
+      - name: localCertificateId
+        value: RTCCertificate_D8:89:88:A2:7C:06:84:89:0C:B2:47:09:5D:61:50:5D:CD:72:41:5B:88:D5:C7:64:0F:E5:22:48:88:59:5D:E4
+      - name: remoteCertificateId
+        value: RTCCertificate_AC:D7:98:CA:44:5D:64:D4:F3:B9:BA:11:E7:F4:FF:46:30:09:FF:BA
+      - name: tlsVersion
         value: FEFD
-      - stat:
-        name: dtlsCipher
+      - name: dtlsCipher
         value: TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256
-      - stat:
-        name: srtpCipher
+      - name: srtpCipher
         value: AES_CM_128_HMAC_SHA1_80
-      - stat:
-        name: selectedCandidatePairChanges
+      - name: selectedCandidatePairChanges
         value: 1
-  - RTCStatsReport:
-    id: RTCVideoSource_2
+  # RTCStatsReport:
+  - id: RTCVideoSource_2
     type: media-source
     stats:
-      - stat:
-        name: id
+      - name: id
         value: RTCVideoSource_2
-      - stat:
-        name: timestamp
-        value: 1589967936625.601
-      - stat:
-        name: type
+      - name: timestamp
+        value: 1590052098549.883
+      - name: type
         value: media-source
-      - stat:
-        name: trackIdentifier
-        value: 9d904cef-beeb-40e3-9def-0f05a06fed53
-      - stat:
-        name: kind
+      - name: trackIdentifier
+        value: a1a55fdd-ac92-4d63-b1ee-c15a4febdb4d
+      - name: kind
         value: video
-      - stat:
-        name: width
+      - name: width
         value: 320
-      - stat:
-        name: height
+      - name: height
         value: 180
-      - stat:
-        name: framesPerSecond
+      - name: framesPerSecond
         value: 20
