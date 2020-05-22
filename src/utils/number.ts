@@ -1,34 +1,30 @@
 const INT_REGX = /^-?(?:0|[1-9][0-9]*)$/;
 const FLOAT_REGX = /^-?(?:0|[1-9][0-9]*)(?:\.[0-9]*)?(?:[eE][-+]?[0-9]+)?$/;
 
-function isInt(raw: string): boolean {
+export function isInt(raw: string): boolean {
+  raw += '';
   return INT_REGX.test(raw);
 }
-function isFloat(raw: string): boolean {
+
+export function isFloat(raw: string): boolean {
+  raw += '';
   return FLOAT_REGX.test(raw);
 }
 
-export interface NumberParsedResult {
-  isNumber: boolean
-  value: number | string
+export function isNumber(raw: string): boolean {
+  raw += '';
+  return isInt(raw) || isFloat(raw);
 }
 
-export function parse(raw: string): NumberParsedResult {
+export function parseNumber(raw: string): number {
   raw += '';
-  let isNumber = false;
   let result: number | string;
   if (isInt(raw)) {
-    isNumber = true;
     result = parseInt(raw, 10);
   } else if (isFloat(raw)) {
-    isNumber = true;
     result = parseFloat(raw);
   } else {
-    result = raw;
+    throw new Error('parameter invalid')
   }
-
-  return {
-    isNumber,
-    value: result
-  }
+  return result;
 }
