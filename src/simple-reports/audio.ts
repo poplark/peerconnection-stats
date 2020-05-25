@@ -1,3 +1,4 @@
+import browserDetails from '../utils/browser';
 import { SimpleReports } from './base';
 
 export class AudioInputReports extends SimpleReports {
@@ -7,16 +8,16 @@ export class AudioInputReports extends SimpleReports {
    * safari - { type: inbound-rtp, mediaType: audio }
    */
   get bytesReceived(): number {
-    return this._find('bytesReceived', [{ key: 'type', value: 'inbound-rtp' }, { key: 'mediaType', value: 'audio' }]);
+    return this._find('bytesReceived', { type: 'inbound-rtp', mediaType: 'audio' });
   }
   get packetsReceived(): number {
-    return this._find('packetsReceived', [{ key: 'type', value: 'inbound-rtp' }, { key: 'mediaType', value: 'audio' }]);
+    return this._find('packetsReceived', { type: 'inbound-rtp', mediaType: 'audio' });
   }
   get jitter(): number {
-    return this._find('jitter', [{ key: 'type', value: 'inbound-rtp' }, { key: 'mediaType', value: 'audio' }]);
+    return this._find('jitter', { type: 'inbound-rtp', mediaType: 'audio' });
   }
   get packetsLost(): number {
-    return this._find('packetsLost', [{ key: 'type', value: 'inbound-rtp' }, { key: 'mediaType', value: 'audio' }]);
+    return this._find('packetsLost', { type: 'inbound-rtp', mediaType: 'audio' });
   }
 
   /**
@@ -24,20 +25,26 @@ export class AudioInputReports extends SimpleReports {
    * safari - { type: track }
    */
   get audioLevel(): number {
-    // todo if chrome
-    return this._find('audioLevel', [{ key: 'type', value: 'track' }, { key: 'kind', value: 'audio' }]);
-    // todo if safari
-    // return this._find('audioLevel', [{ key: 'type', value: 'track' }]);
-    // todo firefox
-    // return 0
+    switch (browserDetails.browser) {
+      case 'chrome':
+        return this._find('audioLevel', { type: 'track', kind: 'audio' });
+      case 'safari':
+        return this._find('audioLevel', { type: 'track' });
+      default:
+    }
+    return -1;
   }
 
   /**
    * chrome - { type: track, kind: audio }
    */
   get totalAudioEnergy(): number {
-    // todo if chrome
-    return this._find('totalAudioEnergy', [{ key: 'type', value: 'track' }, { key: 'kind', value: 'audio' }]);
+    switch (browserDetails.browser) {
+      case 'chrome':
+        return this._find('totalAudioEnergy', { type: 'track', kind: 'audio' });
+      default:
+    }
+    return -1;
   }
 }
 
@@ -48,10 +55,10 @@ export class AudioOutputReports extends SimpleReports {
    * safari - { type: outbound-rtp, mediaType: audio }
    */
   get bytesSent(): number {
-    return this._find('bytesSent', [{ key: 'type', value: 'outbound-rtp' }, { key: 'mediaType', value: 'audio' }]);
+    return this._find('bytesSent', { type: 'outbound-rtp', mediaType: 'audio' });
   }
   get packetsSent(): number {
-    return this._find('packetsSent', [{ key: 'type', value: 'outbound-rtp' }, { key: 'mediaType', value: 'audio' }]);
+    return this._find('packetsSent', { type: 'outbound-rtp', mediaType: 'audio' });
   }
 
   /**
@@ -59,36 +66,62 @@ export class AudioOutputReports extends SimpleReports {
    * firefox - { type: remote-inbound-rtp, kind: audio }
    */
   get jitter(): number {
-    // todo check chrome
-    return this._find('jitter', [{ key: 'type', value: 'remote-inbound-rtp' }, { key: 'kind', value: 'audio' }]);
+    switch (browserDetails.browser) {
+      case 'chrome':
+        return this._find('jitter', { type: 'remote-inbound-rtp', kind: 'audio' });
+      case 'firefox':
+        return this._find('jitter', { type: 'remote-inbound-rtp', kind: 'audio' });
+      default:
+    }
+    return -1;
   }
   get packetsLost(): number {
-    // todo check chrome
-    return this._find('packetsLost', [{ key: 'type', value: 'remote-inbound-rtp' }, { key: 'kind', value: 'audio' }]);
+    switch (browserDetails.browser) {
+      case 'chrome':
+        return this._find('packetsLost', { type: 'remote-inbound-rtp', kind: 'audio' });
+      case 'firefox':
+        return this._find('packetsLost', { type: 'remote-inbound-rtp', kind: 'audio' });
+      default:
+    }
+    return -1;
   }
   get roundTripTime(): number {
-    // todo check chrome
-    return this._find('roundTripTime', [{ key: 'type', value: 'remote-inbound-rtp' }, { key: 'kind', value: 'audio' }]);
+    switch (browserDetails.browser) {
+      case 'chrome':
+        return this._find('roundTripTime', { type: 'remote-inbound-rtp', kind: 'audio' });
+      case 'firefox':
+        return this._find('roundTripTime', { type: 'remote-inbound-rtp', kind: 'audio' });
+      default:
+    }
+    return -1;
   }
 
   /**
    * chrome - { type: media-source, kind: audio }
    */
   get audioLevel(): number {
-    // todo check chrome
-    return this._find('audioLevel', [{ key: 'type', value: 'media-source' }, { key: 'kind', value: 'audio' }]);
+    switch (browserDetails.browser) {
+      case 'chrome':
+        return this._find('audioLevel', { type: 'media-source', kind: 'audio' });
+      default:
+    }
+    return -1;
   }
 
   /**
    * chrome - { type: media-source, kind: audio }
    */
   get totalAudioEnergy(): number {
-    // todo check chrome
-    return this._find('totalAudioEnergy', [{ key: 'type', value: 'media-source' }, { key: 'kind', value: 'audio' }]);
+    switch (browserDetails.browser) {
+      case 'chrome':
+        return this._find('totalAudioEnergy', { type: 'media-source', kind: 'audio' });
+      default:
+    }
+    return -1;
   }
 }
 
-// ============== Legacy ================/
+// ============== todo - Legacy ================/
 
 // chrome - { type: ssrc, mediaType: audio }
 export class AudioInputLegacyReports extends SimpleReports {

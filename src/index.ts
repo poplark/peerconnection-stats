@@ -1,3 +1,4 @@
+import 'webrtc-adapter';
 import { OriginalReport } from './report';
 
 export function getStats(pc: RTCPeerConnection): Promise<Array<OriginalReport>> {
@@ -5,7 +6,7 @@ export function getStats(pc: RTCPeerConnection): Promise<Array<OriginalReport>> 
     const result = [] as Array<OriginalReport>;
     reports.forEach(report => {
       const originalReport = new Map() as OriginalReport;
-      for(let key in report) {
+      for(const key in report) {
         originalReport.set(key, report[key]);
       }
       result.push(originalReport);

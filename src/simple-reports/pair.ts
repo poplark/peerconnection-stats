@@ -1,3 +1,4 @@
+import browserDetails from '../utils/browser';
 import { SimpleReports } from './base';
 
 export class CandidatePairReports extends SimpleReports {
@@ -6,23 +7,56 @@ export class CandidatePairReports extends SimpleReports {
    * firefox - { type: candidate-pair, selected: true }
    * safari - { type: candidate-pair }
    */
-  bytesSent: number;
-  bytesReceived: number;
+  get bytesSent(): number {
+    switch (browserDetails.browser) {
+      case 'chrome':
+        return this._find('bytesSent', { type: 'candidate-pair' });
+      case 'firefox':
+        return this._find('bytesSent', { type: 'candidate-pair', selected: true });
+      case 'safari':
+        return this._find('bytesSent', { type: 'candidate-pair' });
+      default:
+    }
+    return -1;
+  }
+  get bytesReceived(): number {
+    switch (browserDetails.browser) {
+      case 'chrome':
+        return this._find('bytesReceived', { type: 'candidate-pair' });
+      case 'firefox':
+        return this._find('bytesReceived', { type: 'candidate-pair', selected: true });
+      case 'safari':
+        return this._find('bytesReceived', { type: 'candidate-pair' });
+      default:
+    }
+    return -1;
+  }
 
   /**
    * chrome - { type: candidate-pair }
    * safari - { type: candidate-pair }
    */
-  currentRoundTripTime: number;
-
-  /**
-   * chrome - { type: candidate-pair }
-   * safari - { type: candidate-pair }
-   */
-  totalRoundTripTime: number;
+  get currentRoundTripTime(): number {
+    switch (browserDetails.browser) {
+      case 'chrome':
+      case 'safari':
+        return this._find('currentRoundTripTime', { type: 'candidate-pair' });
+      default:
+    }
+    return -1;
+  }
+  get totalRoundTripTime(): number {
+    switch (browserDetails.browser) {
+      case 'chrome':
+      case 'safari':
+        return this._find('totalRoundTripTime', { type: 'candidate-pair' });
+      default:
+    }
+    return -1;
+  }
 }
 
-// ============== Legacy ================/
+// ============== todo - Legacy ================/
 
 export class CandidatePairLegacyReports extends SimpleReports {
   // chrome - { type: googCandidatePair }

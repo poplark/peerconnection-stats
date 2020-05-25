@@ -5,11 +5,11 @@ export class SimpleReports extends Reports {
     super(originReports);
   }
 
-  protected _find(key: string, conditions?: Array<Condition>): number {
-    const result: Array<Report> = this.find(key, conditions);
+  protected _find(key: string, condition?: Condition): number {
+    const result: Array<Report> = this.find(key, condition);
     if (result[0]) {
       return result[0].value as number;
     }
-    return 0;
+    return -1;
   }
 }

@@ -2,8 +2,7 @@ import { isUndefined } from './utils/type';
 // import { parse } from './parser';
 
 export interface Condition {
-  key: string;
-  value?: string | number | boolean;
+  [key: string]: string | number | boolean;
 }
 
 export type OriginalReport = Map<string, string | number | boolean>;
@@ -21,19 +20,19 @@ export class Reports {
     this.originReports = originReports;
   }
 
-  find(key: string, conditions?: Array<Condition>): Array<Report> {
+  find(key: string, condition?: Condition): Array<Report> {
     const result = [] as Array<Report>;
     this.originReports.forEach((report: OriginalReport) => {
       let flag = true;
-      if (conditions) {
-        conditions.forEach((condition: Condition) => {
-          if (!flag) return;
-          if (isUndefined(condition.value)) {
-            flag = report.has(condition.key);
+      if (condition) {
+        for (const key in condition) {
+          if (isUndefined(condition[key])) {
+            flag = report.has(key);
           } else {
-            flag = condition.value === report.get(condition.key);
+            flag = condition[key] === report.get(key);
           }
-        });
+          if (!flag) break;
+        }
       }
       if (flag && report.has(key)) {
         result.push({
