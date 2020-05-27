@@ -30,12 +30,11 @@
     "experimentalDecorators": true
   },
   "include": [
-    "src/**/*",
-    "./*.d.ts"
+    "src/**/*.ts"
   ],
   "exclude": [
     "node_modules",
-    "**/*.spec.ts",
+    "test/**/*.ts",
     "dist",
     "es",
     "lib"

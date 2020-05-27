@@ -35,6 +35,7 @@
   "homepage": "https://github.com/poplark/peerconnection-stats#readme",
   "devDependencies": {
     "@types/jasmine": "^3.5.10",
+    "@types/node": "^14.0.5",
     "jasmine-core": "^3.5.0",
     "karma": "^5.0.7",
     "karma-chrome-launcher": "^3.1.0",

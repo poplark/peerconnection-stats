@@ -1,11 +1,11 @@
 // Karma configuration
 // Generated on Mon May 18 2020 13:51:18 GMT+0800 (GMT+08:00)
 
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '',
+    basePath: '..',
 
 
     // frameworks to use
@@ -14,15 +14,15 @@ module.exports = function(config) {
 
 
     // list of files / patterns to load in the browser
-    files: [
-      { pattern: 'src/**/*.ts' },
-      { pattern: 'test/**/*.ts' }
-    ],
+    files: [{
+      pattern: 'src/**/*.ts'
+    }, {
+      pattern: 'test/**/*.ts'
+    }],
 
 
     // list of files / patterns to exclude
-    exclude: [
-    ],
+    exclude: [],
 
 
     // preprocess matching files before serving them to the browser
@@ -33,8 +33,12 @@ module.exports = function(config) {
     },
 
     karmaTypescriptConfig: {
+      compilerOptions: {
+        target: "es2015",
+        lib: ["es2015", "es2016", "es2017", "dom"]
+      },
       bundlerOptions: {
-        transforms: [require("karma-typescript-es6-transform")()]
+        transforms: [require('karma-typescript-es6-transform')()]
       }
     },
 
@@ -65,7 +69,7 @@ module.exports = function(config) {
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     // use karam-edge-launcher, not karma-edgium-launcher
     // browsers: ['Chrome', 'Firefox', 'Safari', 'Edge'],
-    browsers: ['Chrome', 'Firefox', 'Safari'],
+    browsers: ['ChromeHeadless'],
 
 
     // Continuous Integration mode
@@ -80,8 +84,8 @@ module.exports = function(config) {
       'karma-jasmine',
       'karma-typescript',
       'karma-chrome-launcher',
-      'karma-firefox-launcher',
-      'karma-safari-launcher',
+      // 'karma-firefox-launcher',
+      // 'karma-safari-launcher',
       // 'karma-edge-launcher'
     ]
   })
