@@ -1,30 +1,52 @@
 // use samples data to test
-import { Reports } from '../src/report';
+// import { Reports } from '../src/report';
+import { AudioInputReports } from '../src/simple-reports';
 
-describe('reports', function (): void {
-  it('chrome reports', function (): void {
-    const sampleReports = new Map();
-    sampleReports.set('type', 'test');
-    sampleReports.set('kind', 'audio');
-    const r = new Reports([sampleReports]);
-    console.log('oooooo ', r);
-    // todo
-    expect('chrome').toBe('chrome');
+import {
+  chromeInOriginalReports,
+  // chromeOutOriginalReports,
+  // chromeInLegacyOriginalReports,
+  // chromeOutLegacyOriginalReports,
+  firefoxInOriginalReports,
+  // firefoxOutOriginalReports,
+  safariInOriginalReports,
+  // safariOutOriginalReports
+} from './utils/load-samples';
+
+describe('audio input reports', function (): void {
+  it('chrome', function (): void {
+    const reports = new AudioInputReports(chromeInOriginalReports);
+    expect(reports.bytesReceived).toBeGreaterThanOrEqual(0);
+    expect(reports.jitter).toBeGreaterThanOrEqual(0);
+    expect(reports.packetsLost).toBeGreaterThanOrEqual(0);
+    expect(reports.packetsReceived).toBeGreaterThanOrEqual(0);
+    expect(reports.audioLevel).toBeGreaterThanOrEqual(0);
+    expect(reports.totalAudioEnergy).toBeGreaterThanOrEqual(0);
   });
 
-  it('firefox reports', function (): void {
-    // todo
-    expect('firefox').toBe('firefox');
+  it('firefox', function (): void {
+    const reports = new AudioInputReports(firefoxInOriginalReports);
+    expect(reports.bytesReceived).toBeGreaterThanOrEqual(0);
+    expect(reports.jitter).toBeGreaterThanOrEqual(0);
+    expect(reports.packetsLost).toBeGreaterThanOrEqual(0);
+    expect(reports.packetsReceived).toBeGreaterThanOrEqual(0);
+    expect(reports.audioLevel).toEqual(-1);
+    expect(reports.totalAudioEnergy).toEqual(-1);
   });
 
-  it('opera reports', function (): void {
-    // todo
-    expect('opera').toBe('opera');
+  it('safari', function (): void {
+    const reports = new AudioInputReports(safariInOriginalReports);
+    expect(reports.bytesReceived).toBeGreaterThanOrEqual(0);
+    expect(reports.jitter).toBeGreaterThanOrEqual(0);
+    expect(reports.packetsLost).toBeGreaterThanOrEqual(0);
+    expect(reports.packetsReceived).toBeGreaterThanOrEqual(0);
+    expect(reports.audioLevel).toBeGreaterThanOrEqual(0);
+    expect(reports.totalAudioEnergy).toBeGreaterThanOrEqual(0);
   });
 
-  it('safari reports', function (): void {
+  it('edge todo', function (): void {
     // todo
-    expect('safari').toBe('safari');
+    expect('edge').toBe('edge');
   });
 });
 
