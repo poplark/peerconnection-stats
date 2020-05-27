@@ -79,9 +79,9 @@ export class VideoInputReports extends SimpleReports {
   get framesDecoded(): number {
     switch (browserDetails.browser) {
       case 'chrome':
-        return this._find('framesDecoded', { key: 'type', value: 'track', kind: 'video' });
+        return this._find('framesDecoded', { type: 'track', kind: 'video' });
       case 'firefox':
-        return this._find('framesDecoded', { key: 'type', value: 'inbound-rtp', kind: 'video' });
+        return this._find('framesDecoded', { type: 'inbound-rtp', kind: 'video' });
       case 'safari':
         return this._find('framesDecoded', { type: 'track' });
       default:

@@ -45,7 +45,7 @@ module.exports = function (config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['dots'],
 
 
     // web server port
@@ -69,8 +69,7 @@ module.exports = function (config) {
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     // use karam-edge-launcher, not karma-edgium-launcher
     // browsers: ['Chrome', 'Firefox', 'Safari', 'Edge'],
-    browsers: ['ChromeHeadless'],
-
+    browsers: ['ChromeHeadless', 'FirefoxHeadless', 'Safari'],
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
@@ -78,14 +77,14 @@ module.exports = function (config) {
 
     // Concurrency level
     // how many browser should be started simultaneous
-    concurrency: Infinity,
+    concurrency: 1,
 
     plugins: [
       'karma-jasmine',
       'karma-typescript',
       'karma-chrome-launcher',
-      // 'karma-firefox-launcher',
-      // 'karma-safari-launcher',
+      'karma-firefox-launcher',
+      'karma-safari-launcher',
       // 'karma-edge-launcher'
     ]
   })

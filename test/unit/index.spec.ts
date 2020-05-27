@@ -1,3 +1,4 @@
+/*
 describe('reports', function(): void {
   it('chrome reports', function(): void {
     // todo
@@ -41,3 +42,4 @@ describe('legacy reports', function(): void {
     expect('safari').toBe('safari');
   });
 });
+*/

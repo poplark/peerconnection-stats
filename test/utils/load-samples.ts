@@ -14,21 +14,20 @@ const safariOut = require('../../samples/safari-out.yml');
 import { OriginalReport } from '../../src/report';
 
 function convert2OriginalReport(mockData: string): Array<OriginalReport> {
-  const reports = yaml.parse(mockData).Reports;
   let result = [];
   try {
-  reports.forEach(report => {
-    const oReport: OriginalReport = new Map();
-    oReport.set('id', report.id);
-    oReport.set('type', report.type);
-    (report.stats || []).forEach(stat => {
-      oReport.set(stat.name, stat.value);
+    const reports = yaml.parse(mockData).Reports;
+    reports.forEach(report => {
+      const oReport: OriginalReport = new Map();
+      oReport.set('id', report.id);
+      oReport.set('type', report.type);
+      (report.stats || []).forEach(stat => {
+        oReport.set(stat.name, stat.value);
+      });
+      result.push(oReport);
     });
-    result.push(oReport);
-  });
   } catch(err) {
-    console.log('eeeeee ', err);
-    // console.log('pppppp ', reports);
+    console.error('convert2OriginalReport ', err);
   }
   return result;
 }
