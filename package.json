@@ -27,7 +27,7 @@
   },
   "files": [
     "lib/index.js",
-    "types/index.d.ts"
+    "types/**/*.d.ts"
   ],
   "license": "MIT",
   "bugs": {
