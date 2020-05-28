@@ -1,5 +1,24 @@
-import 'webrtc-adapter';
-import { OriginalReport } from './report';
+import { OriginalReport, Report, Reports } from './report';
+
+export {
+  OriginalReport,
+  Report,
+  Reports
+};
+
+export {
+  AudioInputReports,
+  AudioOutputReports,
+  // AudioInputLegacyReports,
+  // AudioOutputLegacyReports
+  VideoInputReports,
+  VideoOutputReports,
+  // VedioInputLegacyReports,
+  // VideoOutputLegacyReports
+  CandidatePairReports,
+  // CandidatePairLegacyReports
+// todo - finish legacy data
+} from './simple-reports/index';
 
 export function getStats(pc: RTCPeerConnection): Promise<Array<OriginalReport>> {
   return pc.getStats().then((reports: RTCStatsReport) => {
@@ -23,7 +42,7 @@ export function getLegacyStats(pc: RTCPeerConnection): Promise<Array<OriginalRep
         const originalReport = new Map() as OriginalReport;
         originalReport.set('id', report.id);
         originalReport.set('type', report.type);
-        report.names().forEach(name => {
+        report.names().forEach((name: string) => {
           originalReport.set(name, report.stat(name));
         });
         result.push(originalReport);
@@ -32,3 +51,5 @@ export function getLegacyStats(pc: RTCPeerConnection): Promise<Array<OriginalRep
     }).catch(reject);
   });
 }
+
+export default getStats;

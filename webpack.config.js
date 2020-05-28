@@ -22,6 +22,6 @@ module.exports = {
     }]
   },
   plugins: [
-    new webpack.BannerPlugin(`A getStats API of peerconnection with 'Standardized' and 'Legacy Non-Standard' reports.\n \n@author poplark <https://github.com/poplark>\n@license MIT`)
+    new webpack.BannerPlugin(`A getStats API of peerconnection with 'Standardized' and 'Legacy Non-Standard' reports.\n\n@author poplark <https://github.com/poplark>\n@license MIT`)
   ]
 }

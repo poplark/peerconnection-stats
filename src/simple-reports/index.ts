@@ -1,33 +1,20 @@
-import {
+export {
   AudioInputReports,
   AudioOutputReports,
   // AudioInputLegacyReports,
   // AudioOutputLegacyReports
 } from './audio';
 
-import {
+export {
   VideoInputReports,
   VideoOutputReports,
   // VedioInputLegacyReports,
   // VideoOutputLegacyReports
 } from './video';
 
-import {
+export {
   CandidatePairReports,
   // CandidatePairLegacyReports
 } from './pair';
 
 // todo - finish legacy data
-
-export { 
-  AudioInputReports,
-  AudioOutputReports,
-  // AudioInputLegacyReports,
-  // AudioOutputLegacyReports,
-  VideoInputReports,
-  VideoOutputReports,
-  // VedioInputLegacyReports,
-  // VideoOutputLegacyReports,
-  CandidatePairReports,
-  // CandidatePairLegacyReports
-} 

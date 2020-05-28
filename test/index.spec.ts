@@ -6,7 +6,7 @@ import {
   AudioOutputReports,
   VideoInputReports,
   VideoOutputReports,
-} from '../src/simple-reports';
+} from '../src';
 
 import {
   chromeInOriginalReports,

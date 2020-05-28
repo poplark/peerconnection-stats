@@ -1,10 +1,6 @@
 import { isUndefined } from './utils/type';
 // import { parse } from './parser';
 
-export interface Condition {
-  [key: string]: string | number | boolean;
-}
-
 export type OriginalReport = Map<string, string | number | boolean>;
 
 export interface Report {
@@ -20,7 +16,9 @@ export class Reports {
     this.originReports = originReports;
   }
 
-  find(key: string, condition?: Condition): Array<Report> {
+  find(key: string, condition?: {
+    [key: string]: string | number | boolean;
+  }): Array<Report> {
     const result = [] as Array<Report>;
     this.originReports.forEach((report: OriginalReport) => {
       let flag = true;
