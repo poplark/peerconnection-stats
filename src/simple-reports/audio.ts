@@ -31,8 +31,8 @@ export class AudioInputReports extends SimpleReports {
       case 'safari':
         return this._find('audioLevel', { type: 'track' });
       default:
+        return this._find('audioLevel');
     }
-    return -1;
   }
 
   /**
@@ -43,8 +43,8 @@ export class AudioInputReports extends SimpleReports {
       case 'chrome':
         return this._find('totalAudioEnergy', { type: 'track', kind: 'audio' });
       default:
+        return this._find('totalAudioEnergy');
     }
-    return -1;
   }
 }
 
@@ -72,8 +72,9 @@ export class AudioOutputReports extends SimpleReports {
       case 'firefox':
         return this._find('jitter', { type: 'remote-inbound-rtp', kind: 'audio' });
       default:
+        // todo - mediaType audio ?
+        return this._find('jitter', { mediaType: 'audio' });
     }
-    return -1;
   }
   get packetsLost(): number {
     switch (browserDetails.browser) {
@@ -82,8 +83,9 @@ export class AudioOutputReports extends SimpleReports {
       case 'firefox':
         return this._find('packetsLost', { type: 'remote-inbound-rtp', kind: 'audio' });
       default:
+        // todo - mediaType audio ?
+        return this._find('packetsLost', { mediaType: 'audio' });
     }
-    return -1;
   }
   get roundTripTime(): number {
     switch (browserDetails.browser) {
@@ -92,8 +94,9 @@ export class AudioOutputReports extends SimpleReports {
       case 'firefox':
         return this._find('roundTripTime', { type: 'remote-inbound-rtp', kind: 'audio' });
       default:
+        // todo - mediaType audio ?
+        return this._find('roundTripTime', { mediaType: 'audio' });
     }
-    return -1;
   }
 
   /**
@@ -104,8 +107,8 @@ export class AudioOutputReports extends SimpleReports {
       case 'chrome':
         return this._find('audioLevel', { type: 'media-source', kind: 'audio' });
       default:
+        return this._find('audioLevel');
     }
-    return -1;
   }
 
   /**
@@ -116,12 +119,12 @@ export class AudioOutputReports extends SimpleReports {
       case 'chrome':
         return this._find('totalAudioEnergy', { type: 'media-source', kind: 'audio' });
       default:
+        return this._find('totalAudioEnergy');
     }
-    return -1;
   }
 }
 
-// ============== todo - Legacy ================/
+// ============== Chrome - Legacy ================/
 
 // chrome - { type: ssrc, mediaType: audio }
 export class AudioInputLegacyReports extends SimpleReports {
@@ -134,12 +137,24 @@ export class AudioInputLegacyReports extends SimpleReports {
   // audioOutputLevel: number; // 播放音频幅度
 
   // chrome - { type: ssrc, mediaType: audio }
-  bytesReceived: number;
-  packetsReceived: number;
-  packetsLost: number;
+  get bytesReceived(): number {
+    return this._find('bytesReceived', { type: 'ssrc', mediaType: 'audio'});
+  }
+  get packetsReceived(): number {
+    return this._find('packetsReceived', { type: 'ssrc', mediaType: 'audio'});
+  }
+  get packetsLost(): number {
+    return this._find('packetsLost', { type: 'ssrc', mediaType: 'audio'});
+  }
   // jitter: number; // no corresponding data
-  audioLevel: number; // audioOutputLevel
-  totalAudioEnergy: number;
+
+  // refer to audioOutputLevel
+  get audioLevel(): number {
+    return this._find('audioOutputLevel', { type: 'ssrc', mediaType: 'audio'});
+  }
+  get totalAudioEnergy(): number {
+    return this._find('totalAudioEnergy', { type: 'ssrc', mediaType: 'audio'});
+  }
 }
 
 // chrome - { type: ssrc, mediaType: audio }
@@ -149,12 +164,27 @@ export class AudioOutputLegacyReports extends SimpleReports {
   // audioInputLevel: number; // 采集音频幅度
 
   // chrome - { type: ssrc, mediaType: audio }
-  bytesSent: number;
-  packetsSent: number;
-  packetsLost: number;
+  get bytesSent(): number {
+    return this._find('bytesSent', { type: 'ssrc', mediaType: 'audio'});
+  }
+  get packetsSent(): number {
+    return this._find('packetsSent', { type: 'ssrc', mediaType: 'audio'});
+  }
+  get packetsLost(): number {
+    return this._find('packetsLost', { type: 'ssrc', mediaType: 'audio'});
+  }
   // jitter: number; // no corresponding data
-  roundTripTime: number; // googRtt - ms
 
-  audioLevel: number; // audioInputLevel
-  totalAudioEnergy: number;
+  // refer to googRtt
+  get roundTripTime(): number {
+    return this._find('googRtt', { type: 'ssrc', mediaType: 'audio'});
+  }
+
+  // refer to audioInputLevel
+  get audioLevel(): number {
+    return this._find('audioInputLevel', { type: 'ssrc', mediaType: 'audio'});
+  }
+  get totalAudioEnergy(): number {
+    return this._find('totalAudioEnergy', { type: 'ssrc', mediaType: 'audio'});
+  }
 }

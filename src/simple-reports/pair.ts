@@ -10,26 +10,24 @@ export class CandidatePairReports extends SimpleReports {
   get bytesSent(): number {
     switch (browserDetails.browser) {
       case 'chrome':
+      case 'safari':
         return this._find('bytesSent', { type: 'candidate-pair' });
       case 'firefox':
         return this._find('bytesSent', { type: 'candidate-pair', selected: true });
-      case 'safari':
-        return this._find('bytesSent', { type: 'candidate-pair' });
       default:
+        return this._find('bytesSent', { type: 'candidate-pair' });
     }
-    return -1;
   }
   get bytesReceived(): number {
     switch (browserDetails.browser) {
       case 'chrome':
+      case 'safari':
         return this._find('bytesReceived', { type: 'candidate-pair' });
       case 'firefox':
         return this._find('bytesReceived', { type: 'candidate-pair', selected: true });
-      case 'safari':
-        return this._find('bytesReceived', { type: 'candidate-pair' });
       default:
+        return this._find('bytesReceived', { type: 'candidate-pair' });
     }
-    return -1;
   }
 
   /**
@@ -42,8 +40,8 @@ export class CandidatePairReports extends SimpleReports {
       case 'safari':
         return this._find('currentRoundTripTime', { type: 'candidate-pair' });
       default:
+        return this._find('currentRoundTripTime', { type: 'candidate-pair' });
     }
-    return -1;
   }
   get totalRoundTripTime(): number {
     switch (browserDetails.browser) {
@@ -51,17 +49,26 @@ export class CandidatePairReports extends SimpleReports {
       case 'safari':
         return this._find('totalRoundTripTime', { type: 'candidate-pair' });
       default:
+        return this._find('totalRoundTripTime', { type: 'candidate-pair' });
     }
-    return -1;
   }
 }
 
-// ============== todo - Legacy ================/
+// ============== Chrome - Legacy ================/
 
 export class CandidatePairLegacyReports extends SimpleReports {
   // chrome - { type: googCandidatePair }
-  bytesReceived: number;
-  bytesSent: number;
-  packetsSent: number;
-  currentRoundTripTime: number; // googRtt - ms
+  get bytesReceived(): number {
+    return this._find('bytesReceived', { type: 'googCandidatePair' });
+  }
+  get bytesSent(): number {
+    return this._find('bytesSent', { type: 'googCandidatePair' });
+  }
+  get packetsSent(): number {
+    return this._find('packetsSent', { type: 'googCandidatePair' });
+  }
+  // refer to googRtt - ms
+  get currentRoundTripTime(): number {
+    return this._find('googRtt', { type: 'googCandidatePair' });
+  }
 }

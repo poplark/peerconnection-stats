@@ -13,8 +13,8 @@ export class VideoInputReports extends SimpleReports {
       case 'safari':
         return this._find('frameWidth', { type: 'track' });
       default:
+        return this._find('frameWidth');
     }
-    return -1;
   }
   get frameHeight(): number {
     switch (browserDetails.browser) {
@@ -23,8 +23,8 @@ export class VideoInputReports extends SimpleReports {
       case 'safari':
         return this._find('frameHeight', { type: 'track' });
       default:
+        return this._find('frameHeight');
     }
-    return -1;
   }
   get framesReceived(): number {
     switch (browserDetails.browser) {
@@ -33,8 +33,8 @@ export class VideoInputReports extends SimpleReports {
       case 'safari':
         return this._find('framesReceived', { type: 'track' });
       default:
+        return this._find('framesReceived');
     }
-    return -1;
   }
   get framesDropped(): number {
     switch (browserDetails.browser) {
@@ -43,8 +43,8 @@ export class VideoInputReports extends SimpleReports {
       case 'safari':
         return this._find('framesDropped', { type: 'track' });
       default:
+        return this._find('framesDropped');
     }
-    return -1;
   }
 
   /**
@@ -85,8 +85,8 @@ export class VideoInputReports extends SimpleReports {
       case 'safari':
         return this._find('framesDecoded', { type: 'track' });
       default:
+        return this._find('framesDecoded');
     }
-    return -1;
   }
 
   /**
@@ -97,27 +97,11 @@ export class VideoInputReports extends SimpleReports {
       case 'firefox':
         return this._find('jitter', { type: 'inbound-rtp', kind: 'video' });
       default:
+        // todo - mediaType ?
+        return this._find('jitter', { mediaType: 'video' });
     }
-    return -1;
   }
 }
-
-/* todo - simplify
-['bytesReceived', 'packetsReceived', 'packetsLost', 'pliCount', 'firCount'].forEach(key => {
-  Object.defineProperty(VideoInputReports.prototype, key, {
-    get() {
-      switch (browserDetails.browser) {
-        case 'chrome':
-        case 'firefox':
-        case 'safari':
-          return this._find(key, { type: 'inbound-rtp', mediaType: 'video' });
-        default:
-      }
-      return -1;
-    }
-  });
-})
-*/
 
 export class VideoOutputReports extends SimpleReports {
   /**
@@ -131,8 +115,8 @@ export class VideoOutputReports extends SimpleReports {
       case 'safari':
         return this._find('frameWidth', { type: 'track' });
       default:
+        return this._find('frameWidth');
     }
-    return -1;
   }
   get frameHeight(): number {
     switch (browserDetails.browser) {
@@ -141,8 +125,8 @@ export class VideoOutputReports extends SimpleReports {
       case 'safari':
         return this._find('frameHeight', { type: 'track' });
       default:
+        return this._find('frameHeight');
     }
-    return -1;
   }
 
   /**
@@ -179,8 +163,9 @@ export class VideoOutputReports extends SimpleReports {
       case 'firefox':
         return this._find('packetsLost', { type: 'remote-inbound-rtp', kind: 'video' });
       default:
+        // todo - mediaType ?
+        return this._find('packetsLost', { mediaType: 'video' });
     }
-    return -1;
   }
   get jitter(): number {
     switch (browserDetails.browser) {
@@ -188,8 +173,9 @@ export class VideoOutputReports extends SimpleReports {
       case 'firefox':
         return this._find('jitter', { type: 'remote-inbound-rtp', kind: 'video' });
       default:
+        // todo - mediaType ?
+        return this._find('jitter', { mediaType: 'video' });
     }
-    return -1;
   }
   get roundTripTime(): number {
     switch (browserDetails.browser) {
@@ -197,8 +183,8 @@ export class VideoOutputReports extends SimpleReports {
       case 'firefox':
         return this._find('roundTripTime', { type: 'remote-inbound-rtp', kind: 'video' });
       default:
+        return this._find('roundTripTime', { mediaType: 'video' });
     }
-    return -1;
   }
 
   /**
@@ -212,63 +198,96 @@ export class VideoOutputReports extends SimpleReports {
       case 'safari':
         return this._find('framesSent', { type: 'track' });
       default:
+        return this._find('framesSent');
     }
-    return -1;
   }
 }
 
-/* todo - simplify
-['bytesSent', 'packetsSent', 'nackCount', 'pliCount', 'firCount', 'framesEncoded'].forEach(key => {
-  Object.defineProperty(VideoOutputReports.prototype, key, {
-    get() {
-      switch (browserDetails.browser) {
-        case 'chrome':
-        case 'firefox':
-        case 'safari':
-          return this._find(key, { type: 'outbound-rtp', mediaType: 'video' });
-        default:
-      }
-      return -1;
-    }
-  });
-})
-*/
-
-// ============== todo - Legacy ================/
+// ============== Chrome - Legacy ================/
 
 // chrome - { type: ssrc, mediaType: video }
 export class VedioInputLegacyReports extends SimpleReports {
-  frameWidth: number; // googFrameWidthReceived
-  frameHeight: number; // googFrameHeightReceived
+  // refer to googFrameWidthReceived
+  get frameWidth(): number {
+    return this._find('googFrameWidthReceived', { type: 'ssrc', mediaType: 'video' });
+  }
+  // refer to - googFrameHeightReceived
+  get frameHeight(): number {
+    return this._find('googFrameHeightReceived', { type: 'ssrc', mediaType: 'video' });
+  }
 
-  bytesReceived: number;
-  packetsReceived: number;
-  packetsLost: number;
+  get bytesReceived(): number {
+    return this._find('bytesReceived', { type: 'ssrc', mediaType: 'video' });
+  }
+  get packetsReceived(): number {
+    return this._find('packetsReceived', { type: 'ssrc', mediaType: 'video' });
+  }
+  get packetsLost(): number {
+    return this._find('packetsLost', { type: 'ssrc', mediaType: 'video' });
+  }
 
-  nackCount: number; // googNacksSent
-  pliCount: number; // googPlisSent
-  firCount: number; // googFirsSent
+  // refer to - googNacksSent
+  get nackCount(): number {
+    return this._find('googNacksSent', { type: 'ssrc', mediaType: 'video' });
+  }
+  // refer to - googPlisSent
+  get pliCount(): number {
+    return this._find('googPlisSent', { type: 'ssrc', mediaType: 'video' });
+  }
+  // refer to - googFirsSent
+  get firCount(): number {
+    return this._find('googFirsSent', { type: 'ssrc', mediaType: 'video' });
+  }
 
   // framesReceived: number; // no corresponding data
   // framesDropped: number; // no corresponding data
-  framesDecoded: number;
+  get framesDecoded(): number {
+    return this._find('framesDecoded', { type: 'ssrc', mediaType: 'video' });
+  }
 }
 
 // chrome - { type: ssrc, mediaType: video }
 export class VideoOutputLegacyReports extends SimpleReports {
-  frameWidth: number; // googFrameWidthSent
-  frameHeight: number;  // googFrameHeightSent
+  // refer to - googFrameWidthSent
+  get frameWidth(): number {
+    return this._find('googFrameWidthSent', { type: 'ssrc', mediaType: 'video' });
+  }
+  // refer to - googFrameHeightSent
+  get frameHeight(): number {
+    return this._find('googFrameHeightSent', { type: 'ssrc', mediaType: 'video' });
+  }
 
-  bytesSent: number;
-  packetsSent: number;
-  nackCount: number; // googNacksReceived
-  pliCount: number; // googPlisReceived
-  firCount: number; // googFirsReceived
-  framesEncoded: number
+  get bytesSent(): number {
+    return this._find('bytesSent', { type: 'ssrc', mediaType: 'video' });
+  }
+  get packetsSent(): number {
+    return this._find('packetsSent', { type: 'ssrc', mediaType: 'video' });
+  }
+  // refer to - googNacksReceived
+  get nackCount(): number {
+    return this._find('googNacksReceived', { type: 'ssrc', mediaType: 'video' });
+  }
+  // refer to - googPlisReceived
+  get pliCount(): number {
+    return this._find('googPlisReceived', { type: 'ssrc', mediaType: 'video' });
+  }
+  // refer to - googFirsReceived
+  get firCount(): number {
+    return this._find('googFirsReceived', { type: 'ssrc', mediaType: 'video' });
+  }
+  get framesEncoded(): number {
+    return this._find('framesEncoded', { type: 'ssrc', mediaType: 'video' });
+  }
 
-  packetsLost: number;
+  get packetsLost(): number {
+    return this._find('packetsLost', { type: 'ssrc', mediaType: 'video' });
+  }
   // jitter: number; // no corresponding data
-  roundTripTime: number; // googRtt - ms
+
+  // refer to - googRtt - ms
+  get roundTripTime(): number {
+    return this._find('googRtt', { type: 'ssrc', mediaType: 'video' });
+  }
 
   // framesSent: number; // no corresponding data
 }

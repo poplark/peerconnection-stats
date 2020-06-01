@@ -9,15 +9,14 @@ export {
 export {
   AudioInputReports,
   AudioOutputReports,
-  // AudioInputLegacyReports,
-  // AudioOutputLegacyReports
+  AudioInputLegacyReports,
+  AudioOutputLegacyReports,
   VideoInputReports,
   VideoOutputReports,
-  // VedioInputLegacyReports,
-  // VideoOutputLegacyReports
+  VedioInputLegacyReports,
+  VideoOutputLegacyReports,
   CandidatePairReports,
-  // CandidatePairLegacyReports
-// todo - finish legacy data
+  CandidatePairLegacyReports,
 } from './simple-reports/index';
 
 export function getStats(pc: RTCPeerConnection): Promise<Array<OriginalReport>> {

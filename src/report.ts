@@ -10,17 +10,17 @@ export interface Report {
 }
 
 export class Reports {
-  private originReports: Array<OriginalReport>;
+  private originalReports: Array<OriginalReport>;
 
   constructor(originReports: Array<OriginalReport>) {
-    this.originReports = originReports;
+    this.originalReports = originReports;
   }
 
   find(key: string, condition?: {
     [key: string]: string | number | boolean;
   }): Array<Report> {
     const result = [] as Array<Report>;
-    this.originReports.forEach((report: OriginalReport) => {
+    this.originalReports.forEach((report: OriginalReport) => {
       let flag = true;
       if (condition) {
         for (const key in condition) {

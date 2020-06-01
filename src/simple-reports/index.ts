@@ -1,20 +1,18 @@
 export {
   AudioInputReports,
   AudioOutputReports,
-  // AudioInputLegacyReports,
-  // AudioOutputLegacyReports
+  AudioInputLegacyReports,
+  AudioOutputLegacyReports
 } from './audio';
 
 export {
   VideoInputReports,
   VideoOutputReports,
-  // VedioInputLegacyReports,
-  // VideoOutputLegacyReports
+  VedioInputLegacyReports,
+  VideoOutputLegacyReports
 } from './video';
 
 export {
   CandidatePairReports,
-  // CandidatePairLegacyReports
+  CandidatePairLegacyReports
 } from './pair';
-
-// todo - finish legacy data
