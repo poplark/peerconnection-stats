@@ -1,9 +1,12 @@
 // use samples data to test
 // import { Reports } from '../src/report';
 import browserDetails from '../src/utils/browser';
+import { parse } from '../src/utils/parser';
 import {
   AudioInputReports,
   AudioOutputReports,
+  AudioInputLegacyReports,
+  AudioOutputLegacyReports,
   VideoInputReports,
   VideoOutputReports,
 } from '../src';
@@ -11,8 +14,8 @@ import {
 import {
   chromeInOriginalReports,
   chromeOutOriginalReports,
-  // chromeInLegacyOriginalReports,
-  // chromeOutLegacyOriginalReports,
+  chromeInLegacyOriginalReports,
+  chromeOutLegacyOriginalReports,
   firefoxInOriginalReports,
   firefoxOutOriginalReports,
   safariInOriginalReports,
@@ -56,6 +59,36 @@ describe('Audio Input Reports - ', function (): void {
   });
 });
 
+describe('Audio Input Legacy Reports - ', function(): void {
+  let reports: AudioInputLegacyReports;
+  if (browserDetails.browser === 'chrome') {
+    reports = new AudioInputLegacyReports(chromeInLegacyOriginalReports);
+    it(browserDetails.browser, function (): void {
+      expect(reports.bytesReceived).toBeGreaterThanOrEqual(0);
+      // expect(reports.jitter).toBeGreaterThanOrEqual(0);
+      expect(reports.packetsLost).toBeGreaterThanOrEqual(0);
+      expect(reports.packetsReceived).toBeGreaterThanOrEqual(0);
+      expect(reports.audioLevel).toBeGreaterThanOrEqual(0);
+      expect(reports.totalAudioEnergy).toBeGreaterThanOrEqual(0);
+      expect('' + reports.bytesReceived).toEqual(reports.find('bytesReceived', { type: 'ssrc', mediaType: 'audio' })[0].value as string);
+      expect('' + reports.packetsLost).toEqual(reports.find('packetsLost', { type: 'ssrc', mediaType: 'audio' })[0].value as string);
+      expect('' + reports.packetsReceived).toEqual(reports.find('packetsReceived', { type: 'ssrc', mediaType: 'audio' })[0].value as string);
+      expect('' + reports.audioLevel).toEqual(reports.find('audioOutputLevel', { type: 'ssrc', mediaType: 'audio' })[0].value as string);
+      expect('' + reports.totalAudioEnergy).toEqual(reports.find('totalAudioEnergy', { type: 'ssrc', mediaType: 'audio' })[0].value as string);
+      // 加速率
+      expect(parse((reports.find('googAccelerateRate', { type: 'ssrc', mediaType: 'audio' })[0].value) as string)).toBeGreaterThanOrEqual(0);
+      // 抖动反馈
+      expect(parse((reports.find('googJitterReceived', { type: 'ssrc', mediaType: 'audio' })[0].value) as string)).toBeGreaterThanOrEqual(0);
+      // 抗丢包解码
+      expect(parse((reports.find('googDecodingPLC', { type: 'ssrc', mediaType: 'audio' })[0].value) as string)).toBeGreaterThanOrEqual(0);
+      // 伸缩率
+      expect(parse((reports.find('googExpandRate', { type: 'ssrc', mediaType: 'audio' })[0].value) as string)).toBeGreaterThanOrEqual(0);
+      // 伸缩抢占率
+      expect(parse((reports.find('googPreemptiveExpandRate', { type: 'ssrc', mediaType: 'audio' })[0].value) as string)).toBeGreaterThanOrEqual(0);
+    });
+  }
+});
+
 describe('Audio Output Reports - ', function (): void {
   let reports: AudioOutputReports;
   switch (browserDetails.browser) {
@@ -97,6 +130,33 @@ describe('Audio Output Reports - ', function (): void {
     }
     // todo - edge & others
   });
+});
+
+describe('Audio Output Legacy Reports - ', function(): void {
+  let reports: AudioOutputLegacyReports;
+  if (browserDetails.browser === 'chrome') {
+    reports = new AudioOutputLegacyReports(chromeOutLegacyOriginalReports);
+    it(browserDetails.browser, function (): void {
+      expect(reports.bytesSent).toBeGreaterThanOrEqual(0);
+      // expect(reports.jitter).toBeGreaterThanOrEqual(0);
+      expect(reports.packetsLost).toBeGreaterThanOrEqual(0);
+      expect(reports.packetsSent).toBeGreaterThanOrEqual(0);
+      expect(reports.roundTripTime).toBeGreaterThanOrEqual(0);
+      expect(reports.audioLevel).toBeGreaterThanOrEqual(0);
+      expect(reports.totalAudioEnergy).toBeGreaterThanOrEqual(0);
+
+      expect('' + reports.bytesSent).toEqual(reports.find('bytesSent', { type: 'ssrc', mediaType: 'audio' })[0].value as string);
+      expect('' + reports.packetsLost).toEqual(reports.find('packetsLost', { type: 'ssrc', mediaType: 'audio' })[0].value as string);
+      expect('' + reports.packetsSent).toEqual(reports.find('packetsSent', { type: 'ssrc', mediaType: 'audio' })[0].value as string);
+      expect('' + reports.roundTripTime).toEqual(reports.find('googRtt', { type: 'ssrc', mediaType: 'audio' })[0].value as string);
+      // 采集音频幅度
+      expect('' + reports.audioLevel).toEqual(reports.find('audioInputLevel', { type: 'ssrc', mediaType: 'audio' })[0].value as string);
+      // 总音频发送量
+      expect('' + reports.totalAudioEnergy).toEqual(reports.find('totalAudioEnergy', { type: 'ssrc', mediaType: 'audio' })[0].value as string);
+      // 抖动反馈
+      expect(parse((reports.find('googJitterReceived', { type: 'ssrc', mediaType: 'audio' })[0].value) as string)).toBeGreaterThanOrEqual(0);
+    });
+  }
 });
 
 describe('Video Input Reports - ', function (): void {
