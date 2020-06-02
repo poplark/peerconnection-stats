@@ -1,0 +1,11 @@
+{
+  "mode": "file",
+  "out": "docs",
+  "exclude": [
+    "src/utils/*.ts"
+  ],
+  "disableSources": true,
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "readme": "none"
+}

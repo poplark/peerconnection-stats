@@ -6,7 +6,8 @@
   "scripts": {
     "test": "karma start test/karma.config.js",
     "dev": "webpack --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "build": "rm -rf types && webpack --config webpack.prod.js",
+    "doc": "rm -rf docs && typedoc"
   },
   "repository": {
     "type": "git",
@@ -47,6 +48,7 @@
     "karma-typescript": "^5.0.2",
     "karma-typescript-es6-transform": "^5.0.2",
     "ts-loader": "^7.0.4",
+    "typedoc": "^0.17.7",
     "typescript": "^3.9.2",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
