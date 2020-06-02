@@ -11,6 +11,8 @@ import {
   VideoOutputReports,
   VideoInputLegacyReports,
   VideoOutputLegacyReports,
+  CandidatePairReports,
+  CandidatePairLegacyReports,
 } from '../src';
 
 import {
@@ -339,3 +341,116 @@ describe('Video Output Legacy Reports - ', function (): void {
   }
 });
 
+describe('Candidate Pair Reports (In) - ', function (): void {
+  let reports: CandidatePairReports;
+  switch (browserDetails.browser) {
+    case 'chrome':
+      reports = new CandidatePairReports(chromeInOriginalReports);
+      break;
+    case 'firefox':
+      reports = new CandidatePairReports(firefoxInOriginalReports);
+      break;
+    case 'safari':
+      reports = new CandidatePairReports(safariInOriginalReports);
+      break;
+  }
+  it(browserDetails.browser, function (): void {
+    expect(reports.bytesSent).toBeGreaterThanOrEqual(0);
+    expect(reports.bytesReceived).toBeGreaterThanOrEqual(0);
+
+    switch (browserDetails.browser) {
+      case 'chrome':
+        expect(reports.currentRoundTripTime).toBeGreaterThanOrEqual(0);
+        expect(reports.totalRoundTripTime).toBeGreaterThanOrEqual(0);
+        break;
+      case 'firefox':
+        expect(reports.currentRoundTripTime).toEqual(-1);
+        expect(reports.totalRoundTripTime).toEqual(-1);
+        break;
+      case 'safari':
+        expect(reports.currentRoundTripTime).toBeGreaterThanOrEqual(0);
+        expect(reports.totalRoundTripTime).toBeGreaterThanOrEqual(0);
+        break;
+      default:
+        expect(reports.currentRoundTripTime).toEqual(-1);
+        expect(reports.totalRoundTripTime).toEqual(-1);
+    }
+    // todo - edge & others
+  });
+});
+
+describe('Candidate Pair Legacy Reports (In) - ', function (): void {
+  let reports: CandidatePairLegacyReports;
+  if (browserDetails.browser === 'chrome') {
+    reports = new CandidatePairLegacyReports(chromeInLegacyOriginalReports);
+
+    it(browserDetails.browser, function (): void {
+      expect(reports.bytesSent).toBeGreaterThanOrEqual(0);
+      expect(reports.bytesReceived).toBeGreaterThanOrEqual(0);
+      expect(reports.packetsSent).toBeGreaterThanOrEqual(0);
+      expect(reports.currentRoundTripTime).toBeGreaterThanOrEqual(0);
+
+      expect('' + reports.bytesSent).toEqual(reports.find('bytesSent', { type: 'googCandidatePair' })[0].value as string);
+      expect('' + reports.bytesReceived).toEqual(reports.find('bytesReceived', { type: 'googCandidatePair' })[0].value as string);
+      expect('' + reports.packetsSent).toEqual(reports.find('packetsSent', { type: 'googCandidatePair' })[0].value as string);
+      expect('' + reports.currentRoundTripTime).toEqual(reports.find('googRtt', { type: 'googCandidatePair' })[0].value as string);
+    });
+  }
+});
+
+describe('Candidate Pair Reports (Out) - ', function (): void {
+  let reports: CandidatePairReports;
+  switch (browserDetails.browser) {
+    case 'chrome':
+      reports = new CandidatePairReports(chromeOutOriginalReports);
+      break;
+    case 'firefox':
+      reports = new CandidatePairReports(firefoxOutOriginalReports);
+      break;
+    case 'safari':
+      reports = new CandidatePairReports(safariOutOriginalReports);
+      break;
+  }
+  it(browserDetails.browser, function (): void {
+    expect(reports.bytesSent).toBeGreaterThanOrEqual(0);
+    expect(reports.bytesReceived).toBeGreaterThanOrEqual(0);
+
+    switch (browserDetails.browser) {
+      case 'chrome':
+        expect(reports.currentRoundTripTime).toBeGreaterThanOrEqual(0);
+        expect(reports.totalRoundTripTime).toBeGreaterThanOrEqual(0);
+        break;
+      case 'firefox':
+        expect(reports.currentRoundTripTime).toEqual(-1);
+        expect(reports.totalRoundTripTime).toEqual(-1);
+        break;
+      case 'safari':
+        expect(reports.currentRoundTripTime).toBeGreaterThanOrEqual(0);
+        expect(reports.totalRoundTripTime).toBeGreaterThanOrEqual(0);
+        break;
+      default:
+        expect(reports.currentRoundTripTime).toEqual(-1);
+        expect(reports.totalRoundTripTime).toEqual(-1);
+    }
+    // todo - edge & others
+  });
+});
+
+describe('Candidate Pair Legacy Reports (Out) - ', function (): void {
+  let reports: CandidatePairLegacyReports;
+  if (browserDetails.browser === 'chrome') {
+    reports = new CandidatePairLegacyReports(chromeOutLegacyOriginalReports);
+
+    it(browserDetails.browser, function (): void {
+      expect(reports.bytesSent).toBeGreaterThanOrEqual(0);
+      expect(reports.bytesReceived).toBeGreaterThanOrEqual(0);
+      expect(reports.packetsSent).toBeGreaterThanOrEqual(0);
+      expect(reports.currentRoundTripTime).toBeGreaterThanOrEqual(0);
+
+      expect('' + reports.bytesSent).toEqual(reports.find('bytesSent', { type: 'googCandidatePair' })[0].value as string);
+      expect('' + reports.bytesReceived).toEqual(reports.find('bytesReceived', { type: 'googCandidatePair' })[0].value as string);
+      expect('' + reports.packetsSent).toEqual(reports.find('packetsSent', { type: 'googCandidatePair' })[0].value as string);
+      expect('' + reports.currentRoundTripTime).toEqual(reports.find('googRtt', { type: 'googCandidatePair' })[0].value as string);
+    });
+  }
+});
