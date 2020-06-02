@@ -6,7 +6,7 @@
 
 ## 示例
 
-看更多 API 文档，请翻着 [DOCS](docs/index.html)
+看更多 API 文档，请翻着 [DOCS](https://poplark.github.io/peerconnection-stats/)
 
 ### getStats
 

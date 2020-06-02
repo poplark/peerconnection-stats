@@ -6,7 +6,7 @@ A getStats API of peerconnection with `Standardized` and `Legacy Non-Standard` r
 
 ## Examples
 
-For more APIs, see [DOCS](docs/index.html)
+For more APIs, see [DOCS](https://poplark.github.io/peerconnection-stats/)
 
 ### getStats
 
