@@ -1,4 +1,5 @@
 import { OriginalReport, Report, Reports } from './report';
+import browserDetails from './utils/browser';
 
 export {
   OriginalReport,
@@ -34,6 +35,9 @@ export function getStats(pc: RTCPeerConnection): Promise<Array<OriginalReport>> 
 }
 
 export function getLegacyStats(pc: RTCPeerConnection): Promise<Array<OriginalReport>> {
+  if (browserDetails.browser !== 'chrome') {
+    return Promise.reject(new Error('Only chrome/chromium style browsers can use this function'));
+  }
   return new Promise((resolve, reject) => {
     const result = [] as Array<OriginalReport>;
     (pc as any).getStats(function(response) {
