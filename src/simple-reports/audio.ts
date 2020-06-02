@@ -3,26 +3,50 @@ import { Reports } from '../report';
 
 export class AudioInputReports extends Reports {
   /**
-   * chrome - { type: inbound-rtp, mediaType: audio }
-   * firefox - { type: inbound-rtp, mediaType: audio }
-   * safari - { type: inbound-rtp, mediaType: audio }
+   * **Note** (Data from):
+   * - chrome - { type: 'inbound-rtp', mediaType: 'audio' }
+   * - firefox - { type: 'inbound-rtp', mediaType: 'audio' }
+   * - safari - { type: 'inbound-rtp', mediaType: 'audio' }
    */
   get bytesReceived(): number {
     return this._find('bytesReceived', { type: 'inbound-rtp', mediaType: 'audio' });
   }
+
+  /**
+   * **Note** (Data from):
+   * - chrome - { type: 'inbound-rtp', mediaType: 'audio' }
+   * - firefox - { type: 'inbound-rtp', mediaType: 'audio' }
+   * - safari - { type: 'inbound-rtp', mediaType: 'audio' }
+   */
   get packetsReceived(): number {
     return this._find('packetsReceived', { type: 'inbound-rtp', mediaType: 'audio' });
   }
+
+  /**
+   * **Note** (Data from):
+   * - chrome - { type: 'inbound-rtp', mediaType: 'audio' }
+   * - firefox - { type: 'inbound-rtp', mediaType: 'audio' }
+   * - safari - { type: 'inbound-rtp', mediaType: 'audio' }
+   */
   get jitter(): number {
     return this._find('jitter', { type: 'inbound-rtp', mediaType: 'audio' });
   }
+
+  /**
+   * **Note** (Data from):
+   * - chrome - { type: 'inbound-rtp', mediaType: 'audio' }
+   * - firefox - { type: 'inbound-rtp', mediaType: 'audio' }
+   * - safari - { type: 'inbound-rtp', mediaType: 'audio' }
+   */
   get packetsLost(): number {
     return this._find('packetsLost', { type: 'inbound-rtp', mediaType: 'audio' });
   }
 
   /**
-   * chrome - { type: track, kind: audio }
-   * safari - { type: track }
+   * **Note** (Data from):
+   * - chrome - { type: 'track', kind: 'audio' }
+   * - firefox - no corresponding data
+   * - safari - { type: 'track' }
    */
   get audioLevel(): number {
     switch (browserDetails.browser) {
@@ -36,7 +60,10 @@ export class AudioInputReports extends Reports {
   }
 
   /**
-   * chrome - { type: track, kind: audio }
+   * **Note** (Data from):
+   * - chrome - { type: 'track', kind: 'audio' }
+   * - firefox - no corresponding data
+   * - safari - no corresponding data
    */
   get totalAudioEnergy(): number {
     switch (browserDetails.browser) {
@@ -50,20 +77,30 @@ export class AudioInputReports extends Reports {
 
 export class AudioOutputReports extends Reports {
   /**
-   * chrome - { type: outbound-rtp, mediaType: audio }
-   * firefox - { type: outbound-rtp, mediaType: audio }
-   * safari - { type: outbound-rtp, mediaType: audio }
+   * **Note** (Data from):
+   * - chrome - { type: 'outbound-rtp', mediaType: 'audio' }
+   * - firefox - { type: 'outbound-rtp', mediaType: 'audio' }
+   * - safari - { type: 'outbound-rtp', mediaType: 'audio' }
    */
   get bytesSent(): number {
     return this._find('bytesSent', { type: 'outbound-rtp', mediaType: 'audio' });
   }
+
+  /**
+   * **Note** (Data from):
+   * - chrome - { type: 'outbound-rtp', mediaType: 'audio' }
+   * - firefox - { type: 'outbound-rtp', mediaType: 'audio' }
+   * - safari - { type: 'outbound-rtp', mediaType: 'audio' }
+   */
   get packetsSent(): number {
     return this._find('packetsSent', { type: 'outbound-rtp', mediaType: 'audio' });
   }
 
   /**
-   * chrome - { type: remote-inbound-rtp, kind: audio }
-   * firefox - { type: remote-inbound-rtp, kind: audio }
+   * **Note** (Data from):
+   * - chrome - { type: 'remote-inbound-rtp', kind: 'audio' }
+   * - firefox - { type: 'remote-inbound-rtp', kind: 'audio' }
+   * - safari - no corresponding data
    */
   get jitter(): number {
     switch (browserDetails.browser) {
@@ -76,6 +113,13 @@ export class AudioOutputReports extends Reports {
         return this._find('jitter', { mediaType: 'audio' });
     }
   }
+
+  /**
+   * **Note** (Data from):
+   * - chrome - { type: 'remote-inbound-rtp', kind: 'audio' }
+   * - firefox - { type: 'remote-inbound-rtp', kind: 'audio' }
+   * - safari - no corresponding data
+   */
   get packetsLost(): number {
     switch (browserDetails.browser) {
       case 'chrome':
@@ -87,6 +131,13 @@ export class AudioOutputReports extends Reports {
         return this._find('packetsLost', { mediaType: 'audio' });
     }
   }
+
+  /**
+   * **Note** (Data from):
+   * - chrome - { type: 'remote-inbound-rtp', kind: 'audio' }
+   * - firefox - { type: 'remote-inbound-rtp', kind: 'audio' }
+   * - safari - no corresponding data
+   */
   get roundTripTime(): number {
     switch (browserDetails.browser) {
       case 'chrome':
@@ -100,7 +151,10 @@ export class AudioOutputReports extends Reports {
   }
 
   /**
-   * chrome - { type: media-source, kind: audio }
+   * **Note** (Data from):
+   * - chrome - { type: 'media-source', kind: 'audio' }
+   * - firefox - no corresponding data
+   * - safari - no corresponding data
    */
   get audioLevel(): number {
     switch (browserDetails.browser) {
@@ -112,7 +166,10 @@ export class AudioOutputReports extends Reports {
   }
 
   /**
-   * chrome - { type: media-source, kind: audio }
+   * **Note** (Data from):
+   * - chrome - { type: 'media-source', kind: 'audio' }
+   * - firefox - no corresponding data
+   * - safari - no corresponding data
    */
   get totalAudioEnergy(): number {
     switch (browserDetails.browser) {
@@ -126,64 +183,92 @@ export class AudioOutputReports extends Reports {
 
 // ============== Chrome - Legacy ================/
 
-// chrome - { type: ssrc, mediaType: audio }
+// chrome - { type: 'ssrc', mediaType: 'audio' }
 export class AudioInputLegacyReports extends Reports {
-  // totalAudioEnergy: number; // 总音频发送量
-  // googAccelerateRate: number; // 加速率
-  // googJitterReceived: number; // 抖动反馈
-  // googDecodingPLC: number; // 抗丢包解码
-  // googExpandRate: number; // 伸缩率
-  // googPreemptiveExpandRate: number; // 伸缩抢占率
-  // audioOutputLevel: number; // 播放音频幅度
-
-  // chrome - { type: ssrc, mediaType: audio }
+  /**
+   * **Note** (Data from):
+   * - chrome - { type: 'ssrc', mediaType: 'audio' }
+   */
   get bytesReceived(): number {
     return this._find('bytesReceived', { type: 'ssrc', mediaType: 'audio'});
   }
+  /**
+   * **Note** (Data from):
+   * - chrome - { type: 'ssrc', mediaType: 'audio' }
+   */
   get packetsReceived(): number {
     return this._find('packetsReceived', { type: 'ssrc', mediaType: 'audio'});
   }
+  /**
+   * **Note** (Data from):
+   * - chrome - { type: 'ssrc', mediaType: 'audio' }
+   */
   get packetsLost(): number {
     return this._find('packetsLost', { type: 'ssrc', mediaType: 'audio'});
   }
   // jitter: number; // no corresponding data
 
-  // refer to audioOutputLevel
+  /**
+   * **Note** (Data from):
+   * - chrome - { type: 'ssrc', mediaType: 'audio' }, and the original source is `audioOutputLevel`
+   */
   get audioLevel(): number {
     return this._find('audioOutputLevel', { type: 'ssrc', mediaType: 'audio'});
   }
+
+  /**
+   * **Note** (Data from):
+   * - chrome - { type: 'ssrc', mediaType: 'audio' }
+   */
   get totalAudioEnergy(): number {
     return this._find('totalAudioEnergy', { type: 'ssrc', mediaType: 'audio'});
   }
 }
 
-// chrome - { type: ssrc, mediaType: audio }
+// chrome - { type: 'ssrc', mediaType: 'audio' }
 export class AudioOutputLegacyReports extends Reports {
-  // totalAudioEnergy: number; // 总音频发送量
-  // googJitterReceived: number; // 抖动反馈
-  // audioInputLevel: number; // 采集音频幅度
-
-  // chrome - { type: ssrc, mediaType: audio }
+  /**
+   * **Note** (Data from):
+   * - chrome - { type: 'ssrc', mediaType: 'audio' }
+   */
   get bytesSent(): number {
     return this._find('bytesSent', { type: 'ssrc', mediaType: 'audio'});
   }
+  /**
+   * **Note** (Data from):
+   * - chrome - { type: 'ssrc', mediaType: 'audio' }
+   */
   get packetsSent(): number {
     return this._find('packetsSent', { type: 'ssrc', mediaType: 'audio'});
   }
+  /**
+   * **Note** (Data from):
+   * - chrome - { type: 'ssrc', mediaType: 'audio' }
+   */
   get packetsLost(): number {
     return this._find('packetsLost', { type: 'ssrc', mediaType: 'audio'});
   }
   // jitter: number; // no corresponding data
 
-  // refer to googRtt
+  /**
+   * **Note** (Data from):
+   * - chrome - { type: 'ssrc', mediaType: 'audio' }, and the original source is `googRtt`
+   */
   get roundTripTime(): number {
     return this._find('googRtt', { type: 'ssrc', mediaType: 'audio'});
   }
 
-  // refer to audioInputLevel
+  /**
+   * **Note** (Data from):
+   * - chrome - { type: 'ssrc', mediaType: 'audio' }, and the original source is `audioInputLevel`
+   */
   get audioLevel(): number {
     return this._find('audioInputLevel', { type: 'ssrc', mediaType: 'audio'});
   }
+  /**
+   * **Note** (Data from):
+   * - chrome - { type: 'ssrc', mediaType: 'audio' }
+   */
   get totalAudioEnergy(): number {
     return this._find('totalAudioEnergy', { type: 'ssrc', mediaType: 'audio'});
   }

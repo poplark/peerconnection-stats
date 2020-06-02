@@ -3,9 +3,10 @@ import { Reports } from '../report';
 
 export class CandidatePairReports extends Reports {
   /**
-   * chrome - { type: candidate-pair }
-   * firefox - { type: candidate-pair, selected: true }
-   * safari - { type: candidate-pair }
+   * **Note** (Data from):
+   * - chrome - { type: 'candidate-pair' }
+   * - firefox - { type: 'candidate-pair', selected: true }
+   * - safari - { type: 'candidate-pair' }
    */
   get bytesSent(): number {
     switch (browserDetails.browser) {
@@ -18,6 +19,12 @@ export class CandidatePairReports extends Reports {
         return this._find('bytesSent', { type: 'candidate-pair' });
     }
   }
+  /**
+   * **Note** (Data from):
+   * - chrome - { type: 'candidate-pair' }
+   * - firefox - { type: 'candidate-pair', selected: true }
+   * - safari - { type: 'candidate-pair' }
+   */
   get bytesReceived(): number {
     switch (browserDetails.browser) {
       case 'chrome':
@@ -31,8 +38,10 @@ export class CandidatePairReports extends Reports {
   }
 
   /**
-   * chrome - { type: candidate-pair }
-   * safari - { type: candidate-pair }
+   * **Note** (Data from):
+   * - chrome - { type: 'candidate-pair' }
+   * - firefox - no corresponding data
+   * - safari - { type: 'candidate-pair' }
    */
   get currentRoundTripTime(): number {
     switch (browserDetails.browser) {
@@ -43,6 +52,12 @@ export class CandidatePairReports extends Reports {
         return this._find('currentRoundTripTime', { type: 'candidate-pair' });
     }
   }
+  /**
+   * **Note** (Data from):
+   * - chrome - { type: 'candidate-pair' }
+   * - firefox - no corresponding data
+   * - safari - { type: 'candidate-pair' }
+   */
   get totalRoundTripTime(): number {
     switch (browserDetails.browser) {
       case 'chrome':
@@ -57,17 +72,31 @@ export class CandidatePairReports extends Reports {
 // ============== Chrome - Legacy ================/
 
 export class CandidatePairLegacyReports extends Reports {
-  // chrome - { type: googCandidatePair }
+  /**
+   * **Note** (Data from):
+   * - chrome - { type: 'googCandidatePair' }
+   */
   get bytesReceived(): number {
     return this._find('bytesReceived', { type: 'googCandidatePair' });
   }
+  /**
+   * **Note** (Data from):
+   * - chrome - { type: 'googCandidatePair' }
+   */
   get bytesSent(): number {
     return this._find('bytesSent', { type: 'googCandidatePair' });
   }
+  /**
+   * **Note** (Data from):
+   * - chrome - { type: 'googCandidatePair' }
+   */
   get packetsSent(): number {
     return this._find('packetsSent', { type: 'googCandidatePair' });
   }
-  // refer to googRtt - ms
+  /**
+   * **Note** (Data from):
+   * - chrome - { type: 'googCandidatePair' }, and the original source is `googRtt`
+   */
   get currentRoundTripTime(): number {
     return this._find('googRtt', { type: 'googCandidatePair' });
   }
