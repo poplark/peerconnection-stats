@@ -8,7 +8,7 @@ export {
 export {
   VideoInputReports,
   VideoOutputReports,
-  VedioInputLegacyReports,
+  VideoInputLegacyReports,
   VideoOutputLegacyReports
 } from './video';
 

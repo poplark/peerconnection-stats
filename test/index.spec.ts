@@ -9,6 +9,8 @@ import {
   AudioOutputLegacyReports,
   VideoInputReports,
   VideoOutputReports,
+  VideoInputLegacyReports,
+  VideoOutputLegacyReports,
 } from '../src';
 
 import {
@@ -216,6 +218,37 @@ describe('Video Input Reports - ', function (): void {
   });
 });
 
+describe('Video Input Legacy Reports - ', function (): void {
+  let reports: VideoInputLegacyReports;
+  if (browserDetails.browser === 'chrome') {
+    reports = new VideoInputLegacyReports(chromeInLegacyOriginalReports);
+
+    it(browserDetails.browser, function (): void {
+      expect(reports.bytesReceived).toBeGreaterThanOrEqual(0);
+      expect(reports.packetsReceived).toBeGreaterThanOrEqual(0);
+      expect(reports.packetsLost).toBeGreaterThanOrEqual(0);
+      expect(reports.nackCount).toBeGreaterThanOrEqual(0);
+      expect(reports.pliCount).toBeGreaterThanOrEqual(0);
+      expect(reports.firCount).toBeGreaterThanOrEqual(0);
+
+      expect(reports.framesDecoded).toBeGreaterThanOrEqual(0);
+
+      expect(reports.frameWidth).toBeGreaterThanOrEqual(0);
+      expect(reports.frameHeight).toBeGreaterThanOrEqual(0);
+
+      expect('' + reports.bytesReceived).toEqual(reports.find('bytesReceived', { type: 'ssrc', mediaType: 'video' })[0].value as string);
+      expect('' + reports.packetsReceived).toEqual(reports.find('packetsReceived', { type: 'ssrc', mediaType: 'video' })[0].value as string);
+      expect('' + reports.packetsLost).toEqual(reports.find('packetsLost', { type: 'ssrc', mediaType: 'video' })[0].value as string);
+      expect('' + reports.nackCount).toEqual(reports.find('googNacksSent', { type: 'ssrc', mediaType: 'video' })[0].value as string);
+      expect('' + reports.pliCount).toEqual(reports.find('googPlisSent', { type: 'ssrc', mediaType: 'video' })[0].value as string);
+      expect('' + reports.firCount).toEqual(reports.find('googFirsSent', { type: 'ssrc', mediaType: 'video' })[0].value as string);
+      expect('' + reports.frameWidth).toEqual(reports.find('googFrameWidthReceived', { type: 'ssrc', mediaType: 'video' })[0].value as string);
+      expect('' + reports.frameHeight).toEqual(reports.find('googFrameHeightReceived', { type: 'ssrc', mediaType: 'video' })[0].value as string);
+      expect('' + reports.framesDecoded).toEqual(reports.find('framesDecoded', { type: 'ssrc', mediaType: 'video' })[0].value as string);
+    });
+  }
+});
+
 describe('Video Output Reports - ', function (): void {
   let reports: VideoOutputReports;
   switch (browserDetails.browser) {
@@ -273,3 +306,36 @@ describe('Video Output Reports - ', function (): void {
     // todo - edge & others
   });
 });
+
+describe('Video Output Legacy Reports - ', function (): void {
+  let reports: VideoOutputLegacyReports;
+  if (browserDetails.browser === 'chrome') {
+    reports = new VideoOutputLegacyReports(chromeOutLegacyOriginalReports);
+
+    it(browserDetails.browser, function (): void {
+      expect(reports.bytesSent).toBeGreaterThanOrEqual(0);
+      expect(reports.packetsSent).toBeGreaterThanOrEqual(0);
+      expect(reports.nackCount).toBeGreaterThanOrEqual(0);
+      expect(reports.pliCount).toBeGreaterThanOrEqual(0);
+      expect(reports.firCount).toBeGreaterThanOrEqual(0);
+      expect(reports.framesEncoded).toBeGreaterThanOrEqual(0);
+
+      expect(reports.frameWidth).toBeGreaterThanOrEqual(0);
+      expect(reports.frameHeight).toBeGreaterThanOrEqual(0);
+      expect(reports.packetsLost).toBeGreaterThanOrEqual(0);
+      expect(reports.roundTripTime).toBeGreaterThanOrEqual(0);
+
+      expect('' + reports.bytesSent).toEqual(reports.find('bytesSent', { type: 'ssrc', mediaType: 'video' })[0].value as string);
+      expect('' + reports.packetsSent).toEqual(reports.find('packetsSent', { type: 'ssrc', mediaType: 'video' })[0].value as string);
+      expect('' + reports.nackCount).toEqual(reports.find('googNacksReceived', { type: 'ssrc', mediaType: 'video' })[0].value as string);
+      expect('' + reports.pliCount).toEqual(reports.find('googPlisReceived', { type: 'ssrc', mediaType: 'video' })[0].value as string);
+      expect('' + reports.firCount).toEqual(reports.find('googFirsReceived', { type: 'ssrc', mediaType: 'video' })[0].value as string);
+      expect('' + reports.framesEncoded).toEqual(reports.find('framesEncoded', { type: 'ssrc', mediaType: 'video' })[0].value as string);
+      expect('' + reports.frameWidth).toEqual(reports.find('googFrameWidthSent', { type: 'ssrc', mediaType: 'video' })[0].value as string);
+      expect('' + reports.frameHeight).toEqual(reports.find('googFrameHeightSent', { type: 'ssrc', mediaType: 'video' })[0].value as string);
+      expect('' + reports.packetsLost).toEqual(reports.find('packetsLost', { type: 'ssrc', mediaType: 'video' })[0].value as string);
+      expect('' + reports.roundTripTime).toEqual(reports.find('googRtt', { type: 'ssrc', mediaType: 'video' })[0].value as string);
+    });
+  }
+});
+

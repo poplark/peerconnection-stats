@@ -206,7 +206,7 @@ export class VideoOutputReports extends SimpleReports {
 // ============== Chrome - Legacy ================/
 
 // chrome - { type: ssrc, mediaType: video }
-export class VedioInputLegacyReports extends SimpleReports {
+export class VideoInputLegacyReports extends SimpleReports {
   // refer to googFrameWidthReceived
   get frameWidth(): number {
     return this._find('googFrameWidthReceived', { type: 'ssrc', mediaType: 'video' });

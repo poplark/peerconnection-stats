@@ -13,7 +13,7 @@ export {
   AudioOutputLegacyReports,
   VideoInputReports,
   VideoOutputReports,
-  VedioInputLegacyReports,
+  VideoInputLegacyReports,
   VideoOutputLegacyReports,
   CandidatePairReports,
   CandidatePairLegacyReports,
