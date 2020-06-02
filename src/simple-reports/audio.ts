@@ -1,7 +1,7 @@
 import browserDetails from '../utils/browser';
-import { SimpleReports } from './base';
+import { Reports } from '../report';
 
-export class AudioInputReports extends SimpleReports {
+export class AudioInputReports extends Reports {
   /**
    * chrome - { type: inbound-rtp, mediaType: audio }
    * firefox - { type: inbound-rtp, mediaType: audio }
@@ -48,7 +48,7 @@ export class AudioInputReports extends SimpleReports {
   }
 }
 
-export class AudioOutputReports extends SimpleReports {
+export class AudioOutputReports extends Reports {
   /**
    * chrome - { type: outbound-rtp, mediaType: audio }
    * firefox - { type: outbound-rtp, mediaType: audio }
@@ -127,7 +127,7 @@ export class AudioOutputReports extends SimpleReports {
 // ============== Chrome - Legacy ================/
 
 // chrome - { type: ssrc, mediaType: audio }
-export class AudioInputLegacyReports extends SimpleReports {
+export class AudioInputLegacyReports extends Reports {
   // totalAudioEnergy: number; // 总音频发送量
   // googAccelerateRate: number; // 加速率
   // googJitterReceived: number; // 抖动反馈
@@ -158,7 +158,7 @@ export class AudioInputLegacyReports extends SimpleReports {
 }
 
 // chrome - { type: ssrc, mediaType: audio }
-export class AudioOutputLegacyReports extends SimpleReports {
+export class AudioOutputLegacyReports extends Reports {
   // totalAudioEnergy: number; // 总音频发送量
   // googJitterReceived: number; // 抖动反馈
   // audioInputLevel: number; // 采集音频幅度

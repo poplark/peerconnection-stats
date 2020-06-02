@@ -1,7 +1,7 @@
 import browserDetails from '../utils/browser';
-import { SimpleReports } from './base';
+import { Reports } from '../report';
 
-export class CandidatePairReports extends SimpleReports {
+export class CandidatePairReports extends Reports {
   /**
    * chrome - { type: candidate-pair }
    * firefox - { type: candidate-pair, selected: true }
@@ -56,7 +56,7 @@ export class CandidatePairReports extends SimpleReports {
 
 // ============== Chrome - Legacy ================/
 
-export class CandidatePairLegacyReports extends SimpleReports {
+export class CandidatePairLegacyReports extends Reports {
   // chrome - { type: googCandidatePair }
   get bytesReceived(): number {
     return this._find('bytesReceived', { type: 'googCandidatePair' });

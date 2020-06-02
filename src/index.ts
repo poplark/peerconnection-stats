@@ -1,5 +1,21 @@
-import { OriginalReport, Report, Reports } from './report';
 import browserDetails from './utils/browser';
+import { OriginalReport, Report, Reports } from './report';
+import {
+  AudioInputReports,
+  AudioOutputReports,
+  AudioInputLegacyReports,
+  AudioOutputLegacyReports,
+} from './simple-reports/audio';
+import {
+  VideoInputReports,
+  VideoOutputReports,
+  VideoInputLegacyReports,
+  VideoOutputLegacyReports,
+} from './simple-reports/video';
+import {
+  CandidatePairReports,
+  CandidatePairLegacyReports,
+} from './simple-reports/pair';
 
 export {
   OriginalReport,
@@ -12,14 +28,39 @@ export {
   AudioOutputReports,
   AudioInputLegacyReports,
   AudioOutputLegacyReports,
+};
+
+export {
   VideoInputReports,
   VideoOutputReports,
   VideoInputLegacyReports,
   VideoOutputLegacyReports,
+};
+
+export {
   CandidatePairReports,
   CandidatePairLegacyReports,
-} from './simple-reports/index';
+};
 
+/**
+ * Get stats of peerconnection / 获取 peerconnection 的状态信息
+ *
+ * @param pc A peerconnection object / 需要获取状态的 peerconnection 对象
+ * @returns A collection of formatted reports from original getStats of peerconnection / 一组通过 peerconnection 原生 getStats 方法获取的数据的格式式报告
+ *
+ * @example
+ * ```
+ * getStats(pc)
+ *  .then((originalReports: Array<OriginalReport>) => {
+ *    let report: CandidatePairReports = new CandidatePairReports(originalReports);
+ *    console.log(report.currentRoundTripTime);
+ *    ...
+ *  })
+ *  .catch(err => {
+ *    ...
+ *  });
+ * ```
+ */
 export function getStats(pc: RTCPeerConnection): Promise<Array<OriginalReport>> {
   return pc.getStats().then((reports: RTCStatsReport) => {
     const result = [] as Array<OriginalReport>;
@@ -34,6 +75,25 @@ export function getStats(pc: RTCPeerConnection): Promise<Array<OriginalReport>> 
   });
 }
 
+/**
+ * Get stats of peerconnection / 获取 peerconnection 的状态信息
+ *
+ * @param pc A peerconnection object / 需要获取状态的 peerconnection 对象
+ * @returns A collection of formatted reports from original getStats of peerconnection / 一组通过 peerconnection 原生 getStats 方法获取的数据的格式式报告
+ *
+ * @example
+ * ```
+ * getLegacyStats(pc)
+ *  .then((originalReports: Array<OriginalReport>) => {
+ *    let report: CandidatePairReports = new CandidatePairReports(originalReports);
+ *    console.log(report.currentRoundTripTime);
+ *    ...
+ *  })
+ *  .catch(err => {
+ *    ...
+ *  });
+ * ```
+ */
 export function getLegacyStats(pc: RTCPeerConnection): Promise<Array<OriginalReport>> {
   if (browserDetails.browser !== 'chrome') {
     return Promise.reject(new Error('Only chrome/chromium style browsers can use this function'));

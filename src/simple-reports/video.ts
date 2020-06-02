@@ -1,7 +1,7 @@
 import browserDetails from '../utils/browser';
-import { SimpleReports } from './base';
+import { Reports } from '../report';
 
-export class VideoInputReports extends SimpleReports {
+export class VideoInputReports extends Reports {
   /**
    * chrome - { type: track, kind: video }
    * safari - { type: track }
@@ -103,7 +103,7 @@ export class VideoInputReports extends SimpleReports {
   }
 }
 
-export class VideoOutputReports extends SimpleReports {
+export class VideoOutputReports extends Reports {
   /**
    * chrome - { type: track, kind: video }
    * safari - { type: track }
@@ -206,7 +206,7 @@ export class VideoOutputReports extends SimpleReports {
 // ============== Chrome - Legacy ================/
 
 // chrome - { type: ssrc, mediaType: video }
-export class VideoInputLegacyReports extends SimpleReports {
+export class VideoInputLegacyReports extends Reports {
   // refer to googFrameWidthReceived
   get frameWidth(): number {
     return this._find('googFrameWidthReceived', { type: 'ssrc', mediaType: 'video' });
@@ -247,7 +247,7 @@ export class VideoInputLegacyReports extends SimpleReports {
 }
 
 // chrome - { type: ssrc, mediaType: video }
-export class VideoOutputLegacyReports extends SimpleReports {
+export class VideoOutputLegacyReports extends Reports {
   // refer to - googFrameWidthSent
   get frameWidth(): number {
     return this._find('googFrameWidthSent', { type: 'ssrc', mediaType: 'video' });
