@@ -3,6 +3,7 @@
   "version": "0.0.4",
   "description": "getStats API of peerconnection with `Standardized` and `Legacy Non-Standard` reports",
   "main": "lib/index.js",
+  "types": "types",
   "scripts": {
     "test": "karma start test/karma.config.js",
     "dev": "webpack --config webpack.dev.js",
