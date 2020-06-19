@@ -454,3 +454,60 @@ describe('Candidate Pair Legacy Reports (Out) - ', function (): void {
     });
   }
 });
+
+describe('Empty Reports - ', function (): void {
+  const audioInReports = new AudioInputReports([]);
+  const audioOutReports = new AudioOutputReports([]);
+  const videoInReports = new VideoInputReports([]);
+  const videoOutReports = new VideoOutputReports([]);
+  const candidatePairReports = new CandidatePairReports([]);
+
+  it(browserDetails.browser, function (): void {
+    expect(audioInReports.bytesReceived).toEqual(-1);
+    expect(audioInReports.jitter).toEqual(-1);
+    expect(audioInReports.packetsLost).toEqual(-1);
+    expect(audioInReports.packetsReceived).toEqual(-1);
+    expect(audioInReports.audioLevel).toEqual(-1);
+    expect(audioInReports.totalAudioEnergy).toEqual(-1);
+
+    expect(audioOutReports.bytesSent).toEqual(-1);
+    expect(audioOutReports.packetsSent).toEqual(-1);
+    expect(audioOutReports.jitter).toEqual(-1);
+    expect(audioOutReports.packetsLost).toEqual(-1);
+    expect(audioOutReports.roundTripTime).toEqual(-1);
+    expect(audioOutReports.audioLevel).toEqual(-1);
+    expect(audioOutReports.totalAudioEnergy).toEqual(-1);
+
+    expect(videoInReports.bytesReceived).toEqual(-1);
+    expect(videoInReports.packetsReceived).toEqual(-1);
+    expect(videoInReports.packetsLost).toEqual(-1);
+    expect(videoInReports.nackCount).toEqual(-1);
+    expect(videoInReports.pliCount).toEqual(-1);
+    expect(videoInReports.firCount).toEqual(-1);
+    expect(videoInReports.framesDecoded).toEqual(-1);
+    expect(videoInReports.frameWidth).toEqual(-1);
+    expect(videoInReports.frameHeight).toEqual(-1);
+    expect(videoInReports.framesReceived).toEqual(-1);
+    expect(videoInReports.framesDropped).toEqual(-1);
+    expect(videoInReports.jitter).toEqual(-1);
+
+
+    expect(videoOutReports.bytesSent).toEqual(-1);
+    expect(videoOutReports.packetsSent).toEqual(-1);
+    expect(videoOutReports.nackCount).toEqual(-1);
+    expect(videoOutReports.pliCount).toEqual(-1);
+    expect(videoOutReports.firCount).toEqual(-1);
+    expect(videoOutReports.framesEncoded).toEqual(-1);
+    expect(videoOutReports.frameWidth).toEqual(-1);
+    expect(videoOutReports.frameHeight).toEqual(-1);
+    expect(videoOutReports.packetsLost).toEqual(-1);
+    expect(videoOutReports.jitter).toEqual(-1);
+    expect(videoOutReports.roundTripTime).toEqual(-1);
+    expect(videoOutReports.framesSent).toEqual(-1);
+
+    expect(candidatePairReports.bytesSent).toEqual(-1);
+    expect(candidatePairReports.bytesReceived).toEqual(-1);
+    expect(candidatePairReports.currentRoundTripTime).toEqual(-1);
+    expect(candidatePairReports.totalRoundTripTime).toEqual(-1);
+  });
+});
