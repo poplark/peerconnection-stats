@@ -134,12 +134,12 @@
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
 									<dd><pre><code>getLegacyStats(pc)
- .then(<span class="hljs-function">(<span class="hljs-params">originalReports: <span class="hljs-built_in">Array</span>&lt;OriginalReport&gt;</span>) =&gt;</span> {
-   <span class="hljs-keyword">let</span> report: CandidatePairReports = <span class="hljs-keyword">new</span> CandidatePairReports(originalReports);
+ .<span class="hljs-keyword">then</span>(<span class="hljs-function"><span class="hljs-params">(originalReports: <span class="hljs-built_in">Array</span>&lt;OriginalReport&gt;)</span> =&gt;</span> {
+   let report: CandidatePairReports = <span class="hljs-keyword">new</span> CandidatePairReports(originalReports);
    <span class="hljs-built_in">console</span>.log(report.currentRoundTripTime);
    ...
  })
- .catch(<span class="hljs-function"><span class="hljs-params">err</span> =&gt;</span> {
+ .<span class="hljs-keyword">catch</span>(err =&gt; {
    ...
  });</code></pre></dd>
 								</dl>
@@ -175,12 +175,12 @@
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
 									<dd><pre><code>getStats(pc)
- .then(<span class="hljs-function">(<span class="hljs-params">originalReports: <span class="hljs-built_in">Array</span>&lt;OriginalReport&gt;</span>) =&gt;</span> {
-   <span class="hljs-keyword">let</span> report: CandidatePairReports = <span class="hljs-keyword">new</span> CandidatePairReports(originalReports);
+ .<span class="hljs-keyword">then</span>(<span class="hljs-function"><span class="hljs-params">(originalReports: <span class="hljs-built_in">Array</span>&lt;OriginalReport&gt;)</span> =&gt;</span> {
+   let report: CandidatePairReports = <span class="hljs-keyword">new</span> CandidatePairReports(originalReports);
    <span class="hljs-built_in">console</span>.log(report.currentRoundTripTime);
    ...
  })
- .catch(<span class="hljs-function"><span class="hljs-params">err</span> =&gt;</span> {
+ .<span class="hljs-keyword">catch</span>(err =&gt; {
    ...
  });</code></pre></dd>
 								</dl>
@@ -284,6 +284,5 @@
 </div>
 <div class="overlay"></div>
 <script src="assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>
