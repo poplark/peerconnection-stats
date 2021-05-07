@@ -115,4 +115,17 @@ export function getLegacyStats(pc: RTCPeerConnection): Promise<Array<OriginalRep
   });
 }
 
+/**
+ * The version of AudioTrackMixer
+ *
+ * @example
+ * ```
+ * import { version } from 'audio-track-mixer';
+ * ```
+ */
+//@ts-ignore
+const version: string = __VERSION__;
+
+export { version };
+
 export default getStats;
