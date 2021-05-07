@@ -66,7 +66,9 @@ export class Reports {
   protected _find(key: string, condition?: {[key: string]: string | number | boolean}): number {
     const result: Array<Report> = this.find(key, condition);
     if (result.length > 0) {
-      return parse('' + result[result.length - 1].value) as number;
+      return result.reduce((total, item) => {
+        return total + (parse('' + item.value) as number);
+      }, 0);
     }
     return -1;
   }
