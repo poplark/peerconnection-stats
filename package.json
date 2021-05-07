@@ -1,6 +1,6 @@
 {
   "name": "peerconnection-stats",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A getStats API of peerconnection with 'Standardized' and 'Legacy Non-Standard' reports.",
   "main": "lib/index.js",
   "types": "types",
