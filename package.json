@@ -49,6 +49,7 @@
     "karma-typescript": "^5.0.2",
     "karma-typescript-es6-transform": "^5.0.2",
     "ts-loader": "^7.0.4",
+    "tslib": "^2.3.0",
     "typedoc": "^0.17.7",
     "typescript": "^3.9.2",
     "webpack": "^4.43.0",

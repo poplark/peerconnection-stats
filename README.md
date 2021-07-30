@@ -25,7 +25,7 @@ getStats(peerconnection)
 ### getLegacyStats
 
 ```ts
-getStats(peerconnection)
+getLegacyStats(peerconnection)
   .then((originalReports: OriginalReports) => {
     const reports: AudioInputLegacyReports = new AudioInputLegacyReports(originalReports);
     console.log(reports.bytesReceived);
