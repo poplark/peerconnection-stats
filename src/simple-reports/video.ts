@@ -156,9 +156,79 @@ export class VideoInputReports extends Reports {
         return this._find('jitter', { mediaType: 'video' });
     }
   }
+
+  /**
+   * **Note** (Data from):
+   * - chrome - { type: 'inbound-rtp', mediaType: 'video' }
+   * - firefox - { type: 'inbound-rtp', mediaType: 'video' }
+   * - safari - { type: 'inbound-rtp', mediaType: 'video' }
+   */
+  get ssrc(): number {
+    return this._find('ssrc', { type: 'inbound-rtp', mediaType: 'video' });
+  }
 }
 
 export class VideoOutputReports extends Reports {
+  /**
+   * **Note** (Data from):
+   * - chrome - { type: 'media-source', kind: 'video' }
+   * - firefox - N/A
+   * - safari - N/A
+   */
+  get width(): number {
+    switch (browserDetails.browser) {
+      case 'chrome':
+        return this._find('width', { type: 'media-source', kind: 'video' });
+      default:
+        return this._find('width');
+    }
+  }
+
+  /**
+   * **Note** (Data from):
+   * - chrome - { type: 'media-source', kind: 'video' }
+   * - firefox - N/A
+   * - safari - N/A
+   */
+  get height(): number {
+    switch (browserDetails.browser) {
+      case 'chrome':
+        return this._find('height', { type: 'media-source', kind: 'video' });
+      default:
+        return this._find('height');
+    }
+  }
+
+  /**
+   * **Note** (Data from):
+   * - chrome - { type: 'media-source', kind: 'video' }
+   * - firefox - N/A
+   * - safari - N/A
+   */
+  get framesPerSecond(): number {
+    switch (browserDetails.browser) {
+      case 'chrome':
+        return this._find('framesPerSecond', { type: 'media-source', kind: 'video' });
+      default:
+        return this._find('frames');
+    }
+  }
+
+  /**
+   * **Note** (Data from):
+   * - chrome - { type: 'media-source', kind: 'video' }
+   * - firefox - N/A
+   * - safari - N/A
+   */
+  get frames(): number {
+    switch (browserDetails.browser) {
+      case 'chrome':
+        return this._find('frames', { type: 'media-source', kind: 'video' });
+      default:
+        return this._find('frames');
+    }
+  }
+
   /**
    * **Note** (Data from):
    * - chrome - { type: 'track', kind: 'video' }
@@ -310,6 +380,16 @@ export class VideoOutputReports extends Reports {
       default:
         return this._find('framesSent');
     }
+  }
+
+  /**
+   * **Note** (Data from):
+   * - chrome - { type: 'outbound-rtp', mediaType: 'video' }
+   * - firefox - { type: 'outbound-rtp', mediaType: 'video' }
+   * - safari - { type: 'outbound-rtp', mediaType: 'video' }
+   */
+  get ssrc(): number {
+    return this._find('ssrc', { type: 'outbound-rtp', mediaType: 'video' });
   }
 }
 

@@ -73,6 +73,16 @@ export class AudioInputReports extends Reports {
         return this._find('totalAudioEnergy');
     }
   }
+
+  /**
+   * **Note** (Data from):
+   * - chrome - { type: 'inbound-rtp', mediaType: 'audio' }
+   * - firefox - { type: 'inbound-rtp', mediaType: 'audio' }
+   * - safari - { type: 'inbound-rtp', mediaType: 'audio' }
+   */
+  get ssrc(): number {
+    return this._find('ssrc', { type: 'inbound-rtp', mediaType: 'audio' });
+  }
 }
 
 export class AudioOutputReports extends Reports {
@@ -178,6 +188,16 @@ export class AudioOutputReports extends Reports {
       default:
         return this._find('totalAudioEnergy');
     }
+  }
+
+  /**
+   * **Note** (Data from):
+   * - chrome - { type: 'outbound-rtp', mediaType: 'audio' }
+   * - firefox - { type: 'outbound-rtp', mediaType: 'audio' }
+   * - safari - { type: 'outbound-rtp', mediaType: 'audio' }
+   */
+  get ssrc(): number {
+    return this._find('ssrc', { type: 'outbound-rtp', mediaType: 'audio' });
   }
 }
 

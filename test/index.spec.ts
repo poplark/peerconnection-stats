@@ -45,6 +45,7 @@ describe('Audio Input Reports - ', function (): void {
     expect(reports.jitter).toBeGreaterThanOrEqual(0);
     expect(reports.packetsLost).toBeGreaterThanOrEqual(0);
     expect(reports.packetsReceived).toBeGreaterThanOrEqual(0);
+    expect(reports.ssrc).toBeGreaterThanOrEqual(0);
 
     switch (browserDetails.browser) {
       case 'chrome':
@@ -109,6 +110,7 @@ describe('Audio Output Reports - ', function (): void {
   it(browserDetails.browser, function (): void {
     expect(reports.bytesSent).toBeGreaterThanOrEqual(0);
     expect(reports.packetsSent).toBeGreaterThanOrEqual(0);
+    expect(reports.ssrc).toBeGreaterThanOrEqual(0);
 
     switch (browserDetails.browser) {
       case 'chrome':
@@ -184,6 +186,7 @@ describe('Video Input Reports - ', function (): void {
     expect(reports.nackCount).toBeGreaterThanOrEqual(0);
     expect(reports.pliCount).toBeGreaterThanOrEqual(0);
     expect(reports.firCount).toBeGreaterThanOrEqual(0);
+    expect(reports.ssrc).toBeGreaterThanOrEqual(0);
 
     expect(reports.framesDecoded).toBeGreaterThanOrEqual(0);
 
@@ -271,6 +274,7 @@ describe('Video Output Reports - ', function (): void {
     expect(reports.pliCount).toBeGreaterThanOrEqual(0);
     expect(reports.firCount).toBeGreaterThanOrEqual(0);
     expect(reports.framesEncoded).toBeGreaterThanOrEqual(0);
+    expect(reports.ssrc).toBeGreaterThanOrEqual(0);
 
     switch (browserDetails.browser) {
       case 'chrome':
@@ -280,6 +284,10 @@ describe('Video Output Reports - ', function (): void {
         expect(reports.jitter).toBeGreaterThanOrEqual(0);
         expect(reports.roundTripTime).toBeGreaterThanOrEqual(0);
         expect(reports.framesSent).toBeGreaterThanOrEqual(0);
+        expect(reports.width).toBeGreaterThanOrEqual(0);
+        expect(reports.height).toBeGreaterThanOrEqual(0);
+        expect(reports.framesPerSecond).toBeGreaterThanOrEqual(0);
+        expect(reports.frames).toBeGreaterThanOrEqual(0);
         break;
       case 'firefox':
         expect(reports.frameWidth).toEqual(-1);
