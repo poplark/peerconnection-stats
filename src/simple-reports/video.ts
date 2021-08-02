@@ -166,6 +166,36 @@ export class VideoInputReports extends Reports {
   get ssrc(): number {
     return this._find('ssrc', { type: 'inbound-rtp', mediaType: 'video' });
   }
+
+  /**
+   * **Note** (Data from):
+   * - chrome - { type: 'track', kind: 'video' }
+   * - firefox - no corresponding data
+   * - safari - no corresponding data
+   */
+  get jitterBufferDelay(): number {
+    switch (browserDetails.browser) {
+      case 'chrome':
+        return this._find('jitterBufferDelay', { type: 'track', kind: 'video' });
+      default:
+        return this._find('jitterBufferDelay');
+    }
+  }
+
+  /**
+   * **Note** (Data from):
+   * - chrome - { type: 'track', kind: 'video' }
+   * - firefox - no corresponding data
+   * - safari - no corresponding data
+   */
+  get jitterBufferEmittedCount(): number {
+    switch (browserDetails.browser) {
+      case 'chrome':
+        return this._find('jitterBufferEmittedCount', { type: 'track', kind: 'video' });
+      default:
+        return this._find('jitterBufferEmittedCount');
+    }
+  }
 }
 
 export class VideoOutputReports extends Reports {

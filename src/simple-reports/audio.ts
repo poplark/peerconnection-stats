@@ -83,6 +83,36 @@ export class AudioInputReports extends Reports {
   get ssrc(): number {
     return this._find('ssrc', { type: 'inbound-rtp', mediaType: 'audio' });
   }
+
+  /**
+   * **Note** (Data from):
+   * - chrome - { type: 'track', kind: 'audio' }
+   * - firefox - no corresponding data
+   * - safari - no corresponding data
+   */
+  get jitterBufferDelay(): number {
+    switch (browserDetails.browser) {
+      case 'chrome':
+        return this._find('jitterBufferDelay', { type: 'track', kind: 'audio' });
+      default:
+        return this._find('jitterBufferDelay');
+    }
+  }
+
+  /**
+   * **Note** (Data from):
+   * - chrome - { type: 'track', kind: 'audio' }
+   * - firefox - no corresponding data
+   * - safari - no corresponding data
+   */
+  get jitterBufferEmittedCount(): number {
+    switch (browserDetails.browser) {
+      case 'chrome':
+        return this._find('jitterBufferEmittedCount', { type: 'track', kind: 'audio' });
+      default:
+        return this._find('jitterBufferEmittedCount');
+    }
+  }
 }
 
 export class AudioOutputReports extends Reports {
