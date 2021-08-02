@@ -8,14 +8,15 @@
     "test": "karma start test/karma.config.js",
     "dev": "webpack --config webpack.dev.js",
     "build": "rm -rf types && webpack --config webpack.prod.js",
-    "doc": "rm -rf docs && typedoc"
+    "doc": "rm -rf docs && typedoc",
+    "postbuild": "npm run doc"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/poplark/peerconnection-stats.git"
   },
   "keywords": [
-    "webrtc",
+    "WebRTC",
     "peerconnection",
     "getStats",
     "standardized",
