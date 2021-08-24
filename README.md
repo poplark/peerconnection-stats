@@ -1,5 +1,7 @@
 # Peerconnection getStats API
 
+[![pipeline status](https://gitlab.com/poplark/peerconnection-stats/badges/master/pipeline.svg)](https://gitlab.com/poplark/peerconnection-stats/-/commits/master)
+
 English | [中文](./README-zh_CN.md)
 
 A getStats API of peerconnection with `Standardized` and `Legacy Non-Standard` reports, and it will normalized the output.
