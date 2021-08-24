@@ -1,5 +1,8 @@
 # Peerconnection getStats API
 
+[![pipeline status](https://gitlab.com/poplark/peerconnection-stats/badges/master/pipeline.svg)](https://gitlab.com/poplark/peerconnection-stats/-/commits/master)
+[![coverage report](https://gitlab.com/poplark/peerconnection-stats/badges/master/coverage.svg)](https://gitlab.com/poplark/peerconnection-stats/-/commits/master)
+
 [English](./README.md) | 中文
 
 获取 Peerconnection 的 `Standardized` 和 `Legacy Non-Standard` 报告并规范化输入的 getStats API。
