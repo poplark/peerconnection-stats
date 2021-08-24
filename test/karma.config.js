@@ -22,8 +22,9 @@ module.exports = function (config) {
 
 
     // list of files / patterns to exclude
-    exclude: [],
-
+    exclude: [
+    'node_modules'
+    ],
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
@@ -69,7 +70,24 @@ module.exports = function (config) {
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     // use karam-edge-launcher, not karma-edgium-launcher
     // browsers: ['Chrome', 'Firefox', 'Safari', 'Edge'],
-    browsers: ['ChromeHeadless', 'FirefoxHeadless', 'Safari'],
+    // browsers: ['ChromeHeadless', 'FirefoxHeadless', 'Safari'],
+    browsers: ['ChromeHeadless', 'FirefoxHeadless'],
+
+    customLaunchers: {
+      ChromeHeadless: {
+        base: 'Chrome',
+        flags: [
+          '--headless',
+          '--disable-gpu',
+          '--remote-debugging-port=9222',
+          '--no-sandbox'
+        ]
+      },
+      FirefoxHeadless: {
+        base: 'Firefox',
+        flags: ['-headless'],
+      },
+    },
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
@@ -77,14 +95,14 @@ module.exports = function (config) {
 
     // Concurrency level
     // how many browser should be started simultaneous
-    concurrency: 1,
+    concurrency: 2,
 
     plugins: [
       'karma-jasmine',
       'karma-typescript',
       'karma-chrome-launcher',
       'karma-firefox-launcher',
-      'karma-safari-launcher',
+      // 'karma-safari-launcher',
       // 'karma-edge-launcher'
     ]
   })
