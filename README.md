@@ -1,6 +1,7 @@
 # Peerconnection getStats API
 
 [![pipeline status](https://gitlab.com/poplark/peerconnection-stats/badges/master/pipeline.svg)](https://gitlab.com/poplark/peerconnection-stats/-/commits/master)
+[![coverage report](https://gitlab.com/poplark/peerconnection-stats/badges/master/coverage.svg)](https://gitlab.com/poplark/peerconnection-stats/-/commits/master)
 
 English | [中文](./README-zh_CN.md)
 
