@@ -27,7 +27,6 @@ module.exports = function (config) {
     // list of files / patterns to exclude
     exclude: [
       'node_modules',
-      'src/index.ts', // webpack DefinePlugin 目前尚无法解决，只能先忽略
     ],
 
     // preprocess matching files before serving them to the browser
@@ -42,7 +41,10 @@ module.exports = function (config) {
         lib: ["es2015", "es2016", "es2017", "dom"]
       },
       bundlerOptions: {
-        transforms: [require('karma-typescript-es6-transform')()]
+        transforms: [require('karma-typescript-es6-transform')()],
+        constants: {
+          __VERSION__: false
+        }
       }
     },
 

@@ -7,17 +7,13 @@ import {
   AudioOutputReports,
   AudioInputLegacyReports,
   AudioOutputLegacyReports,
-} from '../src/simple-reports/audio';
-import {
   VideoInputReports,
   VideoOutputReports,
   VideoInputLegacyReports,
   VideoOutputLegacyReports,
-} from '../src/simple-reports/video';
-import {
   CandidatePairReports,
   CandidatePairLegacyReports,
-} from '../src/simple-reports/pair';
+} from '../src';
 
 import {
   chromeInOriginalReports,
