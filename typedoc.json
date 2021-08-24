@@ -1,11 +1,12 @@
 {
-  "mode": "file",
   "out": "docs",
   "exclude": [
     "src/utils/*.ts"
   ],
+  "entryPoints": ["src/index.ts"],
   "disableSources": true,
   "excludePrivate": true,
   "excludeProtected": true,
+  "excludeInternal": true,
   "readme": "none"
 }

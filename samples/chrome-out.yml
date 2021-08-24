@@ -429,5 +429,7 @@ Reports:
         value: 320
       - name: height
         value: 180
+      - name: frames
+        value: 200
       - name: framesPerSecond
         value: 20
